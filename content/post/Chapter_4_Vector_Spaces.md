@@ -30,9 +30,9 @@ The <b>intersection of the subspaces denoted as $S_1 \cap S_2$ is a subspace</b>
 ## 4.3 Column Space
 
 Given a matrix $A$, it's columns and all their linear combinations form a vector space called as the <b>column space</b> $C(A)$ of $A$. For example, for the matrix $A = \begin{bmatrix}
-    1, 3 \\\\
-    2, 3 \\\\
-    4, 1 
+    1 & 3 \\\\
+    2 & 3 \\\\
+    4 & 1 
 \end{bmatrix}$ it's column space $C(A)$ is a plane passing through $\begin{bmatrix}
     0 \\\\
     0 \\\\

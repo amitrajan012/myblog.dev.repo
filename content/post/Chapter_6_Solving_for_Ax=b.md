@@ -70,7 +70,7 @@ U = \begin{bmatrix}
 \end{align}
 
 To find the complete solution of $Ax=b$, we can start with finding a particular solution (x_p) and then proceed from there. The steps are as follows:
-* Set all <b>free varibales</b> in $x$, variables corresponding to <b>free columns</b> to $0$ and solve for the <b>pivot variables</b>. This gives us the set of equations as: $x_1 + 2x_3 =0;2x_3=3;x_2=0;x_4=0$ (as $x_2,x_4$ are free variables). Hence, $x_p = \begin{bmatrix}-2 \\\\
+* Set all <b>free varibales</b> in $x$, variables corresponding to <b>free columns</b> to $0$ and solve for the <b>pivot variables</b>. This gives us the set of equations as: $x_1 + 2x_3 =1;2x_3=3;x_2=0;x_4=0$ (as $x_2,x_4$ are free variables). Hence, $x_p = \begin{bmatrix}-2 \\\\
 0 \\\\
 3/2 \\\\
 0
