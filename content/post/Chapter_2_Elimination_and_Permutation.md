@@ -40,7 +40,7 @@ A^{'} = \left[
 \right]
 \end{align}$$
 
-The usual elimination step which is used to make the entry of <b>row m column n</b> 0 is denoted as $E_{mn}$. The two primaraly used elimination steps are:
+The usual elimination step which is used to make the entry of <b>row m column n</b> is denoted as $E_{mn}$. The two primaraly used elimination steps are:
 * <b>row multiplication and subtraction:</b> In this step, a row is multiplied by a number and subtracted from another row
 * <b>row exchange:</b> In this step, two rows are exchanged
 

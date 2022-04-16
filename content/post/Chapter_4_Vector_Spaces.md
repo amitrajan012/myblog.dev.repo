@@ -155,6 +155,6 @@ $$\begin{align}
 aAu=0;bAv=0 \implies Aau=0; Abv=0 \implies Aau+Abv=0 \implies A(au+bv)=0 
 \end{align}$$
 
-Hence, $au+bv$ is also a solution of $Ax=0$ which makes nullspace a vector space. One of the major intution about null space is the fact that <b>for any matrix $A$, null space will contains non-zero vectors only if all of it's columns are not lineraly independent</b>, i.e. at least one of the columns of $A$ should be the linear combination of all the other columns.
+Hence, $au+bv$ is also a solution of $Ax=0$ which makes nullspace a vector space. One of the major intution about null space is the fact that <b>for any matrix $A$, null space will contain non-zero vectors only if all of it's columns are not lineraly independent</b>, i.e. at least one of the columns of $A$ should be the linear combination of all the other columns.
 
 Another important question which can be asked that whether for any non-zero $b$, whether the solutions of the equation $Ax=b$ forms a subspace. <b>No, they don't</b>. As for non-zero $b$, the zero vector is not a solution and hence the set of solutions don't form a subspace as every subspace should contain the zero vector.
