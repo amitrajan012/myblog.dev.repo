@@ -9,7 +9,7 @@ topics = ["Linear Algebra"]
 
 +++
 
-### 7.1 Independence
+## 7.1 Independence
 Vectors $x_1,x_2, ..., x_n$ are <b>linearly independent</b> if no combinations of these vectors gives zero vector, except the zero combination. i.e.
 
 
@@ -23,7 +23,7 @@ As we know that, for a $m \times n$ matrix $A$, if $m < n$, then we will have at
 In general, given the vectors $v_1, v_2, ..., v_n$, to check for their indepedence we can form a matrix $A$ with these vectors as the columns. Once the matrix is formed, we have to find the null-space of it (i.e. solution for $Ax=0$). If the <b>null-space of $A$ is just a zero vector, the columns of $A$ are independent</b>. We will not have any non-zero vector in the null-space of $A$ if and only there are not any <b>free columns</b> after the substitution steps. This means that all the columns are <b>pivot columns</b> and hence the <b>rank of matrix $A$ is $n$</b>. The columns in $A$ are dependent if there exist any <b>non-zero</b> $c$ such that $Ac=0$, which implies that there are some <b>free columns</b> in $A$, i.e. <b>rank of $A < n$</b>
 
 
-### 7.2 Span, Basis and Dimension
+## 7.2 Span, Basis and Dimension
 
 Vectors $v_1, v_2, ..., v_l$ <b>spans a space</b> if the vector space consists of all combinations of these vectors. For example, columns of a matrix spans it's column space. The vectors which span a space can be dependent as well. For example, for a one dimnesional space $S_1$, we need at least one vector to span the entire space. But even if we have more that one vectors in that one-dimensional space, they will span the same $S_1$. This gives rise to basis.
 
