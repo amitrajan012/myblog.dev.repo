@@ -16,11 +16,11 @@ Orthogonal means <b>perpendicular</b>. For two vectors $x,y$, they are orthogona
 We can conclude the dot product condition from Pythoagoras Theorem as follows:
 
 $$\begin{align}
-\lVert x \rVert^2 + \lVert y \rVert^2 = \lVert x+y \rVert^2 \\
-x^Tx + y^Ty = (x+y)^T(x+y) \\
-x^Tx + y^Ty = x^Tx + y^Ty + x^Ty + y^Tx \\
-x^Ty + y^Tx = 0 \\
-2x^Ty = 0 \\
+\lVert x \rVert^2 + \lVert y \rVert^2 = \lVert x+y \rVert^2 \\\\
+x^Tx + y^Ty = (x+y)^T(x+y) \\\\
+x^Tx + y^Ty = x^Tx + y^Ty + x^Ty + y^Tx \\\\
+x^Ty + y^Tx = 0 \\\\
+2x^Ty = 0 \\\\
 x^Ty = 0
 \end{align}$$
 
@@ -43,8 +43,7 @@ $$\begin{align}
 \end{bmatrix} 
 \begin{bmatrix}
     x
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
     0 \\\\
     0 \\\\
@@ -112,4 +111,4 @@ If $A^TA$ is <b>invertible</b>, we can get the solution for $A^TA\hat{x} = A^Tb$
 
 * $N(A^TA) = N(A)$
 * $Rank(A^TA) = Rank(A)$
-* Using these properties, we can conclude that <b>$A^TA$ is invertible if and only if $N(A)$ only has zero vectors in it</b>, i.e. the $A$ has independent columns.
+* Using these properties, we can conclude that <b>$A^TA$ is invertible if and only if $N(A)$ only has zero vectors in it</b>, i.e. $A$ has independent columns.

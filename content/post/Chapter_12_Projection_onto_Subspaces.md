@@ -13,7 +13,7 @@ topics = ["Linear Algebra"]
 
 Given two vectors $a,b$ in a plane, the projection of $b$ onto $a$ is shown below. The <b>projection</b> $p$ will be a multiple of $a$ and the <b>error vector</b> $e$ will be orthogonal to $a$. Error vector can be denoted as: $e = b - p$. As $e \perp a$, we can say that: $a^Te =0 \implies a^T(b - p) = 0 \implies a^T(b - xa) = 0 \implies xa^Ta = a^Tb \implies x = \frac{a^Tb}{a^Ta}$. Hence, $p = ax = a\frac{a^Tb}{a^Ta}$.
 
-<img src="../Projections.png">
+{{% fluid_img "/img/Linear_Algebra/Projections.png" %}}
 
 Some of the observations about the projection $p$ are as follows:
 * If $b$ is doubled, projection $p$ is doubled
@@ -32,7 +32,7 @@ For any $m \times n$ matrix $A$ such that $m > n$, our goal is to solve $Ax=b$ w
 
 Let $A$ be a matrix representing a two-dimensional space with the basis as vectors $a_1$ and $a_2$, i.e. $A = \begin{bmatrix}a_1 & a_2 \end{bmatrix}$. Let $b$ be the vector whose projection needs to be taken on $A$. The projection $p$ will be in the plane and can be denoted as $p=a_1\hat{x_1} + a_2\hat{x_2}$ or $p=A\hat{x}$. The error $e$, which is $e = b-p = b-A\hat{x}$ is <b>perpendicular to the plane</b>.
 
-<img src="../Projection_Multi.png">
+{{% fluid_img "/img/Linear_Algebra/Projection_Multi.png" %}}
 
 Or, we can say that the error vector $e$ is perpendicular to both the basis vectors $a_1$ and $a_2$, i.e. $a_1^T(b-A\hat{x}) = 0$ and $a_2^T(b-A\hat{x}) = 0$. In the matrix form,  $\begin{bmatrix}a_1^T \\\\
 a_2^T\end{bmatrix}(b - A\hat{x}) = \begin{bmatrix}0 \\\\
