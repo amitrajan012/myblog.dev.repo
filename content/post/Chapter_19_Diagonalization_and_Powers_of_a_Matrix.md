@@ -1,6 +1,6 @@
 +++
 date = "2022-04-17T14:07:28+01:00"
-description = "Linear Algebra (Gilbert Strang): Chapter 18"
+description = "Linear Algebra (Gilbert Strang): Chapter 19"
 draft = false
 tags = ["Linear Algebra", "Determinant", "Gilbert Strang", "Eigenvalues", "Eigenvectors", "Eigenvalue Decomposition", "Power", "Difference Equation"]
 title = "Diagonalization and Powers of a Matrix"
