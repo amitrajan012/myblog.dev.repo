@@ -3,7 +3,7 @@ date = "2022-05-29T14:07:28+01:00"
 description = "Pattern Recognition (Bishop): Chapter 1"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Model Selection", "Curse of Dimensionality", "Cross-validation"]
-title = "Model Selection & Curse of Dimensionality"
+title = "Introduction - Model Selection & Curse of Dimensionality"
 topics = ["Pattern Recognition"]
 
 +++

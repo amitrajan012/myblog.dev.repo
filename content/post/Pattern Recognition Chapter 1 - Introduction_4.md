@@ -3,7 +3,7 @@ date = "2022-06-04T14:07:28+01:00"
 description = "Pattern Recognition (Bishop): Chapter 1"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Decision Theory", "Misclassification Rate", "Expected Loss", "Loss Function", "Utility Function", "Reject Option", "Reject Region", "Inference", "Discriminant Function", "Generative Models", "Discriminative Models", "Minkowski Loss"]
-title = "Decision Theory"
+title = "Introduction - Decision Theory"
 topics = ["Pattern Recognition"]
 
 +++

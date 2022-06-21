@@ -3,7 +3,7 @@ date = "2022-05-20T14:07:28+01:00"
 description = "Pattern Recognition (Bishop): Chapter 1"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Polynomial Curve Fitting", "Polynomial Fuction", "Overfitting", "Regularization", "Shrinkage Method", "Ridge Regression"]
-title = "Polynomial Curve Fitting"
+title = "Introduction - Polynomial Curve Fitting"
 topics = ["Pattern Recognition"]
 
 +++

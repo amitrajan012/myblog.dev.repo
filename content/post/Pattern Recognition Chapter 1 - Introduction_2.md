@@ -3,7 +3,7 @@ date = "2022-05-23T14:07:28+01:00"
 description = "Pattern Recognition (Bishop): Chapter 1"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Joint Probability", "Marginal Probability", "Conditional Probability", "Bayes Rule", "Prior Probability", "Posterior Probability", "Probability Desnities", "Cumulative Distribution Function", "Expectations", "Covariances", "Bayesian Probabilities", "Likelihood Function", "Gaussian Distribution", "Precision", "IID Samples", "Maximum Likelihood Estimator"]
-title = "Probability Theory"
+title = "Introduction - Probability Theory"
 topics = ["Pattern Recognition"]
 
 +++

@@ -3,7 +3,7 @@ date = "2022-06-10T14:07:28+01:00"
 description = "Pattern Recognition (Bishop): Chapter 1"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Information Theory", "Entropy", "Disorder", "lagrange Multiplier", "Differential Entropy", "Relative Entropy", "Mutual Information", "Kulback-Leibler Divergence", "Convex Functions", "Jensen’s Inequality"]
-title = "Information Theory"
+title = "Introduction - Information Theory"
 topics = ["Pattern Recognition"]
 
 +++
