@@ -7,7 +7,7 @@
   var list = box.querySelector('.qs-list');
   var foot = box.querySelector('.qs-foot');
   var url = box.getAttribute('data-index');
-  var data = null, active = -1, timer;
+  var data = null, active = -1, timer, lastQ = null;
 
   var open = function (on) { pane.hidden = !on; input.setAttribute('aria-expanded', on ? 'true' : 'false'); };
   var options = function () { return Array.prototype.slice.call(list.querySelectorAll('[role="option"]')); };
@@ -26,12 +26,14 @@
     if (!q) { open(false); return; }
     if (!data) { list.innerHTML = '<li class="qs-msg">Loading…</li>'; foot.hidden = true; open(true); return; }
     var ts = NB.terms(q), hits = NB.search(data, ts);
+    var changed = q !== lastQ; lastQ = q;
     list.innerHTML = hits.slice(0, 30).map(function (h, i) {
       var p = h.p;
       return '<li role="option" id="qs-opt-' + i + '" aria-selected="false"><a href="' + p.u + '" tabindex="-1">' +
         '<span class="qs-top"><span class="qs-title">' + NB.mark(p.t, ts) + '</span><span class="chip' + (p.k === 'book' ? ' chip-book' : '') + '">' + NB.esc(p.s) + '</span></span>' +
         '<span class="qs-snip">' + (NB.snippet(p.x, ts, 50, 110) || NB.esc(p.l || '')) + '</span></a></li>';
     }).join('') || '<li class="qs-msg">No notes match “' + NB.esc(q) + '”.</li>';
+    if (changed) list.scrollTop = 0;   // new query: start at the top of the results
     foot.hidden = !hits.length;
     foot.querySelector('a').href = full();
     foot.querySelector('a').textContent = 'See all ' + hits.length + ' result' + (hits.length === 1 ? '' : 's') + ' →';
