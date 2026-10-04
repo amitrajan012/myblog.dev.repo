@@ -77,7 +77,7 @@
     var el = document.activeElement;
     if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable)) return;
     e.preventDefault();
-    var q = document.getElementById('q');
+    var q = document.getElementById('q') || document.getElementById('qs-input');
     if (q) q.focus(); else location.href = '/search/';
   });
   // Note pages: reading progress bar.

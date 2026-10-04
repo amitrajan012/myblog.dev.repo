@@ -11,5 +11,6 @@
 {{ partial "footer.html" . }}
 {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
 <script src="{{ $js.RelPermalink }}" defer></script>
+{{ if .IsHome }}{{ $qs := slice (resources.Get "js/search-core.js") (resources.Get "js/quick-search.js") | resources.Concat "js/quick.js" | minify | fingerprint }}<script src="{{ $qs.RelPermalink }}" defer></script>{{ end }}
 </body>
 </html>

@@ -35,6 +35,6 @@
   </div>
   <noscript><p class="muted">Search needs JavaScript. You can still browse <a href="{{ "/tags/" | relURL }}">all topics</a> or the <a href="{{ "/post/" | relURL }}">full archive</a>.</p></noscript>
 </section>
-{{ $s := resources.Get "js/search.js" | minify | fingerprint }}
+{{ $s := slice (resources.Get "js/search-core.js") (resources.Get "js/search.js") | resources.Concat "js/search-page.js" | minify | fingerprint }}
 <script src="{{ $s.RelPermalink }}" data-index="{{ "index.json" | relURL }}" defer></script>
 {{ end }}

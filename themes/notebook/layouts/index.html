@@ -17,6 +17,20 @@
         <a class="btn btn-light" href="#notes">Latest notes</a>
       </div>
     </div>
+    <div class="hero-side">
+    <div class="quick-search" data-quick-search data-index="{{ "index.json" | relURL }}">
+      <label for="qs-input" class="sr-only">Search the notebook</label>
+      <div class="find-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="qs-input" type="search" placeholder="Search {{ len $all }} notes — e.g. bayes, kernel trick" autocomplete="off"
+               role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="qs-list">
+        <kbd class="qs-kbd" aria-hidden="true">/</kbd>
+      </div>
+      <div class="qs-pane" hidden>
+        <ul class="qs-list" id="qs-list" role="listbox" aria-label="Search results"></ul>
+        <p class="qs-foot" hidden><a href="{{ "/search/" | relURL }}">See all results →</a></p>
+      </div>
+    </div>
     {{ with $latest }}{{ $m := partial "meta.html" . }}{{ $isBook := eq .Section "book-blog" }}
     <a class="card latest{{ if $isBook }} latest-book{{ end }}" href="{{ .RelPermalink }}">
       <div class="latest-top"><span class="kicker {{ if $isBook }}book-ink{{ else }}accent{{ end }}">Latest{{ if $isBook }} · {{ site.Data.book.title }}{{ end }}</span><time class="mono muted" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time></div>
@@ -27,6 +41,7 @@
       <div class="chips">{{ range first 3 .Params.tags }}<span class="chip">{{ . }}</span>{{ end }}</div>
     </a>
     {{ end }}
+    </div>
   </div>
 </section>
 
