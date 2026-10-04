@@ -64,7 +64,7 @@ enableRobotsTXT = true
 # ---- search engines ----
 # Paste the codes from Google Search Console / Bing Webmaster Tools ("HTML tag" verification).
 [params.verification]
-  google = ""
+  google = "pXzqIeTutA1WgFJfCHIpVlu25AvwzROerOZXRqUz8Zg"
   bing = ""
 
 # ---- notebook theme ----
