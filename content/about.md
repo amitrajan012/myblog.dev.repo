@@ -2,7 +2,7 @@
 title = "About"
 description = "Data Scientist, Reader"
 layout = "about"
-[_build]
+[build]
   list = "never"
 +++
 
