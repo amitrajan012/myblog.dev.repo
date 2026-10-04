@@ -1,6 +1,9 @@
 {{ define "main" }}
 {{- $_ := .Paginate .Pages -}}{{- /* keeps legacy /page/1/ redirects working */ -}}
 {{ $series := dict }}
+{{/* The /post/ archive ("All notes") also lists book-blog posts, so it really holds everything. */}}
+{{ $list := .Pages }}
+{{ if and (eq .Section "post") .IsSection }}{{ $list = (where site.RegularPages "Section" "in" (slice "post" "book-blog")).ByDate.Reverse }}{{ end }}
 {{ if eq .Data.Plural "topics" }}{{ range site.Data.series }}{{ if eq (urlize .topic) (urlize $.Title) }}{{ $series = . }}{{ end }}{{ end }}{{ end }}
 <section class="list-hero">
   <div class="wrap">
@@ -12,7 +15,7 @@
       <p class="kicker">{{ with .Data.Singular }}{{ . | title }}{{ else }}Archive{{ end }}</p>
       <h1 class="display-2">{{ if eq .Section "post" }}All notes{{ else }}{{ .Title }}{{ end }}</h1>
     {{ end }}
-    <p class="muted mono">{{ len .Pages }} notes</p>
+    <p class="muted mono">{{ len $list }} notes</p>
   </div>
 </section>
 <section class="wrap section-tight">
@@ -28,7 +31,7 @@
       </ol>
     {{ end }}
   {{ else }}
-    {{ range .Pages.GroupByDate "2006" }}
+    {{ range $list.GroupByDate "2006" }}
       <h2 class="group-head">{{ .Key }} <span class="muted mono small">{{ len .Pages }}</span></h2>
       <ol class="rows">{{ range .Pages }}{{ partial "post-row.html" (dict "page" .) }}{{ end }}</ol>
     {{ end }}
