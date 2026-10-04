@@ -2,7 +2,7 @@
 {{- $_ := .Paginate (where site.RegularPages "Section" "post") -}}
 {{ $posts := (where site.RegularPages "Section" "post").ByDate.Reverse }}
 {{ $all := (where site.RegularPages "Section" "in" (slice "post" "book-blog")).ByDate.Reverse }}
-{{ $latest := index $posts 0 }}
+{{ $latest := index $all 0 }}{{/* newest across notes AND book-blog posts */}}
 
 <section class="hero grid-paper">
   <div class="wrap hero-row">
@@ -16,11 +16,13 @@
         <a class="btn btn-light" href="#notes">Latest notes</a>
       </div>
     </div>
-    {{ with $latest }}{{ $m := partial "meta.html" . }}
-    <a class="card latest" href="{{ .RelPermalink }}">
-      <div class="latest-top"><span class="kicker accent">Latest</span><time class="mono muted" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time></div>
+    {{ with $latest }}{{ $m := partial "meta.html" . }}{{ $isBook := eq .Section "book-blog" }}
+    <a class="card latest{{ if $isBook }} latest-book{{ end }}" href="{{ .RelPermalink }}">
+      <div class="latest-top"><span class="kicker {{ if $isBook }}book-ink{{ else }}accent{{ end }}">Latest{{ if $isBook }} · The Book{{ end }}</span><time class="mono muted" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time></div>
       <h2>{{ .Title }}</h2>
-      {{ with $m.line }}<p class="muted">{{ . }}</p>{{ end }}
+      {{ if $isBook }}
+        <p class="muted">{{ with .Params.subtitle }}{{ . }}{{ else }}{{ partial "book-kind.html" . }}{{ with partial "book-chref.html" . }} · {{ . }}{{ end }}{{ end }}</p>
+      {{ else }}{{ with $m.line }}<p class="muted">{{ . }}</p>{{ end }}{{ end }}
       <div class="chips">{{ range first 3 .Params.tags }}<span class="chip">{{ . }}</span>{{ end }}</div>
     </a>
     {{ end }}
