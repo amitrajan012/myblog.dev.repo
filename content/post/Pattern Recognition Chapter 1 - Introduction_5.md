@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 1"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Information Theory", "Entropy", "Disorder", "lagrange Multiplier", "Differential Entropy", "Relative Entropy", "Mutual Information", "Kulback-Leibler Divergence", "Convex Functions", "Jensen’s Inequality"]
 title = "Introduction - Information Theory"
+slug = "pattern-recognition-chapter-1-introduction_5"
 topics = ["Pattern Recognition"]
 
 +++

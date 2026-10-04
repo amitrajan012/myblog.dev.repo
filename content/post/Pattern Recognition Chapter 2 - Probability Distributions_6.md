@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 2"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Probability Distributions", "Gaussian Distribution", "Student’s t-distribution", "Maximum Likelihood for the Gaussian", "Bayes’ Theorem for Gaussian Variables", "Degree of Freedom", "Bayesian Inference for the Gaussian"]
 title = "Probability Distributions - The Gaussian Distribution: Part 4"
+slug = "pattern-recognition-chapter-2-probability-distributions_6"
 topics = ["Pattern Recognition"]
 
 +++

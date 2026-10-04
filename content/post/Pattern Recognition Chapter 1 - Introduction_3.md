@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 1"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Model Selection", "Curse of Dimensionality", "Cross-validation"]
 title = "Introduction - Model Selection & Curse of Dimensionality"
+slug = "pattern-recognition-chapter-1-introduction_3"
 topics = ["Pattern Recognition"]
 
 +++

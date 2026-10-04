@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 2"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Probability Distributions", "Multinomial Variables", "Sufficient Statistics", "Multinomial Distribution", "Normalization Coefficient", "Dirichlet Distribution", "Multivariate Beta Distribution", "Conjugate Prior"]
 title = "Probability Distributions - Multinomial Variables"
+slug = "pattern-recognition-chapter-2-probability-distributions_2"
 topics = ["Pattern Recognition"]
 
 +++

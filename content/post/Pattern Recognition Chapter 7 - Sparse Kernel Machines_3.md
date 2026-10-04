@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 7"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Kernel Methods", "Maximum Margin Classifiers", "Lagrange Multipliers", "Overlapping Class Distributions", "Slack Variables", "Support Vectors"]
 title = "Sparse Kernel Methods - Maximum Margin Classifiers: Overlapping Class Distributions"
+slug = "pattern-recognition-chapter-7-sparse-kernel-machines_3"
 topics = ["Pattern Recognition"]
 
 +++

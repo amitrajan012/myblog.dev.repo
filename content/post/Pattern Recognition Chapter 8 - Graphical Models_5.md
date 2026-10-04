@@ -5,6 +5,7 @@ description = "Pattern Recognition (Bishop): Chapter 8"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Graphical Models", "Sum-product Algorithm", "Max-Sum Algorithm"]
 title = "Graphical Models - The Sum-product Algorithm, The Max-Sum Algorithm"
+slug = "pattern-recognition-chapter-8-graphical-models_5"
 topics = ["Pattern Recognition"]
 
 +++

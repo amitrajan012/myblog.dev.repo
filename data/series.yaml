@@ -1,0 +1,35 @@
+# One entry per textbook series. `topic` must match the post's `topics` front matter.
+- topic: Pattern Recognition
+  short: Bishop
+  label: "Bishop · PRML"
+  name: Pattern Recognition and Machine Learning
+  blurb: Probability, linear models, neural networks, kernels, graphical models and EM.
+  color: "#2F45C5"
+  bg: "#E8EBFA"
+  total: 14
+  icon: curve
+- topic: Linear Algebra
+  short: Strang
+  label: "Gilbert Strang · MIT 18.06"
+  name: Linear Algebra
+  blurb: Subspaces, projections, least squares, determinants, eigenvalues and the SVD.
+  color: "#A04A0D"
+  bg: "#FBEDE2"
+  icon: triangle
+- topic: ISLR
+  short: ISLR
+  label: "ISLR"
+  name: An Introduction to Statistical Learning
+  blurb: Regression, classification, resampling, trees, SVMs and unsupervised learning — with exercises.
+  color: "#4D7C0F"
+  bg: "#EEF4E1"
+  total: 10
+  icon: scatter
+- topic: Think Stats
+  short: Think Stats
+  label: "Think Stats"
+  name: Think Stats
+  blurb: Distributions, estimation and hypothesis testing for programmers.
+  color: "#6D3FC0"
+  bg: "#EFE8F9"
+  icon: bars

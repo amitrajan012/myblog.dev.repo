@@ -4,6 +4,7 @@ description = "Linear Algebra (Gilbert Strang): Chapter 23"
 draft = false
 tags = ["Linear Algebra", "Determinant", "Gilbert Strang", "Eigenvalues", "Eigenvectors", "Complex Matrices", "Fourier Transform", "Hermitian Matrices"]
 title = "Complex Matrices and Fourier Transform"
+slug = "chapter-23-complex-matrices-and-fast-fourier-transform"
 topics = ["Linear Algebra"]
 
 +++

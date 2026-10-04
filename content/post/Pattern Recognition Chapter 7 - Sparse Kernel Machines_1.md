@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 7"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Kernel Methods", "Lagrange Multiplier", "Lagrangian Function", "KKT Conditions"]
 title = "Sparse Kernel Methods - Lagrange Multipliers"
+slug = "pattern-recognition-chapter-7-sparse-kernel-machines_1"
 topics = ["Pattern Recognition"]
 
 +++

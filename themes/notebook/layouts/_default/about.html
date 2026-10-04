@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="wrap narrow section">
+  <p class="kicker accent">About</p>
+  <h1 class="display-2">Amit Rajan</h1>
+  <p class="lede">{{ .Params.description }}</p>
+  <div class="prose">{{ .Content }}</div>
+  <div class="about-card inline">{{ partial "social.html" . }}</div>
+</div>
+{{ end }}

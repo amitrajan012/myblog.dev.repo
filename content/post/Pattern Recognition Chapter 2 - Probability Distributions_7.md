@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 2"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Probability Distributions", "Gaussian Distribution", "Periodic Variables", "von Mises Distribution", "Mixtures of Gaussians"]
 title = "Probability Distributions - The Gaussian Distribution: Part 5"
+slug = "pattern-recognition-chapter-2-probability-distributions_7"
 topics = ["Pattern Recognition"]
 
 +++

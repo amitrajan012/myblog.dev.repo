@@ -1,0 +1,21 @@
+{{- /* Returns series/chapter info derived from existing front matter (topics, description, title). */ -}}
+{{- $p := . -}}
+{{- $topic := "" -}}
+{{- with $p.Params.topics }}{{ $topic = index . 0 }}{{ end -}}
+{{- $series := dict -}}
+{{- range site.Data.series }}{{ if eq .topic $topic }}{{ $series = . }}{{ end }}{{ end -}}
+{{- $desc := $p.Params.description | default "" -}}
+{{- $ch := "" -}}
+{{- with findRESubmatch `Chapter\s*(\d+)` (printf "%s | %s" $desc $p.Title) 1 }}{{ $ch = index (index . 0) 1 }}{{ end -}}
+{{- $chname := "" -}}
+{{- if eq $topic "ISLR" }}{{ $chname = replaceRE `^ISLR\s*` "" $desc }}
+{{- else if eq $topic "Pattern Recognition" }}{{ if in $p.Title " - " }}{{ $chname = index (split $p.Title " - ") 0 }}{{ end }}
+{{- end -}}
+{{- $line := "" -}}
+{{- if $series }}
+  {{- $line = $series.short -}}
+  {{- with $ch }}{{ $line = printf "%s · Chapter %s" $line . }}{{ end -}}
+  {{- with $chname }}{{ $line = printf "%s — %s" $line . }}{{ end -}}
+{{- else if $desc }}{{ if ne $desc $p.Title }}{{ $line = $desc }}{{ else }}{{ $line = $topic }}{{ end }}
+{{- else }}{{ $line = $topic }}{{ end -}}
+{{- return (dict "topic" $topic "series" $series "chapter" $ch "chapterName" $chname "line" $line "key" (cond (gt (len $series) 0) (urlize $series.short) "other")) -}}

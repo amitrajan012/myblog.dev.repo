@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 6"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Linear Models", "Constructing Kernels", "Radial Basis Function Networks", "Nadaraya-Watson Model"]
 title = "Kernel Methods - Constructing Kernels & Radial Basis Function Networks"
+slug = "pattern-recognition-chapter-6-kernel-methods_2"
 topics = ["Pattern Recognition"]
 
 +++

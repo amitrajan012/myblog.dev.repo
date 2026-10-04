@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 9"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Mixture Models", "Expectation Maximization", "Kullback-Liebler Divergence"]
 title = "Mixture Models and Expectation Maximization - The EM Algorithm in General"
+slug = "pattern-recognition-chapter-9-mixture-models-and-em_4"
 topics = ["Pattern Recognition"]
 
 +++

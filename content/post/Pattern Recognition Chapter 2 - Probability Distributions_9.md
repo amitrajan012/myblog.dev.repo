@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 2"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Probability Distributions", "Nonparametric Methods", "Natural Parameter", "Histogram Density Models", "Kernel Density Estimators", "Nearest-neighbours Method", "Gausian Kernel"]
 title = "Probability Distributions - Nonparametric Methods"
+slug = "pattern-recognition-chapter-2-probability-distributions_9"
 topics = ["Pattern Recognition"]
 
 +++

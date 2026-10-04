@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 4"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Linear Models", "Classification"]
 title = "Linear Models for Clasification - Discriminant Functions"
+slug = "pattern-recognition-chapter-4-linear-models-for-classification_1"
 topics = ["Pattern Recognition"]
 
 +++

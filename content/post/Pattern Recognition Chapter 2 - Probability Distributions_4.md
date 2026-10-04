@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 2"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Probability Distributions", "Gaussian Distribution", "Conditional Gaussian Distribution", "Precision Matrix", "Marginal Gaussian Distribution"]
 title = "Probability Distributions - The Gaussian Distribution: Part 2"
+slug = "pattern-recognition-chapter-2-probability-distributions_4"
 topics = ["Pattern Recognition"]
 
 +++

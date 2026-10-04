@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class="list-hero">
+  <div class="wrap">
+    <p class="kicker">Browse</p>
+    <h1 class="display-2">{{ if eq .Data.Plural "topics" }}Series &amp; topics{{ else }}All {{ .Title | lower }}{{ end }}</h1>
+    <p class="muted mono">{{ len .Data.Terms }} {{ .Data.Plural }}</p>
+  </div>
+</section>
+<section class="wrap section-tight">
+  <div class="chips big">
+    {{ range .Data.Terms.ByCount }}
+    <a class="tag" href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span class="count">{{ .Count }}</span></a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

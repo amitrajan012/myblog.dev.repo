@@ -5,6 +5,7 @@ description = "Pattern Recognition (Bishop): Chapter 8"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Graphical Models", "Inference", "Trees", "Factor Graphs", "Factor Node"]
 title = "Graphical Models - Inference in Graphical Models"
+slug = "pattern-recognition-chapter-8-graphical-models_4"
 topics = ["Pattern Recognition"]
 
 +++

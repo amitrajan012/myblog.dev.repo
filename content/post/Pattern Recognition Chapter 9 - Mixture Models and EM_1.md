@@ -5,6 +5,7 @@ description = "Pattern Recognition (Bishop): Chapter 9"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Mixture Models", "Expectation Maximization", "K-means Clustering", "Distortion Measure", "Image Segmentation", "Image Compression"]
 title = "Mixture Models and Expectation Maximization - K-means Clustering"
+slug = "pattern-recognition-chapter-9-mixture-models-and-em_1"
 topics = ["Pattern Recognition"]
 
 +++

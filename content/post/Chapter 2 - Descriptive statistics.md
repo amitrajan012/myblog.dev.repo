@@ -4,6 +4,7 @@ description = "Think Stats: Chapter 2"
 draft = false
 tags = ["Think Stats", "Mean", "Variance", "Distributions"]
 title = "Think Stats: Chapter 2"
+slug = "chapter-2-descriptive-statistics"
 topics = ["Think Stats"]
 
 +++

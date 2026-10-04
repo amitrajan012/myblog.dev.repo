@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 9"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Mixture Models", "Expectation Maximization", "Mixtures of Gaussians", "Complete Data", "K-means", "Bernoulli Distributions", "Latent Class Analysis", "Resposibility"]
 title = "Mixture Models and Expectation Maximization - An Alternative View of EM"
+slug = "pattern-recognition-chapter-9-mixture-models-and-em_3"
 topics = ["Pattern Recognition"]
 
 +++

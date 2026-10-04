@@ -1,0 +1,119 @@
+{{ define "main" }}
+{{- $_ := .Paginate (where site.RegularPages "Section" "post") -}}
+{{ $posts := (where site.RegularPages "Section" "post").ByDate.Reverse }}
+{{ $all := (where site.RegularPages "Section" "in" (slice "post" "book")).ByDate.Reverse }}
+{{ $latest := index $posts 0 }}
+
+<section class="hero grid-paper">
+  <div class="wrap hero-row">
+    <div class="hero-copy">
+      <p class="kicker accent">Machine Learning · Statistics · Linear Algebra</p>
+      <h1 class="display">Working notes on machine learning, <em>one chapter at a time.</em></h1>
+      <p class="lede">{{ site.Params.notebook.intro }}</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="#series">Browse the series
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-light" href="#notes">Latest notes</a>
+      </div>
+    </div>
+    {{ with $latest }}{{ $m := partial "meta.html" . }}
+    <a class="card latest" href="{{ .RelPermalink }}">
+      <div class="latest-top"><span class="kicker accent">Latest</span><time class="mono muted" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time></div>
+      <h2>{{ .Title }}</h2>
+      {{ with $m.line }}<p class="muted">{{ . }}</p>{{ end }}
+      <div class="chips">{{ range first 3 .Params.tags }}<span class="chip">{{ . }}</span>{{ end }}</div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+
+{{ if site.Params.book.enabled }}{{ with site.Data.book }}
+<section class="wrap section-tight" id="book">
+  <div class="book-band">
+    <div class="book-cover small" aria-hidden="true">
+      <span class="mono">Amit Rajan</span>
+      <span class="cover-title">{{ .title }}</span>
+      <span class="mono">{{ len .parts }} parts</span>
+    </div>
+    <div class="book-band-copy">
+      <p class="kicker book-kicker">The Book · writing in public</p>
+      <h2 class="display-2">{{ .pitch }}</h2>
+      <p>A book for curious readers who don’t speak fluent maths. I’m publishing it section by section as short posts — the maths lives in skippable “Under the Hood” boxes.</p>
+      <div class="actions">
+        <a class="btn btn-ivory" href="{{ "/book/" | relURL }}">See the contents</a>
+        {{ with first 1 (where site.RegularPages "Section" "book").ByDate.Reverse }}{{ range . }}<a class="btn btn-ghost" href="{{ .RelPermalink }}">Read the latest section</a>{{ end }}{{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}{{ end }}
+
+<section class="wrap section" id="series">
+  <div class="section-head">
+    <div>
+      <p class="kicker">01 — Series</p>
+      <h2 class="display-2">Read a book with me</h2>
+    </div>
+    <p class="muted">Each series follows one textbook in order. Start at chapter one, or jump to the topic you need.</p>
+  </div>
+  <div class="series-grid">
+    {{ range site.Data.series }}
+      {{ $s := . }}
+      {{ $sp := where site.RegularPages "Params.topics" "intersect" (slice .topic) }}
+      {{ $chs := slice }}
+      {{ range $sp }}{{ $m := partial "meta.html" . }}{{ with $m.chapter }}{{ $chs = $chs | append (int .) }}{{ end }}{{ end }}
+      {{ $chs = uniq $chs | sort }}
+      {{ $term := site.GetPage (printf "/topics/%s" (urlize .topic)) }}
+      <a class="card series-card" href="{{ with $term }}{{ .RelPermalink }}{{ end }}">
+        <div class="series-art" style="background:{{ .bg | safeCSS }}">{{ partial "series-icon.html" . }}</div>
+        <span class="series-label" style="color:{{ .color | safeCSS }}">{{ .label }}</span>
+        <h3>{{ .name }}</h3>
+        <p class="muted">{{ .blurb }}</p>
+        <div class="series-foot">
+          <div class="series-meta mono"><span>{{ len $sp }} notes{{ with $chs }} · Ch {{ index . 0 }}–{{ index . (sub (len .) 1) }}{{ end }}</span>{{ with $s.total }}<span>{{ len $chs }} / {{ . }}</span>{{ end }}</div>
+          {{ with $s.total }}<div class="bar"><div style="width:{{ math.Min 100 (div (mul (len $chs) 100.0) .) }}%;background:{{ $s.color | safeCSS }}"></div></div>{{ end }}
+        </div>
+      </a>
+    {{ end }}
+  </div>
+</section>
+
+<section class="wrap section notes-row" id="notes">
+  <div class="notes-main">
+    <p class="kicker">02 — Recent notes</p>
+    <h2 class="display-2">From the notebook</h2>
+    <div class="filters" role="group" aria-label="Filter by series" data-count="{{ site.Params.notebook.recentCount | default 12 }}">
+      <button type="button" class="pill is-on" data-filter="all" aria-pressed="true">All</button>
+      {{ if where site.RegularPages "Section" "book" }}<button type="button" class="pill" data-filter="book" aria-pressed="false">Book</button>{{ end }}
+      {{ range site.Data.series }}<button type="button" class="pill" data-filter="{{ urlize .short }}" aria-pressed="false">{{ .short }}</button>{{ end }}
+      <button type="button" class="pill" data-filter="other" aria-pressed="false">Other notes</button>
+    </div>
+    {{ $n := site.Params.notebook.recentCount | default 12 }}
+    <ol class="rows" id="note-list">
+      {{ range $i, $p := $all }}{{ partial "post-row.html" (dict "page" $p "extra" (ge $i $n)) }}{{ end }}
+    </ol>
+    <a class="more" href="{{ "/post/" | relURL }}">View the full archive ({{ len $posts }} notes)
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+
+  <aside class="notes-side" id="topics">
+    <div class="card pad">
+      <h2 class="h3">Topics</h2>
+      <p class="muted small">The most-used tags, grouped by subject. <a href="{{ "/tags/" | relURL }}">All tags →</a></p>
+      {{ range site.Data.topics }}
+      <div class="topic-group">
+        <p class="kicker">{{ .name }}</p>
+        <div class="chips">
+          {{ range .tags }}{{ with site.GetPage (printf "/tags/%s" (urlize .)) }}<a class="tag" href="{{ .RelPermalink }}">{{ .Title }} <span class="count">{{ len .Pages }}</span></a>{{ end }}{{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    <div class="about-card" id="about">
+      <p class="about-line">{{ site.Params.notebook.bio }}</p>
+      <p><a href="{{ "/about/" | relURL }}">More about me →</a></p>
+      {{ partial "social.html" . }}
+    </div>
+  </aside>
+</section>
+{{ end }}

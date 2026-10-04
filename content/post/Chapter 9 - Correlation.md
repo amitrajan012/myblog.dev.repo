@@ -4,6 +4,7 @@ description = "Think Stats: Chapter 9"
 draft = false
 tags = ["Think Stats", "Standard scores", "Covariance", "Correlation", "Spearman’s rank correlation", "Least squares fit", "Goodness of fit"]
 title = "Think Stats: Chapter 9"
+slug = "chapter-9-correlation"
 topics = ["Think Stats"]
 
 +++

@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 8"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Graphical Models", "Markov Random Fields", "Markov Network", "Undirected Graphical Model", "Clique", "Maximum Clique", "Image De-noising", "Moral Graph"]
 title = "Graphical Models - Markov Random Fields"
+slug = "pattern-recognition-chapter-8-graphical-models_3"
 topics = ["Pattern Recognition"]
 
 +++

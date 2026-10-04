@@ -1,0 +1,62 @@
+{{ define "bodyclass" }}page-note{{ end }}
+{{ define "main" }}
+{{ $m := partial "meta.html" . }}
+{{ $topic := $m.topic }}
+{{ $list := slice }}
+{{ if $topic }}{{ $list = (where (where site.RegularPages "Section" "post") "Params.topics" "intersect" (slice $topic)).ByDate }}{{ end }}
+{{ $idx := -1 }}
+{{ range $i, $p := $list }}{{ if eq $p.RelPermalink $.RelPermalink }}{{ $idx = $i }}{{ end }}{{ end }}
+{{ $siblings := slice }}
+{{ if $m.chapter }}{{ range $list }}{{ $pm := partial "meta.html" . }}{{ if eq $pm.chapter $m.chapter }}{{ $siblings = $siblings | append . }}{{ end }}{{ end }}{{ end }}
+{{ $accent := "#2F45C5" }}{{ with $m.series }}{{ $accent = .color }}{{ end }}
+
+<div class="progress" aria-hidden="true"><div id="progress-bar" style="background:{{ $accent | safeCSS }}"></div></div>
+
+<div class="wrap-wide note-layout">
+  <aside class="rail" aria-label="Series contents">
+    {{ with $m.series }}
+      <p class="kicker" style="color:{{ .color | safeCSS }}">{{ .label }}</p>
+      <p class="rail-title">{{ with $m.chapter }}Chapter {{ . }}{{ end }}{{ with $m.chapterName }} — {{ . }}{{ end }}{{ if not $m.chapter }}{{ .name }}{{ end }}</p>
+      {{ if gt (len $siblings) 1 }}
+      <ol class="rail-list">
+        {{ range $siblings }}
+        <li><a href="{{ .RelPermalink }}"{{ if eq .RelPermalink $.RelPermalink }} aria-current="page" style="border-color:{{ $accent | safeCSS }}"{{ end }}>{{ .Title }}</a></li>
+        {{ end }}
+      </ol>
+      {{ end }}
+      <div class="rail-more">
+        {{ with site.GetPage (printf "/topics/%s" (urlize $topic)) }}<a href="{{ .RelPermalink }}">All {{ len .Pages }} notes in this series →</a>{{ end }}
+      </div>
+    {{ else }}
+      <p class="kicker">Note</p>
+      <p class="rail-title">{{ with $topic }}{{ . }}{{ else }}Standalone{{ end }}</p>
+      {{ with $topic }}{{ with site.GetPage (printf "/topics/%s" (urlize .)) }}{{ if gt (len .Pages) 1 }}
+      <ol class="rail-list">{{ range first 8 .Pages.ByDate }}<li><a href="{{ .RelPermalink }}"{{ if eq .RelPermalink $.RelPermalink }} aria-current="page"{{ end }}>{{ .Title }}</a></li>{{ end }}</ol>
+      {{ end }}{{ end }}{{ end }}
+      <div class="rail-more"><a href="{{ "/post/" | relURL }}">Full archive →</a></div>
+    {{ end }}
+  </aside>
+
+  <article class="note">
+    <p class="meta mono">{{ with $m.line }}<span>{{ . }}</span> · {{ end }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Mon, 02 Jan 2006" }}</time> · {{ .ReadingTime }} min read</p>
+    <h1 class="note-title">{{ .Title }}</h1>
+    {{ with .Params.tags }}
+    <div class="chips">{{ range . }}{{ with site.GetPage (printf "/tags/%s" (urlize .)) }}<a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ end }}</div>
+    {{ end }}
+    <div class="prose">
+      {{ .Content }}
+    </div>
+
+    {{ if ge $idx 0 }}
+    <nav class="prevnext" aria-label="Series navigation">
+      {{ if gt $idx 0 }}{{ with index $list (sub $idx 1) }}
+      <a href="{{ .RelPermalink }}"><span class="mono muted">← Previous</span><span class="pn-title">{{ .Title }}</span></a>
+      {{ end }}{{ else }}<span></span>{{ end }}
+      {{ if lt $idx (sub (len $list) 1) }}{{ with index $list (add $idx 1) }}
+      <a class="pn-next" href="{{ .RelPermalink }}"><span class="mono muted">Next →</span><span class="pn-title">{{ .Title }}</span></a>
+      {{ end }}{{ end }}
+    </nav>
+    {{ end }}
+  </article>
+</div>
+{{ end }}

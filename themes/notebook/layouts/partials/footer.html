@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <span>© {{ now.Year }} Amit Rajan · Notes on machine learning</span>
+    <span class="footer-links">
+      {{ with site.Params.social }}
+      {{ with .github }}<a href="{{ . }}">GitHub</a>{{ end }}
+      {{ with .linkedin }}<a href="{{ . }}">LinkedIn</a>{{ end }}
+      {{ with .email }}<a href="mailto:{{ . }}">Email</a>{{ end }}
+      {{ end }}
+      <a href="{{ "/index.xml" | relURL }}">RSS</a>
+    </span>
+  </div>
+</footer>

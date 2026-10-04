@@ -4,6 +4,7 @@ description = "Linear Algebra (Gilbert Strang): Chapter 24"
 draft = false
 tags = ["Linear Algebra", "Determinant", "Gilbert Strang", "Eigenvalues", "Eigenvectors", "Positive Definite Matrices"]
 title = "Positive Definite Matrices"
+slug = "chapter-24-positive-definite-matrices-and-minima"
 topics = ["Linear Algebra"]
 
 +++

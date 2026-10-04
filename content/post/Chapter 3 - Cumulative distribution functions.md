@@ -4,6 +4,7 @@ description = "Think Stats: Chapter 3"
 draft = false
 tags = ["Think Stats", "PMF", "CDF", "Conditional Distribution"]
 title = "Think Stats: Chapter 3"
+slug = "chapter-3-cumulative-distribution-functions"
 topics = ["Think Stats"]
 
 +++

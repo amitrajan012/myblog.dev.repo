@@ -1,0 +1,37 @@
+{{ define "main" }}
+{{- $_ := .Paginate .Pages -}}{{- /* keeps legacy /page/1/ redirects working */ -}}
+{{ $series := dict }}
+{{ if eq .Data.Plural "topics" }}{{ range site.Data.series }}{{ if eq (urlize .topic) (urlize $.Title) }}{{ $series = . }}{{ end }}{{ end }}{{ end }}
+<section class="list-hero">
+  <div class="wrap">
+    {{ with $series }}
+      <p class="kicker" style="color:{{ .color | safeCSS }}">{{ .label }}</p>
+      <h1 class="display-2">{{ .name }}</h1>
+      <p class="lede">{{ .blurb }}</p>
+    {{ else }}
+      <p class="kicker">{{ with .Data.Singular }}{{ . | title }}{{ else }}Archive{{ end }}</p>
+      <h1 class="display-2">{{ if eq .Section "post" }}All notes{{ else }}{{ .Title }}{{ end }}</h1>
+    {{ end }}
+    <p class="muted mono">{{ len .Pages }} notes</p>
+  </div>
+</section>
+<section class="wrap section-tight">
+  {{ if $series }}
+    {{ $pages := .Pages.ByDate }}
+    {{ $groups := slice }}{{ $cur := "__" }}
+    {{ range $pages }}{{ $m := partial "meta.html" . }}{{ $k := $m.chapter | default "" }}{{ if ne $k $cur }}{{ $cur = $k }}{{ $groups = $groups | append (dict "ch" $k "name" $m.chapterName) }}{{ end }}{{ end }}
+    {{ range $groups }}
+      {{ $g := . }}
+      <h2 class="group-head">{{ with $g.ch }}Chapter {{ . }}{{ else }}Notes{{ end }}{{ with $g.name }} <span class="muted">— {{ . }}</span>{{ end }}</h2>
+      <ol class="rows">
+        {{ range $pages }}{{ $m := partial "meta.html" . }}{{ if eq ($m.chapter | default "") $g.ch }}{{ partial "post-row.html" (dict "page" .) }}{{ end }}{{ end }}
+      </ol>
+    {{ end }}
+  {{ else }}
+    {{ range .Pages.GroupByDate "2006" }}
+      <h2 class="group-head">{{ .Key }} <span class="muted mono small">{{ len .Pages }}</span></h2>
+      <ol class="rows">{{ range .Pages }}{{ partial "post-row.html" (dict "page" .) }}{{ end }}</ol>
+    {{ end }}
+  {{ end }}
+</section>
+{{ end }}

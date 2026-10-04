@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 2"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Probability Distributions", "Binary Variables", "Parametric Distribution", "Bernoulli Distribution", "Maximum Likelihood Estimator", "Binomial Distribution", "Beta Distribution", "Conjugate Prior"]
 title = "Probability Distributions - Binary Variables"
+slug = "pattern-recognition-chapter-2-probability-distributions_1"
 topics = ["Pattern Recognition"]
 
 +++

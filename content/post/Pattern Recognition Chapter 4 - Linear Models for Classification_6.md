@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 4"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Linear Models", "Classification", "Probabilistic Generative Models", "Class Priors", "Class-conditional Densities", "Logistic Sigmoid Function"]
 title = "Linear Models for Clasification - Probabilistic Generative Models"
+slug = "pattern-recognition-chapter-4-linear-models-for-classification_6"
 topics = ["Pattern Recognition"]
 
 +++

@@ -1,0 +1,11 @@
+{{- $p := .page -}}{{- $m := partial "meta.html" $p -}}
+<li class="row{{ with .extra }} is-extra{{ end }}" data-series="{{ if eq $p.Section "book" }}book{{ else }}{{ $m.key }}{{ end }}">
+  <a href="{{ $p.RelPermalink }}">
+    <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "02 Jan 06" }}</time>
+    <span class="row-main">
+      <span class="row-title">{{ $p.Title }}</span>
+      {{ with $m.line }}<span class="row-sub">{{ . }}</span>{{ end }}
+    </span>
+    {{ with $m.series }}<span class="chip" style="background:{{ .bg | safeCSS }};color:{{ .color | safeCSS }}">{{ .short }}</span>{{ else }}{{ if eq $p.Section "book" }}<span class="chip chip-book">Book</span>{{ else }}<span class="chip">Note</span>{{ end }}{{ end }}
+  </a>
+</li>

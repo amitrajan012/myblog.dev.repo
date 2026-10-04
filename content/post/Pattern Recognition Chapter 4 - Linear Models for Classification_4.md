@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 4"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Linear Models", "Classification", "Fisher’s Linear Discriminant", "Least Squares"]
 title = "Linear Models for Clasification - Fisher’s Linear Discriminant"
+slug = "pattern-recognition-chapter-4-linear-models-for-classification_4"
 topics = ["Pattern Recognition"]
 
 +++

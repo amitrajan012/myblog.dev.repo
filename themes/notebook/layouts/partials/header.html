@@ -1,0 +1,16 @@
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="{{ "/" | relURL }}">
+      <span class="brand-mark" aria-hidden="true">ar</span>
+      <span class="brand-name">{{ site.Title }}</span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      {{ if site.Params.book.enabled }}<a class="nav-book{{ if eq .Section "book" }} is-active{{ end }}" href="{{ "/book/" | relURL }}">The Book</a>{{ end }}
+      <a href="{{ "/post/" | relURL }}"{{ if eq .Section "post" }} class="is-active"{{ end }}>Notes</a>
+      <a href="{{ "/#series" | relURL }}">Series</a>
+      <a href="{{ "/tags/" | relURL }}"{{ if eq .Type "tags" }} class="is-active"{{ end }}>Topics</a>
+      <a href="{{ "/about/" | relURL }}"{{ if eq .RelPermalink "/about/" }} class="is-active"{{ end }}>About</a>
+    </nav>
+  </div>
+</header>

@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 3"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Linear Models", "Basis Function", "Geometry of Least Squares", "Sequential Learning", "Regularized Least Squares", "Parameter Shrinkage", ""]
 title = "Linear Models for Regression - Linear Basis Function Models : Part 2"
+slug = "pattern-recognition-chapter-3-linear-models-for-regression_2"
 topics = ["Pattern Recognition"]
 
 +++

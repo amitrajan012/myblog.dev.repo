@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 1"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Joint Probability", "Marginal Probability", "Conditional Probability", "Bayes Rule", "Prior Probability", "Posterior Probability", "Probability Desnities", "Cumulative Distribution Function", "Expectations", "Covariances", "Bayesian Probabilities", "Likelihood Function", "Gaussian Distribution", "Precision", "IID Samples", "Maximum Likelihood Estimator"]
 title = "Introduction - Probability Theory"
+slug = "pattern-recognition-chapter-1-introduction_2"
 topics = ["Pattern Recognition"]
 
 +++

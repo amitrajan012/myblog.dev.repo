@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 5"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Neural Networks", "Feed-forward Network", "Mixture Density Networks", "Bayesian Neural Networks"]
 title = "Neural Networks - Mixture Density Networks & Bayesian Neural Networks"
+slug = "pattern-recognition-chapter-5-neural-networks_6"
 topics = ["Pattern Recognition"]
 
 +++

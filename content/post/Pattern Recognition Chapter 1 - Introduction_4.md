@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 1"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Decision Theory", "Misclassification Rate", "Expected Loss", "Loss Function", "Utility Function", "Reject Option", "Reject Region", "Inference", "Discriminant Function", "Generative Models", "Discriminative Models", "Minkowski Loss"]
 title = "Introduction - Decision Theory"
+slug = "pattern-recognition-chapter-1-introduction_4"
 topics = ["Pattern Recognition"]
 
 +++

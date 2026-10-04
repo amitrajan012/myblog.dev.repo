@@ -4,6 +4,7 @@ description = "Linear Algebra (Gilbert Strang): Chapter 27"
 draft = false
 tags = ["Linear Algebra", "Determinant", "Gilbert Strang", "Eigenvalues", "Eigenvectors", "Linear Transformations", "Change of Basis", "Image Compression", "Fourier Basis", "Wavelet Basis"]
 title = "Linear Transformations, Change of Basis and Image Compression"
+slug = "chapter-27-linear-transformations-and-their-matrices-change-of-basis-and-image-compression"
 topics = ["Linear Algebra"]
 
 +++

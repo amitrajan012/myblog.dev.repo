@@ -1,8 +1,15 @@
 baseurl = "https://amitrajan012.github.io"
 title = "Amit Rajan"
-theme = "hugo-theme-cleanwhite"
+theme = "notebook"   # previous theme: "hugo-theme-cleanwhite"
 languageCode = "en-us"
-paginate = 5000 #frontpage pagination
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  topic = "topics"
+
+[pagination]
+  pagerSize = 5000 # frontpage pagination (replaces removed `paginate`)
 
 [markup]
   [markup.goldmark]
@@ -15,7 +22,7 @@ paginate = 5000 #frontpage pagination
   slogan = "Machine Learning | Blockchain"
   SEOTitle = "Amit Rajan Blog"
   keyword = "Amit, Rajan, ML, Data, Science, Blockchain"
- 
+
   # Sidebar settings
   sidebar_about_description = "Data Scientist, Reader"
   sidebar_avatar = "img/a.png"
@@ -31,10 +38,20 @@ paginate = 5000 #frontpage pagination
 
   [[params.addtional_menus]]
   title =  "ABOUT"
-  href =  "/top/about/"
+  href =  "/about/"
 
   [params.social]
   rss            = true
   email          = "amitrajan012@gmail.com"
   linkedin       = "https://www.linkedin.com/in/amit-rajan-1343aaba/"
   github         = "https://github.com/amitrajan012"
+
+# ---- notebook theme ----
+[params.notebook]
+  intro = "I’m Amit — a data scientist and a reader. These are my chapter-by-chapter notes on the textbooks behind modern ML: Bishop, Strang, ISLR and Think Stats, with the derivations written out in full."
+  bio = "Data scientist, reader, and occasional blockchain tinkerer."
+  recentCount = 12
+
+[params.book]
+  # Set to true once data/book.yaml has your real title and contents.
+  enabled = true

@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 9"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Mixture Models", "Expectation Maximization", "Mixtures of Gaussians", "Gaussian Distribution", "Maximum Likelihood"]
 title = "Mixture Models and Expectation Maximization - Mixtures of Gaussians"
+slug = "pattern-recognition-chapter-9-mixture-models-and-em_2"
 topics = ["Pattern Recognition"]
 
 +++

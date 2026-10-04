@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 7"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Kernel Methods", "Maximum Margin Classifiers", "Lagrange Multipliers", "Dual Representation", "KKT Condition", "Support Vectors"]
 title = "Sparse Kernel Methods - Maximum Margin Classifiers"
+slug = "pattern-recognition-chapter-7-sparse-kernel-machines_2"
 topics = ["Pattern Recognition"]
 
 +++

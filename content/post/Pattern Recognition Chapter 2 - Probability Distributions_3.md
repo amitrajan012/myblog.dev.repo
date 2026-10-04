@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 2"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Probability Distributions", "Gaussian Distribution", "Central Limit Theorem", "Quadratic Form", "Normalization Coefficient", "Mahalnobis Distance", "Second Order Moment", "Conditional Gaussian Distribution", "Precision Matrix", "Marginal Gaussian Distribution", "Student’s t-distribution", "Sequential Estimation", "Maximum Likelihood for the Gaussian", "Bayes’ Theorem for Gaussian Variables", "Degree of Freedom", "Periodic Variables", "von Mises Distribution", "Mixtures of Gaussians", "Conjugate Prior"]
 title = "Probability Distributions - The Gaussian Distribution: Part 1"
+slug = "pattern-recognition-chapter-2-probability-distributions_3"
 topics = ["Pattern Recognition"]
 
 +++

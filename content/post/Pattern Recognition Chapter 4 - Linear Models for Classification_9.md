@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 4"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Linear Models", "Classification", "Laplace Approximation", "Model Comparison", "BIC", "Occam factor", "Bayesian Logistic Regression"]
 title = "Linear Models for Clasification - The Laplace Approximation & Bayesian Logistic Regression"
+slug = "pattern-recognition-chapter-4-linear-models-for-classification_9"
 topics = ["Pattern Recognition"]
 
 +++

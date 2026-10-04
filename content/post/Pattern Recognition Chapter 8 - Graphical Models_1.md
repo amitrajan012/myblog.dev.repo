@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 8"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Graphical Models", "Bayesian Networks", "Directed Graphical Models", "Markov Random Fields", "Polynomial Regression", "Observed Random Variables", "Latent Variable", "Generative Models", "Discrete Variables", "Linear-Gaussian Models"]
 title = "Graphical Models - Bayesian Networks"
+slug = "pattern-recognition-chapter-8-graphical-models_1"
 topics = ["Pattern Recognition"]
 
 +++

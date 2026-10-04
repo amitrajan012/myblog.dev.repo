@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 5"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Neural Networks", "Feed-forward Network", "Activation Function"]
 title = "Neural Networks - Feed-forward Network Functions"
+slug = "pattern-recognition-chapter-5-neural-networks_1"
 topics = ["Pattern Recognition"]
 
 +++

@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 8"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Graphical Models", "Conditional Independence", "D-Separation", "Directed Factorization", "Markov Blanket"]
 title = "Graphical Models - Conditional Independence"
+slug = "pattern-recognition-chapter-8-graphical-models_2"
 topics = ["Pattern Recognition"]
 
 +++

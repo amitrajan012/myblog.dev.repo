@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 4"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Linear Models", "Classification", "Least Squares"]
 title = "Linear Models for Clasification - Least Squares for Classification"
+slug = "pattern-recognition-chapter-4-linear-models-for-classification_3"
 topics = ["Pattern Recognition"]
 
 +++

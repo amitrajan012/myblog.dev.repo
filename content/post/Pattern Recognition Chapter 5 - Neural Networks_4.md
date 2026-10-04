@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 5"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Neural Networks", "Feed-forward Network", "Hessian Matrix", "Diagonal Approximation", "Outer Product Approximation"]
 title = "Neural Networks - The Hessian Matrix"
+slug = "pattern-recognition-chapter-5-neural-networks_4"
 topics = ["Pattern Recognition"]
 
 +++

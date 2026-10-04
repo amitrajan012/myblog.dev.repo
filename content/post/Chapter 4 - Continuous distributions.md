@@ -4,6 +4,7 @@ description = "Think Stats: Chapter 4"
 draft = false
 tags = ["Think Stats", "Normal Distribution", "Exponential Distribution", "LogNormal Distribution"]
 title = "Think Stats: Chapter 4"
+slug = "chapter-4-continuous-distributions"
 topics = ["Think Stats"]
 
 +++

@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 6"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Linear Models", "Gaussian Process", "Gram Matrix", "Automatic Relevance Determination"]
 title = "Kernel Methods - Gaussian Process"
+slug = "pattern-recognition-chapter-6-kernel-methods_3"
 topics = ["Pattern Recognition"]
 
 +++

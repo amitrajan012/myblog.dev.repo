@@ -4,6 +4,7 @@ description = "Linear Algebra (Gilbert Strang): Chapter 26"
 draft = false
 tags = ["Linear Algebra", "Determinant", "Gilbert Strang", "Eigenvalues", "Eigenvectors", "Singular Value Decomposition"]
 title = "Singular Value Decomposition"
+slug = "chapter-26-singular-value-decomposition"
 topics = ["Linear Algebra"]
 
 +++

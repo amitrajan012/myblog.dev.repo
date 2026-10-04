@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 3"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Linear Models", "Bayesian Model Comparison", "Bayes Factor", "Model Selection"]
 title = "Linear Models for Regression - Bayesian Model Comparison"
+slug = "pattern-recognition-chapter-3-linear-models-for-regression_5"
 topics = ["Pattern Recognition"]
 
 +++

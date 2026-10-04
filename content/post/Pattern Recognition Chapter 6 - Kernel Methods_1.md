@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 6"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Linear Models", "Dual Representations", "Kernel Function", "Design Matrix"]
 title = "Kernel Methods - Dual Representations"
+slug = "pattern-recognition-chapter-6-kernel-methods_1"
 topics = ["Pattern Recognition"]
 
 +++

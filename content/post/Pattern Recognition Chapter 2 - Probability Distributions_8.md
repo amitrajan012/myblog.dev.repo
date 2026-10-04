@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 2"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Probability Distributions", "Exponential Family", "Natural Parameter", "Bernoulli Distribution", "Logistic Sigmoid Function", "Multinomial Distribution", "Softmax Function", "Noninformative Priors"]
 title = "Probability Distributions - The Exponential Family"
+slug = "pattern-recognition-chapter-2-probability-distributions_8"
 topics = ["Pattern Recognition"]
 
 +++

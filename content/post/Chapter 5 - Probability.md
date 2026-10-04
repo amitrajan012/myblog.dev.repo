@@ -4,6 +4,7 @@ description = "Think Stats: Chapter 5"
 draft = false
 tags = ["Think Stats", "Probability", "Monty Hall Problem", "Binomial Distribution", "Bayes's Theorem"]
 title = "Think Stats: Chapter 5"
+slug = "chapter-5-probability"
 topics = ["Think Stats"]
 
 +++

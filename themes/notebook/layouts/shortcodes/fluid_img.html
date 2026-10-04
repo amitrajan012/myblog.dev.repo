@@ -1,0 +1,6 @@
+{{- /* Kept from the previous theme so existing posts render unchanged. */ -}}
+{{ if .IsNamedParams }}
+<figure class="fig"><img src="{{ .Get "src" }}" alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}" loading="lazy">{{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}</figure>
+{{ else }}
+<figure class="fig"><img src="{{ index .Params 0 }}" alt="" loading="lazy"></figure>
+{{ end }}

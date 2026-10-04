@@ -1,0 +1,4 @@
+name = "notebook"
+license = "MIT"
+description = "A reading-first theme for chapter-by-chapter study notes and a book written in public."
+min_version = "0.128.0"

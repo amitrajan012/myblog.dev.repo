@@ -4,6 +4,7 @@ description = "Think Stats: Chapter 6"
 draft = false
 tags = ["Think Stats", "Skewness", "Random Variables", "Convolution", "Central limit Theorem"]
 title = "Think Stats: Chapter 6"
+slug = "chapter-6-operations-on-distributions"
 topics = ["Think Stats"]
 
 +++

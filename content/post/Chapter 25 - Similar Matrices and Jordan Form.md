@@ -4,6 +4,7 @@ description = "Linear Algebra (Gilbert Strang): Chapter 25"
 draft = false
 tags = ["Linear Algebra", "Determinant", "Gilbert Strang", "Eigenvalues", "Eigenvectors", "Similar Matrices", "Jordan Block"]
 title = "Similar Matrices"
+slug = "chapter-25-similar-matrices-and-jordan-form"
 topics = ["Linear Algebra"]
 
 +++

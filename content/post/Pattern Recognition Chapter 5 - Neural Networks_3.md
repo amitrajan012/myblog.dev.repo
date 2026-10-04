@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 5"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Neural Networks", "Feed-forward Network", "Network Training", "Error Backpropagation", "Jacobian Matrix"]
 title = "Neural Networks - Error Backpropagation"
+slug = "pattern-recognition-chapter-5-neural-networks_3"
 topics = ["Pattern Recognition"]
 
 +++

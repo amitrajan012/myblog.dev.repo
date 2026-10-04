@@ -1,0 +1,2 @@
+{{- /* Usage: {{< problem >}}The problem this idea exists to solve.{{< /problem >}} */ -}}
+<aside class="problem"><p class="kicker">{{ .Get "label" | default "The problem first" }}</p>{{ .Inner | .Page.RenderString (dict "display" "block") }}</aside>

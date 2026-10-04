@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 1"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Polynomial Curve Fitting", "Polynomial Fuction", "Overfitting", "Regularization", "Shrinkage Method", "Ridge Regression"]
 title = "Introduction - Polynomial Curve Fitting"
+slug = "pattern-recognition-chapter-1-introduction_1"
 topics = ["Pattern Recognition"]
 
 +++

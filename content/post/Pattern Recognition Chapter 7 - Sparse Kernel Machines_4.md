@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 7"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Kernel Methods", "Maximum Margin Classifiers", "Lagrange Multipliers", "Logistic Regression", "Slack Variables", "Support Vectors", "Hinge Error", "Multiclass SVMs", "SVMs for Regression"]
 title = "Sparse Kernel Methods - Maximum Margin Classifiers: Relation to Logistic Regression, Multiclass SVMs, SVMs for Regression"
+slug = "pattern-recognition-chapter-7-sparse-kernel-machines_4"
 topics = ["Pattern Recognition"]
 
 +++

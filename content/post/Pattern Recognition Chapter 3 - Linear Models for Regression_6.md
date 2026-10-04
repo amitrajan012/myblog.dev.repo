@@ -4,6 +4,7 @@ description = "Pattern Recognition (Bishop): Chapter 3"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Linear Models", "Evidence Approximation", "Fixed Basis Functions"]
 title = "Linear Models for Regression - Evidence Approximation & Limitations of Fixed Basis Function"
+slug = "pattern-recognition-chapter-3-linear-models-for-regression_6"
 topics = ["Pattern Recognition"]
 
 +++

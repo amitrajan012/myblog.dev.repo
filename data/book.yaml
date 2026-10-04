@@ -1,0 +1,51 @@
+# The Book — replace the [placeholders] with your real title and contents.
+# status: published | drafting | planned
+title: "[Book title]"
+subtitle: "[Subtitle]"
+pitch: "Machine learning, explained from the why up."
+intro: "I found ISLR and ESL hard going the first time. This is the book I wanted then — for readers who are curious and sharp, but don’t think in equations. Each section appears here first as a short post."
+parts:
+  - title: "[Part I title]"
+    chapters:
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+  - title: "[Part II title]"
+    chapters:
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+  - title: "[Part III title]"
+    chapters:
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+  - title: "[Part IV title]"
+    chapters:
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+  - title: "[Part V title]"
+    chapters:
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+  - title: "[Part VI title]"
+    chapters:
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+  - title: "[Part VII title]"
+    chapters:
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }
+      - { title: "[Chapter title]", status: planned }

@@ -1,0 +1,9 @@
+# Home-page topic groups. Each tag must match a tag name used in posts.
+- name: Probability
+  tags: [Probability Distributions, Gaussian Distribution, Bernoulli Distribution, Binomial Distribution, Conjugate Prior, Random Variables]
+- name: Linear algebra
+  tags: [Determinant, Eigenvalues, Eigenvectors, Least Squares, Eigenvalue Decomposition, Singular Value Decomposition]
+- name: Models
+  tags: [Linear Models, Classification, Neural Networks, Support Vector Machines, Kernel Methods, Graphical Models, Mixture Models, Tree-Based Methods]
+- name: Inference
+  tags: [Hypothesis Testing, Confidence Intervals, Resampling, Regularization, Expectation Maximization, Model Selection]
