@@ -35,44 +35,34 @@
   </div>
 </section>
 
-{{ $total := 0 }}{{ range $b.parts }}{{ $total = add $total (len .chapters) }}{{ end }}
+{{ $total := 0 }}{{ range $b.parts }}{{ range .chapters }}{{ if .number }}{{ $total = add $total 1 }}{{ end }}{{ end }}{{ end }}
+{{ $drafted := 0 }}{{ range $b.parts }}{{ range .chapters }}{{ if and .number (eq .status "drafted") }}{{ $drafted = add $drafted 1 }}{{ end }}{{ end }}{{ end }}
 <section class="wrap section contents" id="contents">
   <div class="contents-side">
     <p class="kicker">Contents</p>
     <h2 class="display-2">{{ len $b.parts }} parts, {{ $total }} chapters</h2>
-    <p class="muted">Chapters light up as their section posts go live.</p>
+    <p class="muted">{{ $drafted }} of {{ $total }} chapters drafted. Open a chapter to see its sections. Chapters link to the blog once their section posts go live.</p>
     <ul class="legend">
-      <li><span class="dot dot-published"></span>Published</li>
-      <li><span class="dot dot-drafting"></span>Drafting</li>
+      <li><span class="dot dot-published"></span>Published on the blog</li>
+      <li><span class="dot dot-drafted"></span>Drafted</li>
       <li><span class="dot dot-planned"></span>Planned</li>
     </ul>
   </div>
   <div class="contents-list">
-    {{ $n := 0 }}
     {{ range $i, $part := $b.parts }}
     <details class="part"{{ if eq $i 0 }} open{{ end }}>
       <summary>
         <span class="mono book-ink part-num">Part {{ add $i 1 }}</span>
         <span class="part-title">{{ $part.title }}</span>
-        <span class="mono muted">{{ len $part.chapters }} ch.</span>
+        <span class="mono muted">{{ len (where $part.chapters "number" "!=" nil) }} ch.</span>
         <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
       </summary>
       <ol class="chapters">
-        {{ range $part.chapters }}
-          {{ $n = add $n 1 }}
-          {{ $first := index (where $sections "Params.chapter" $n).ByWeight 0 }}
-          {{ $status := .status | default "planned" }}
-          <li>
-            {{ if $first }}<a class="chapter" href="{{ $first.RelPermalink }}">{{ else }}<span class="chapter">{{ end }}
-              <span class="mono muted">{{ printf "%02d" $n }}</span>
-              <span class="ch-title">{{ .title }}</span>
-              <span class="ch-status mono"><span class="dot dot-{{ $status }}"></span>{{ $status | title }}</span>
-            {{ if $first }}</a>{{ else }}</span>{{ end }}
-          </li>
-        {{ end }}
+        {{ range $part.chapters }}{{ partial "book-chapter.html" (dict "ch" . "sections" $sections) }}{{ end }}
       </ol>
     </details>
     {{ end }}
+    {{ with $b.epilogue }}<ol class="chapters chapters-solo">{{ partial "book-chapter.html" (dict "ch" . "sections" $sections) }}</ol>{{ end }}
   </div>
 </section>
 {{ end }}

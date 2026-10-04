@@ -3,8 +3,8 @@
 {{/* Front matter: part (int), chapter (int), section ("4.2"), weight (order), subtitle (one-line promise) */}}
 {{ $b := site.Data.book }}
 {{ $ch := .Params.chapter }}
-{{ $chTitle := "" }}{{ $partNo := 0 }}{{ $n := 0 }}
-{{ range $i, $part := $b.parts }}{{ range $part.chapters }}{{ $n = add $n 1 }}{{ if eq $n $ch }}{{ $chTitle = .title }}{{ $partNo = add $i 1 }}{{ end }}{{ end }}{{ end }}
+{{ $chTitle := "" }}{{ $partNo := 0 }}
+{{ range $i, $part := $b.parts }}{{ range $part.chapters }}{{ if eq .number $ch }}{{ $chTitle = .title }}{{ $partNo = add $i 1 }}{{ end }}{{ end }}{{ end }}
 {{ $secs := (where (where site.RegularPages "Section" "book") "Params.chapter" $ch).ByWeight }}
 {{ $idx := -1 }}{{ range $i, $p := $secs }}{{ if eq $p.RelPermalink $.RelPermalink }}{{ $idx = $i }}{{ end }}{{ end }}
 <div class="progress" aria-hidden="true"><div id="progress-bar" style="background:#0F766E"></div></div>

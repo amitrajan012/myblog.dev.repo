@@ -1,0 +1,31 @@
+{{- $c := .ch -}}
+{{- $posts := slice -}}
+{{- if $c.number }}{{ $posts = (where .sections "Params.chapter" $c.number).ByWeight }}{{ end -}}
+{{- $status := $c.status | default "planned" -}}
+{{- if $posts }}{{ $status = "published" }}{{ end -}}
+<li class="ch-item">
+  <details class="chapter-d">
+    <summary class="chapter">
+      <span class="mono muted">{{ with $c.number }}{{ printf "%02d" . }}{{ else }}{{ substr $c.label 0 1 }}{{ end }}</span>
+      <span class="ch-title">{{ with $c.label }}<span class="ch-label">{{ . }} · </span>{{ end }}{{ $c.title }}</span>
+      <span class="ch-status mono"><span class="dot dot-{{ $status }}"></span>{{ $status | title }}</span>
+    </summary>
+    <div class="ch-body">
+      {{ with $c.summary }}<p class="ch-summary">{{ . }}</p>{{ end }}
+      {{ with $c.sections }}
+      <ol class="secs">
+        {{ range . }}
+        <li>
+          <span class="mono sec-num">{{ .num }}</span>
+          <span class="sec-main">
+            <span class="sec-title">{{ .title }}</span>
+            {{ with .subs }}<span class="sec-subs">{{ delimit . " · " }}</span>{{ end }}
+          </span>
+        </li>
+        {{ end }}
+      </ol>
+      {{ end }}
+      {{ if $posts }}<a class="ch-read" href="{{ (index $posts 0).RelPermalink }}">Read this chapter on the blog →</a>{{ else if eq $status "planned" }}<p class="ch-note">Planned sections — from the working outline.</p>{{ end }}
+    </div>
+  </details>
+</li>

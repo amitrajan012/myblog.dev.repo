@@ -212,17 +212,32 @@ a.card:hover{border-color:var(--ink);color:var(--ink)}
 .legend li{display:flex;align-items:center;gap:10px}
 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;flex:0 0 auto}
 .dot-published{background:var(--book)}
-.dot-drafting{border:2px solid var(--book)}
+.dot-drafted{border:2px solid var(--book)}
 .dot-planned{background:#D6D6D0}
 .part{border-bottom:1px solid var(--rule)}
 .part summary{list-style:none;display:flex;align-items:center;gap:20px;padding:22px 0;min-height:44px;cursor:pointer}
 .part summary::-webkit-details-marker{display:none}
 .part-num{width:64px;flex:0 0 auto;font-size:13px}
 .part-title{flex:1 1 auto;font-family:var(--serif);font-size:24px}
-.part .mono.muted{font-size:12px}
+.part .mono.muted{font-size:12px;white-space:nowrap}
 .chev{transition:transform .2s;color:var(--ink-2)}
 .part[open] .chev{transform:rotate(180deg)}
 .chapters{list-style:none;margin:0;padding:0 0 18px 84px}
+.chapters-solo{padding:0;border-bottom:1px solid var(--rule)}
+.chapter-d>summary{list-style:none;cursor:pointer;display:grid}
+.chapter-d>summary::-webkit-details-marker{display:none}
+.chapter-d>summary:hover .ch-title{color:var(--book)}
+.chapter-d[open]>summary .ch-title{font-weight:600}
+.ch-label{color:var(--book);font-weight:500}
+.ch-body{padding:4px 0 18px 54px}
+.ch-summary{margin:0 0 12px;font-size:15px;line-height:1.55;color:var(--ink-2)}
+.secs{list-style:none;margin:0;padding:0}
+.secs li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;padding:7px 0}
+.sec-num{font-size:12px;color:var(--book);padding-top:3px}
+.sec-title{display:block;font-size:15px;line-height:1.4}
+.sec-subs{display:block;margin-top:3px;font-size:13px;line-height:1.5;color:var(--muted)}
+.ch-read{display:inline-flex;margin-top:10px;min-height:44px;align-items:center;font-weight:500}
+.ch-note{margin:8px 0 0;font-size:13px;color:var(--muted);font-style:italic}
 .chapter{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 0;color:var(--ink);border-top:1px solid #F0F0EB}
 .chapter .mono{font-size:13px}
 a.chapter:hover .ch-title{color:var(--book)}
@@ -270,6 +285,7 @@ a.chapter:hover .ch-title{color:var(--book)}
   .rail{position:static;max-width:none;max-height:none;order:2;padding-top:32px;border-top:1px solid var(--rule)}
   .note-layout{gap:0}
   .chapters{padding-left:0}
+  .ch-body{padding-left:0}
   .part summary{gap:12px}
   .part-num{width:auto}
   .prose{font-size:18px}
