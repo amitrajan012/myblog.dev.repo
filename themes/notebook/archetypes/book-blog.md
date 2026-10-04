@@ -2,8 +2,8 @@
 title = "{{ replace .File.ContentBaseName "-" " " | title }}"
 date = {{ .Date }}
 draft = true
-# kind: "concept" (one idea explained on its own) or "excerpt" (a section from the manuscript)
-kind = "concept"
+# postkind: "concept" (one idea explained on its own) or "excerpt" (a section from the manuscript)
+postkind = "concept"
 subtitle = "One sentence: the question this post answers."
 # Optional — link the post to its place in the book:
 # chapter = 6

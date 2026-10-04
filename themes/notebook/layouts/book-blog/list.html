@@ -19,7 +19,7 @@
     <button type="button" class="pill" data-filter="excerpt" aria-pressed="false">From the manuscript</button>
   </div>
   <ol class="rows" id="note-list">
-    {{ range $pages }}{{ $kind := .Params.kind | default "concept" }}
+    {{ range $pages }}{{ $kind := .Params.postkind | default "concept" }}
     <li class="row" data-series="{{ $kind }}">
       <a href="{{ .RelPermalink }}">
         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 06" }}</time>

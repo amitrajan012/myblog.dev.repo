@@ -1,7 +1,7 @@
 {{ define "bodyclass" }}page-book{{ end }}
 {{ define "main" }}
-{{/* Front matter: kind ("concept" | "excerpt"), subtitle, optional chapter (int) and section ("6.5"). */}}
-{{ $kind := .Params.kind | default "concept" }}
+{{/* Front matter: postkind ("concept" | "excerpt"), subtitle, optional chapter (int) and section ("6.5"). */}}
+{{ $kind := .Params.postkind | default "concept" }}
 {{ $chref := partial "book-chref.html" . }}
 {{ $all := (where site.RegularPages "Section" "book-blog").ByDate }}
 {{ $idx := -1 }}{{ range $i, $p := $all }}{{ if eq $p.RelPermalink $.RelPermalink }}{{ $idx = $i }}{{ end }}{{ end }}

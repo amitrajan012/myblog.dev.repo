@@ -1,4 +1,4 @@
-{{- $kind := .Params.kind | default "concept" -}}
+{{- $kind := .Params.postkind | default "concept" -}}
 <a class="card bb-card" href="{{ .RelPermalink }}">
   <span class="bb-kind bb-kind-{{ $kind }}">{{ partial "book-kind.html" . }}</span>
   <h3>{{ .Title }}</h3>
