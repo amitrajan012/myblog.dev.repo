@@ -1,0 +1,24 @@
+{{- /* One-line description for search results and link previews (~155 chars). */ -}}
+{{- $d := "" -}}
+{{- $clean := "" -}}
+{{- if .IsPage -}}
+  {{- $clean = .Plain | plainify | htmlUnescape | replaceRE `\$\$[\s\S]*?\$\$` " " | replaceRE `\$[^$\n]*\$` " " | replaceRE `^\s*[\d.]+\s+` "" | replaceRE `\s+` " " | strings.TrimSpace -}}
+{{- end -}}
+{{- if .IsHome -}}
+  {{- $d = "Amit Rajan's ML notebook: chapter-by-chapter notes and derivations on Bishop, Strang, ISLR and Think Stats, plus the book Counting to Intelligence." -}}
+{{- else if eq .Section "book-blog" -}}
+  {{- $d = .Params.subtitle | default $clean -}}
+{{- else if eq .Section "post" -}}
+  {{- $m := partial "meta.html" . -}}
+  {{- $lead := "" -}}{{- with $m.line }}{{ $lead = printf "%s. " . }}{{ end -}}
+  {{- $d = printf "%s%s" $lead $clean -}}
+{{- else if and (eq .Section "book") (not .IsPage) -}}
+  {{- with site.Data.book }}{{ $d = printf "%s: %s. %s" .title .subtitle .tagline }}{{ end -}}
+{{- else if .Params.description -}}
+  {{- $d = .Params.description -}}
+{{- else if .Data.Singular -}}
+  {{- $d = printf "Notes tagged %s on Amit Rajan's machine learning notebook." .Title -}}
+{{- else -}}
+  {{- $d = "Working notes on machine learning, one chapter at a time." -}}
+{{- end -}}
+{{- return ($d | truncate 158) -}}

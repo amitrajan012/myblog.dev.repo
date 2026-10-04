@@ -3,8 +3,16 @@ title = "Amit Rajan"
 theme = "notebook"   # previous theme: "hugo-theme-cleanwhite"
 languageCode = "en-us"
 
+enableRobotsTXT = true
+
+[outputFormats.llms]
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  notAlternative = true
+
 [outputs]
-  home = ["HTML", "RSS", "JSON"]   # index.json powers the site search
+  home = ["HTML", "RSS", "JSON", "llms"]   # index.json powers site search; llms.txt is a plain-text map for AI tools
 
 [taxonomies]
   tag = "tags"
@@ -53,8 +61,16 @@ languageCode = "en-us"
   linkedin       = "https://www.linkedin.com/in/amit-rajan-1343aaba/"
   github         = "https://github.com/amitrajan012"
 
+# ---- search engines ----
+# Paste the codes from Google Search Console / Bing Webmaster Tools ("HTML tag" verification).
+[params.verification]
+  google = ""
+  bing = ""
+
 # ---- notebook theme ----
 [params.notebook]
+  author = "Amit Rajan"
+  jobTitle = "Head of Engineering"
   intro = "I’m Amit—Head of Engineering, currently leading the build of an agentic AI platform that reads, understands and validates documents at enterprise scale. My background is in ML and data science, and these pages contain my chapter-by-chapter notes and complete derivations for the foundational textbooks behind modern AI: Bishop, Strang, ISLR, and Think Stats."
   introBook = "Currently, I’m turning these working notes into my own book, [Counting to Intelligence](/book/)."
   bio = "Head of Engineering, leading the build of an agentic AI platform that reads, understands and validates documents at enterprise scale — teams of AI agents doing work that once took whole back offices. Before that, I spent years in the weeds as a machine learning engineer and data scientist."

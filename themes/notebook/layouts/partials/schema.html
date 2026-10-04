@@ -1,0 +1,20 @@
+{{- /* Structured data (JSON-LD) so search engines and AI tools know what each page is. */ -}}
+{{- $person := dict "@type" "Person" "@id" (printf "%s#person" site.BaseURL) "name" (site.Params.notebook.author | default site.Title) "url" (absURL "/about/") "jobTitle" site.Params.notebook.jobTitle "sameAs" (slice site.Params.social.github site.Params.social.linkedin) "knowsAbout" (slice "Machine learning" "Data science" "Statistics" "Linear algebra" "Agentic AI" "Document processing") -}}
+{{- $book := dict -}}
+{{- with site.Data.book }}{{ $book = dict "@type" "Book" "@id" (absURL "/book/#book") "name" .title "alternativeHeadline" .subtitle "description" (.about | plainify) "author" (dict "@id" (printf "%s#person" site.BaseURL)) "url" (absURL "/book/") "image" (absURL "img/og/og-book.png") "inLanguage" "en" }}{{ end -}}
+{{- $graph := slice -}}
+{{- if .IsHome -}}
+  {{- $graph = $graph | append (dict "@type" "WebSite" "@id" (printf "%s#website" site.BaseURL) "url" site.BaseURL "name" (printf "%s — Notes on machine learning" site.Title) "description" (partial "page-desc.html" .) "publisher" (dict "@id" (printf "%s#person" site.BaseURL)) "inLanguage" "en" "potentialAction" (dict "@type" "SearchAction" "target" (dict "@type" "EntryPoint" "urlTemplate" (printf "%s?q={search_term_string}" (absURL "/search/"))) "query-input" "required name=search_term_string")) -}}
+  {{- $graph = $graph | append $person -}}
+{{- else if eq .RelPermalink "/about/" -}}
+  {{- $graph = $graph | append (dict "@type" "ProfilePage" "url" .Permalink "name" .Title "mainEntity" $person) -}}
+{{- else if and (eq .Section "book") (not .IsPage) -}}
+  {{- $graph = $graph | append $book | append $person -}}
+{{- else if and .IsPage (in (slice "post" "book-blog") .Section) -}}
+  {{- $art := dict "@type" "BlogPosting" "headline" .Title "description" (partial "page-desc.html" .) "url" .Permalink "mainEntityOfPage" .Permalink "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00") "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00") "author" (dict "@id" (printf "%s#person" site.BaseURL) "@type" "Person" "name" (site.Params.notebook.author | default site.Title)) "keywords" (delimit (.Params.tags | default slice) ", ") "inLanguage" "en" "wordCount" .WordCount "image" (absURL (cond (eq .Section "book-blog") "img/og/og-book.png" "img/og/og-default.png")) "isPartOf" (dict "@id" (printf "%s#website" site.BaseURL)) -}}
+  {{- if eq .Section "book-blog" }}{{ $art = merge $art (dict "about" (dict "@id" (absURL "/book/#book"))) }}{{ $graph = $graph | append $book }}{{ end -}}
+  {{- $graph = $graph | append $art -}}
+{{- end -}}
+{{- with $graph -}}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" . | jsonify | safeJS }}</script>
+{{- end -}}

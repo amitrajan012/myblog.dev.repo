@@ -1,0 +1,36 @@
+{{- $b := site.Data.book -}}
+# {{ site.Title }} — Notes on machine learning
+
+> {{ site.Params.notebook.intro | plainify }} {{ site.Params.notebook.introBook | markdownify | plainify }}
+
+{{ site.Params.notebook.bio }} This site has two parts: chapter-by-chapter study notes (with full derivations) on standard machine-learning textbooks, and a book in progress, *{{ $b.title }}: {{ $b.subtitle }}*.
+
+- Author: [{{ site.Params.notebook.author }}]({{ absURL "/about/" }})
+- Search: {{ absURL "/search/" }}?q=your+query
+- All notes: {{ absURL "/post/" }} · Topics: {{ absURL "/tags/" }} · RSS: {{ absURL "/index.xml" }}
+
+## The book: {{ $b.title }}
+
+{{ $b.about | plainify }}
+
+- [About the book and contents]({{ absURL "/book/" }})
+- [Book blog]({{ absURL "/book/blog/" }}): concepts explained and sections from the manuscript
+{{ range (where site.RegularPages "Section" "book-blog").ByDate.Reverse }}- [{{ .Title }}]({{ .Permalink }}): {{ partial "page-desc.html" . }}
+{{ end }}
+{{- range site.Data.series }}
+{{- $s := . }}
+{{- $pages := (where site.RegularPages "Params.topics" "intersect" (slice .topic)).ByDate }}
+
+## {{ .name }} ({{ .label }}) — {{ len $pages }} notes
+
+{{ .blurb }}
+{{ range $pages }}- [{{ .Title }}]({{ .Permalink }})
+{{ end }}
+{{- end }}
+{{- $series := slice }}{{ range site.Data.series }}{{ $series = $series | append .topic }}{{ end }}
+{{- $other := slice }}{{ range (where site.RegularPages "Section" "post").ByDate }}{{ $t := "" }}{{ with .Params.topics }}{{ $t = index . 0 }}{{ end }}{{ if not (in $series $t) }}{{ $other = $other | append . }}{{ end }}{{ end }}
+
+## Other notes — statistics, probability and papers
+
+{{ range $other }}- [{{ .Title }}]({{ .Permalink }})
+{{ end }}
