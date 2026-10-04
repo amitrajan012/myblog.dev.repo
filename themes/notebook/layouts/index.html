@@ -27,6 +27,12 @@
         <kbd class="qs-kbd" aria-hidden="true">/</kbd>
       </div>
       <div class="qs-pane" hidden>
+        {{ with site.Params.notebook.searchSuggestions }}
+        <div class="qs-suggest">
+          <p class="kicker">Try searching</p>
+          <div class="chips">{{ range . }}<button type="button" class="tag qs-chip" data-q="{{ . }}">{{ . }}</button>{{ end }}</div>
+        </div>
+        {{ end }}
         <ul class="qs-list" id="qs-list" role="listbox" aria-label="Search results"></ul>
         <p class="qs-foot" hidden><a href="{{ "/search/" | relURL }}">See all results →</a></p>
       </div>

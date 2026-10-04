@@ -383,3 +383,9 @@ mark{background:#FDF1C7;color:inherit;border-radius:2px;padding:0 1px}
 .qs-msg{padding:16px 14px;font-size:14px;color:var(--muted)}
 .qs-foot{margin:0;padding:12px 20px;border-top:1px solid var(--rule-2);font-size:14px;font-weight:500;background:var(--bg)}
 @media (max-width:720px){.quick-search{display:none}}
+.qs-suggest{padding:16px 18px 18px}
+.qs-suggest .kicker{margin:0 0 10px;font-size:12px}
+.qs-suggest .chips{margin-top:0}
+.qs-chip{font:inherit;font-size:13px;cursor:pointer;min-height:36px}
+.qs-chip:hover{border-color:var(--accent);color:var(--accent)}
+.qs-pane .qs-list:empty{display:none}

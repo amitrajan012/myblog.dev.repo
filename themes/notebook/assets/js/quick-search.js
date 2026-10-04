@@ -6,6 +6,7 @@
   var pane = box.querySelector('.qs-pane');
   var list = box.querySelector('.qs-list');
   var foot = box.querySelector('.qs-foot');
+  var suggest = box.querySelector('.qs-suggest');
   var url = box.getAttribute('data-index');
   var data = null, active = -1, timer, lastQ = null;
 
@@ -23,7 +24,12 @@
   function render() {
     var q = input.value.trim();
     active = -1; input.removeAttribute('aria-activedescendant');
-    if (!q) { open(false); return; }
+    if (suggest) suggest.hidden = !!q;
+    if (!q) {                                   // empty box: show suggestions (if any)
+      list.innerHTML = ''; foot.hidden = true; lastQ = '';
+      open(!!suggest && document.activeElement === input);
+      return;
+    }
     if (!data) { list.innerHTML = '<li class="qs-msg">Loading…</li>'; foot.hidden = true; open(true); return; }
     var ts = NB.terms(q), hits = NB.search(data, ts);
     var changed = q !== lastQ; lastQ = q;
@@ -41,7 +47,11 @@
   }
 
   var ensure = function () { if (!data) NB.load(url).then(function (d) { data = d; render(); }).catch(function () { list.innerHTML = '<li class="qs-msg">Search is unavailable right now.</li>'; }); };
-  input.addEventListener('focus', function () { ensure(); if (input.value.trim()) render(); });
+  input.addEventListener('focus', function () { ensure(); render(); });
+  if (suggest) suggest.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-q]'); if (!b) return;
+    input.value = b.getAttribute('data-q'); input.focus(); ensure(); render();
+  });
   input.addEventListener('input', function () { ensure(); clearTimeout(timer); timer = setTimeout(render, 100); });
   input.addEventListener('keydown', function (e) {
     if (e.key === 'ArrowDown') { e.preventDefault(); if (pane.hidden) render(); setActive(active + 1); }

@@ -59,6 +59,8 @@ languageCode = "en-us"
   introBook = "Currently, I’m turning these working notes into my own book, [Counting to Intelligence](/book/)."
   bio = "Head of Engineering, leading the build of an agentic AI platform that reads, understands and validates documents at enterprise scale — teams of AI agents doing work that once took whole back offices. Before that, I spent years in the weeds as a machine learning engineer and data scientist."
   recentCount = 12
+  # Shown under the home search box before anything is typed
+  searchSuggestions = ["Bayes theorem", "Kernel methods", "Eigenvalues", "Gradient descent", "Hypothesis testing", "Support vector machines", "Expectation maximization"]
 
 [params.book]
   # Set to true once data/book.yaml has your real title and contents.
