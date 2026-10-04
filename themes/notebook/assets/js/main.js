@@ -47,6 +47,39 @@
       if (document.fonts && document.fonts.ready) document.fonts.ready.then(render);
     }
   }
+
+  // Topic finders: type to filter the list of all tags (home Topics card, /tags/ page).
+  document.querySelectorAll('[data-tag-finder]').forEach(function (box) {
+    var input = box.querySelector('input');
+    var list = box.querySelector('.tag-results');
+    var none = box.querySelector('.tag-none');
+    var link = box.querySelector('[data-search-link]');
+    var tags = Array.prototype.slice.call(list.querySelectorAll('.tag'));
+    var hide = box.getAttribute('data-hide') ? document.querySelector(box.getAttribute('data-hide')) : null;
+    var always = !list.hasAttribute('hidden');
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      if (hide) hide.hidden = !!q;
+      list.hidden = !q && !always;
+      var shown = 0;
+      tags.forEach(function (t) { var ok = !q || t.getAttribute('data-name').indexOf(q) >= 0; t.hidden = !ok; if (ok) shown++; });
+      none.hidden = !(q && shown === 0);
+      if (link) link.href = '/search/?q=' + encodeURIComponent(input.value.trim());
+    });
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && input.value.trim()) { e.preventDefault(); location.href = '/search/?q=' + encodeURIComponent(input.value.trim()); }
+    });
+  });
+
+  // Press "/" anywhere to search.
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.metaKey || e.ctrlKey || e.altKey) return;
+    var el = document.activeElement;
+    if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable)) return;
+    e.preventDefault();
+    var q = document.getElementById('q');
+    if (q) q.focus(); else location.href = '/search/';
+  });
   // Note pages: reading progress bar.
   var bar = document.getElementById('progress-bar');
   if (bar) {

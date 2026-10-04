@@ -1,0 +1,40 @@
+{{ define "main" }}
+<section class="list-hero">
+  <div class="wrap">
+    <p class="kicker">Search</p>
+    <h1 class="display-2">Search the notebook</h1>
+  </div>
+</section>
+<section class="wrap section-tight search-page">
+  <form class="search-form" role="search" action="{{ "/search/" | relURL }}" method="get">
+    <label for="q" class="sr-only">Search notes</label>
+    <div class="find-box big">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" name="q" type="search" placeholder="Search titles, topics and text — e.g. kernel trick, bayes, eigenvalues" autocomplete="off" autofocus>
+    </div>
+  </form>
+  <div class="filters" id="search-series" role="group" aria-label="Limit to a series">
+    <button type="button" class="pill is-on" data-k="" aria-pressed="true">Everything</button>
+    {{ if site.Params.book.enabled }}<button type="button" class="pill" data-k="book" aria-pressed="false">{{ site.Data.book.title }}</button>{{ end }}
+    {{ range site.Data.series }}<button type="button" class="pill" data-k="{{ urlize .short }}" aria-pressed="false">{{ .short }}</button>{{ end }}
+    <button type="button" class="pill" data-k="other" aria-pressed="false">Other notes</button>
+  </div>
+  <div id="search-tag" class="search-tag" hidden>Topic: <span class="tag tag-on"></span> <button type="button" class="link-btn" id="clear-tag">Clear</button></div>
+  <p id="search-status" class="muted mono small" aria-live="polite"></p>
+  <ol class="rows" id="search-results"></ol>
+
+  <div id="search-browse" class="search-browse">
+    <p class="kicker">Or browse by topic</p>
+    {{ range site.Data.topics }}
+    <div class="topic-group">
+      <p class="kicker">{{ .name }}</p>
+      <div class="chips">{{ range .tags }}{{ with site.GetPage (printf "/tags/%s" (urlize .)) }}<a class="tag" href="?tag={{ .Title | urlquery }}" data-tag="{{ .Title }}">{{ .Title }} <span class="count">{{ len .Pages }}</span></a>{{ end }}{{ end }}</div>
+    </div>
+    {{ end }}
+    <p class="small"><a href="{{ "/tags/" | relURL }}">All {{ len site.Taxonomies.tags }} topics →</a></p>
+  </div>
+  <noscript><p class="muted">Search needs JavaScript. You can still browse <a href="{{ "/tags/" | relURL }}">all topics</a> or the <a href="{{ "/post/" | relURL }}">full archive</a>.</p></noscript>
+</section>
+{{ $s := resources.Get "js/search.js" | minify | fingerprint }}
+<script src="{{ $s.RelPermalink }}" data-index="{{ "index.json" | relURL }}" defer></script>
+{{ end }}

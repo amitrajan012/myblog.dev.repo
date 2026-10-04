@@ -1,0 +1,13 @@
+{{- /* Search index: every note and book post, full text with LaTeX stripped. Consumed by assets/js/search.js on /search/. */ -}}
+{{- $pages := where site.RegularPages "Section" "in" (slice "post" "book-blog") -}}
+{{- $out := slice -}}
+{{- range $pages.ByDate.Reverse -}}
+  {{- $m := partial "meta.html" . -}}
+  {{- $isBook := eq .Section "book-blog" -}}
+  {{- $series := "Other notes" -}}{{- $key := $m.key -}}
+  {{- if $isBook }}{{ $series = site.Data.book.title }}{{ $key = "book" }}{{ else if $m.series }}{{ $series = $m.series.short }}{{ end -}}
+  {{- $text := .Plain | plainify | replaceRE `\$\$[\s\S]*?\$\$` " " | replaceRE `\$[^$\n]*\$` " " | replaceRE `\s+` " " -}}
+  {{- $line := $m.line -}}{{- if $isBook }}{{ $line = partial "book-kind.html" . }}{{ end -}}
+  {{- $out = $out | append (dict "t" .Title "u" .RelPermalink "d" (.Date.Format "02 Jan 06") "s" $series "k" $key "l" $line "g" (.Params.tags | default slice) "x" $text) -}}
+{{- end -}}
+{{- $out | jsonify -}}

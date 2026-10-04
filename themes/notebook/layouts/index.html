@@ -121,6 +121,8 @@
     <div class="card pad">
       <h2 class="h3">Topics</h2>
       <p class="muted small">The most-used tags, grouped by subject. <a href="{{ "/tags/" | relURL }}">All tags →</a></p>
+      {{ partial "tag-finder.html" (dict "id" "home-tagq" "hide" "#topic-groups") }}
+      <div id="topic-groups">
       {{ range site.Data.topics }}
       <div class="topic-group">
         <p class="kicker">{{ .name }}</p>
@@ -129,6 +131,7 @@
         </div>
       </div>
       {{ end }}
+      </div>
     </div>
     <div class="about-card" id="about">
       <p class="about-line">{{ site.Params.notebook.bio }}</p>

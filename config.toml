@@ -3,6 +3,9 @@ title = "Amit Rajan"
 theme = "notebook"   # previous theme: "hugo-theme-cleanwhite"
 languageCode = "en-us"
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]   # index.json powers the site search
+
 [taxonomies]
   tag = "tags"
   category = "categories"

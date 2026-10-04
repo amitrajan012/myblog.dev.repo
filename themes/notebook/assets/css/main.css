@@ -9,6 +9,7 @@
   --r:16px;
 }
 *,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
 a{color:var(--accent);text-decoration:none}
@@ -337,3 +338,29 @@ a.chapter:hover .ch-title{color:var(--book)}
 .book-mark{display:block;height:auto;max-width:100%}
 .book-cover .book-mark{margin-bottom:14px}
 .cover-mid{display:block}
+
+/* search & topic finder */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.nav-search{gap:6px}
+.nav-search-label{font-size:15px}
+.find-box{display:flex;align-items:center;gap:10px;height:44px;padding:0 14px;border:1px solid #D6D6D0;border-radius:10px;background:var(--surface);color:var(--muted)}
+.find-box:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px rgba(15,118,110,.15)}
+.find-box input{flex:1;min-width:0;border:0;outline:none;background:transparent;font:inherit;font-size:15px;color:var(--ink)}
+.find-box.big{height:56px;padding:0 18px}
+.find-box.big input{font-size:18px}
+.tag-finder{margin:4px 0 8px}
+.tag-finder .tag-results{margin-top:14px}
+.tag-finder .tag[hidden]{display:none}
+.tag-none{margin:12px 0 0}
+.terms-series{margin-bottom:36px}
+.terms-series .chips{margin-top:0}
+.search-form{margin-bottom:18px}
+.search-tag{display:flex;align-items:center;gap:10px;margin:-4px 0 14px;font-size:14px;color:var(--ink-2)}
+.tag.tag-on{background:var(--book-tint);border-color:transparent;color:var(--book)}
+.link-btn{font:inherit;font-size:14px;background:none;border:0;color:var(--accent);cursor:pointer;min-height:44px;padding:0 4px}
+#search-status{margin:0 0 10px}
+#search-results:empty{border-top:0}
+.search-browse{margin-top:28px}
+mark{background:#FDF1C7;color:inherit;border-radius:2px;padding:0 1px}
+@media (max-width:720px){.nav-search-label{display:none}}
+.row-snip{display:block;margin-top:6px;font-size:14px;line-height:1.5;color:var(--ink-2)}
