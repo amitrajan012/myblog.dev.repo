@@ -57,6 +57,8 @@
       {{ end }}{{ end }}
     </nav>
     {{ end }}
+    {{ $skip := slice .RelPermalink }}{{ if ge $idx 0 }}{{ if gt $idx 0 }}{{ $skip = $skip | append (index $list (sub $idx 1)).RelPermalink }}{{ end }}{{ if lt $idx (sub (len $list) 1) }}{{ $skip = $skip | append (index $list (add $idx 1)).RelPermalink }}{{ end }}{{ end }}
+    {{ if eq .Section "post" }}{{ partial "related.html" (dict "page" . "skip" $skip) }}{{ end }}
   </article>
 </div>
 {{ end }}

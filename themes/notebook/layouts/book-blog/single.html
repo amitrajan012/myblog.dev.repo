@@ -36,5 +36,6 @@
     {{ if gt $idx 0 }}{{ with index $all (sub $idx 1) }}<a href="{{ .RelPermalink }}"><span class="mono muted">← Older</span><span class="pn-title">{{ .Title }}</span></a>{{ end }}{{ else }}<a href="{{ "/book/blog/" | relURL }}"><span class="mono muted">← All posts</span><span class="pn-title">Book blog</span></a>{{ end }}
     {{ if lt $idx (sub (len $all) 1) }}{{ with index $all (add $idx 1) }}<a class="pn-next" href="{{ .RelPermalink }}"><span class="mono muted">Newer →</span><span class="pn-title">{{ .Title }}</span></a>{{ end }}{{ end }}
   </nav>
+  {{ partial "related.html" (dict "page" . "skip" (slice .RelPermalink)) }}
 </article>
 {{ end }}

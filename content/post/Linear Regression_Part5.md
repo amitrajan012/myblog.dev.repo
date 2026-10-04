@@ -1,9 +1,9 @@
 +++
 date = "2018-05-11T05:18:18+01:00"
-description = "ISLR Linear Regression"
+description = "ISLR Chapter 3: Linear Regression"
 draft = false
 tags = ["ISLR", "Linear Regression", "Exercises", "Applied"]
-title = "ISLR Chapter 3: Linear Regression (Part 5: Exercises - Applied)"
+title = "Linear Regression: Applied Exercises"
 topics = ["ISLR"]
 
 +++

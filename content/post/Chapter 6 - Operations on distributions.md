@@ -3,7 +3,7 @@ date = "2018-08-26T16:27:09+01:00"
 description = "Think Stats: Chapter 6"
 draft = false
 tags = ["Think Stats", "Skewness", "Random Variables", "Convolution", "Central limit Theorem"]
-title = "Think Stats: Chapter 6"
+title = "Operations on Distributions"
 slug = "chapter-6-operations-on-distributions"
 topics = ["Think Stats"]
 

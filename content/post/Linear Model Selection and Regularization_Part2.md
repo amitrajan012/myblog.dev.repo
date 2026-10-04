@@ -1,9 +1,9 @@
 +++
 date = "2018-05-22T21:16:20+01:00"
-description = "ISLR Linear Model Selection and Regularization"
+description = "ISLR Chapter 6: Linear Model Selection and Regularization"
 draft = false
 tags = ["ISLR", "Resampling", "Linear Model Selection", "Regularization", "Shrinkage Methods"]
-title = "ISLR Chapter 6: Linear Model Selection and Regularization (Part 2: Shrinkage Methods)"
+title = "Shrinkage Methods"
 topics = ["ISLR"]
 
 +++

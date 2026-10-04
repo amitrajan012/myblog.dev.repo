@@ -3,7 +3,7 @@ date = "2018-08-12T09:22:46+01:00"
 description = "Think Stats: Chapter 3"
 draft = false
 tags = ["Think Stats", "PMF", "CDF", "Conditional Distribution"]
-title = "Think Stats: Chapter 3"
+title = "Cumulative Distribution Functions"
 slug = "chapter-3-cumulative-distribution-functions"
 topics = ["Think Stats"]
 

@@ -1,9 +1,9 @@
 +++
 date = "2018-06-04T16:12:19+01:00"
-description = "ISLR Moving Beyond Linearity"
+description = "ISLR Chapter 7: Moving Beyond Linearity"
 draft = false
 tags = ["ISLR", "Resampling", "Moving Beyond Linearity", "Local Regression", "Generalized Additive Models"]
-title = "ISLR Chapter 7: Moving Beyond Linearity (Part 4: Local Regression, Generalized Additive Models)"
+title = "Local Regression, Generalized Additive Models"
 topics = ["ISLR"]
 
 +++

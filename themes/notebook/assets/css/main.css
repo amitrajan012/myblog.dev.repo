@@ -194,7 +194,7 @@ a.card:hover{border-color:var(--ink);color:var(--ink)}
 .prose .fig img{margin:0 auto}
 .prose figcaption{margin-top:10px;font-family:var(--sans);font-size:14px;color:var(--muted)}
 .prose hr{border:0;border-top:1px solid var(--rule);margin:40px 0}
-.prose .MathJax_Display,.prose .MJXc-display{overflow-x:auto;overflow-y:hidden;margin:24px 0!important;padding:4px 0}
+.prose mjx-container[display="true"]{overflow-x:auto;overflow-y:hidden;margin:24px 0!important;padding:4px 0}
 
 /* book */
 .book-hero{background:var(--book-dark);color:#F3F6F5}
@@ -389,3 +389,13 @@ mark{background:#FDF1C7;color:inherit;border-radius:2px;padding:0 1px}
 .qs-chip{font:inherit;font-size:13px;cursor:pointer;min-height:36px}
 .qs-chip:hover{border-color:var(--accent);color:var(--accent)}
 .qs-pane .qs-list:empty{display:none}
+/* Related reading */
+.related{margin-top:48px;padding-top:32px;border-top:1px solid var(--rule)}
+.related-h{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 14px;font-weight:500}
+.related-list{list-style:none;margin:0 0 28px;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.related-list a{display:block;height:100%;padding:16px 18px;border:1px solid var(--rule);border-radius:12px;background:var(--surface);color:var(--ink)}
+.related-list a:hover{border-color:var(--ink);color:var(--ink)}
+.related-list .mono{font-size:11.5px}
+.related-list .pn-title{font-size:17px;margin-top:6px}
+.related-book a{border-color:var(--book,#B4532A)}
+.prose mjx-container:not([display="true"]){max-width:100%}

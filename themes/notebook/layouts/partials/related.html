@@ -1,0 +1,43 @@
+{{- /* Related reading: notes from other series that share tags, plus book posts. ctx: dict "page" . "skip" (slice of pages to leave out) */ -}}
+{{- $p := .page -}}
+{{- $skip := .skip | default slice -}}
+{{- $rel := site.RegularPages.Related $p -}}
+{{- $mine := partial "meta.html" $p -}}
+{{- $book := slice -}}{{- $other := slice -}}{{- $same := slice -}}
+{{- range first 40 $rel -}}
+  {{- if in $skip .RelPermalink }}{{ continue }}{{ end -}}
+  {{- if eq .Section "post" -}}
+    {{- $m := partial "meta.html" . -}}
+    {{- if and $mine.topic (eq $m.topic $mine.topic) }}{{ $same = $same | append . }}{{ else }}{{ $other = $other | append . }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- $notes := first 4 ($other | append $same) -}}
+{{- /* Book posts: any shared tag (other than the book's own tag) is enough, since there are few of them. */ -}}
+{{- $book = slice -}}
+{{- if ne $p.Section "book-blog" -}}
+  {{- $mytags := apply ($p.Params.tags | default slice) "lower" "." -}}
+  {{- range where site.RegularPages "Section" "book-blog" -}}
+    {{- $shared := intersect $mytags (apply (.Params.tags | default slice) "lower" ".") -}}
+    {{- if $shared }}{{ $book = $book | append . }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- if or $notes $book }}
+<section class="related" aria-label="Related reading">
+  {{- with first 2 $book }}
+  <h2 class="mono related-h">From the book</h2>
+  <ul class="related-list related-book">
+    {{- range . }}
+    <li><a href="{{ .RelPermalink }}"><span class="mono muted">Counting to Intelligence</span><span class="pn-title">{{ .Title }}</span></a></li>
+    {{- end }}
+  </ul>
+  {{- end }}
+  {{- with $notes }}
+  <h2 class="mono related-h">{{ if eq $p.Section "book-blog" }}Study notes on the same ideas{{ else }}Related notes{{ end }}</h2>
+  <ul class="related-list">
+    {{- range . }}{{ $m := partial "meta.html" . }}
+    <li><a href="{{ .RelPermalink }}"><span class="mono muted">{{ $m.line }}</span><span class="pn-title">{{ .Title }}</span></a></li>
+    {{- end }}
+  </ul>
+  {{- end }}
+</section>
+{{- end }}

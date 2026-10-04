@@ -8,7 +8,7 @@
 {{- $ch := "" -}}
 {{- with findRESubmatch `Chapter\s*(\d+)` (printf "%s | %s" $desc $p.Title) 1 }}{{ $ch = index (index . 0) 1 }}{{ end -}}
 {{- $chname := "" -}}
-{{- if eq $topic "ISLR" }}{{ $chname = replaceRE `^ISLR\s*` "" $desc }}
+{{- if eq $topic "ISLR" }}{{ $chname = replaceRE `^ISLR\s*(Chapter\s*\d+:\s*)?` "" $desc }}
 {{- else if eq $topic "Pattern Recognition" }}{{ if in $p.Title " - " }}{{ $chname = index (split $p.Title " - ") 0 }}{{ end }}
 {{- end -}}
 {{- $line := "" -}}

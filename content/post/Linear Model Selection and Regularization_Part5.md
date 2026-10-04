@@ -1,9 +1,9 @@
 +++
 date = "2018-05-26T11:08:14+01:00"
-description = "ISLR Linear Model Selection and Regularization"
+description = "ISLR Chapter 6: Linear Model Selection and Regularization"
 draft = false
 tags = ["ISLR", "Resampling", "Linear Model Selection", "Regularization", "Exercises", "Applied"]
-title = "ISLR Chapter 6: Linear Model Selection and Regularization (Part 5: Exercises - Applied)"
+title = "Linear Model Selection and Regularization: Applied Exercises"
 topics = ["ISLR"]
 
 +++

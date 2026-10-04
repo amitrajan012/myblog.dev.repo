@@ -3,7 +3,7 @@ date = "2024-04-18T23:07:28+01:00"
 description = "Data Cleaning for Machine Learning Sysytems: A Survey"
 draft = false
 tags = ["Data Cleaning", "Machine Learning", "Active Learning"]
-title = "Data Cleaning for Machine Learning Sysytems: A Survey"
+title = "Data Cleaning for Machine Learning Systems: A Survey"
 slug = "data-cleaning-for-machine-learning-sysytems-a-survey"
 topics = ["Papers"]
 

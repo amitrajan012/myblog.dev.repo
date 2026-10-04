@@ -3,7 +3,7 @@ date = "2022-06-28T23:07:28+01:00"
 description = "Pattern Recognition (Bishop): Chapter 4"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Linear Models", "Classification"]
-title = "Linear Models for Clasification - Discriminant Functions"
+title = "Linear Models for Classification - Discriminant Functions"
 slug = "pattern-recognition-chapter-4-linear-models-for-classification_1"
 topics = ["Pattern Recognition"]
 

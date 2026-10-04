@@ -1,9 +1,9 @@
 +++
 date = "2018-05-17T05:22:19+01:00"
-description = "ISLR Resampling Methods"
+description = "ISLR Chapter 5: Resampling Methods"
 draft = false
 tags = ["ISLR", "Resampling", "Cross-Validation"]
-title = "ISLR Chapter 5: Resampling Methods (Part 1: Cross-Validation)"
+title = "Cross-Validation"
 topics = ["ISLR"]
 
 +++

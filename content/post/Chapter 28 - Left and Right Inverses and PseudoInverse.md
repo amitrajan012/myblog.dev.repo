@@ -3,7 +3,7 @@ date = "2022-05-15T14:07:28+01:00"
 description = "Linear Algebra (Gilbert Strang): Chapter 28"
 draft = false
 tags = ["Linear Algebra", "Determinant", "Gilbert Strang", "Eigenvalues", "Eigenvectors", "Left Inverse", "Right Inverse", "Pseudo Inverse", "Singular Value Decomposition"]
-title = "Left, Right  and Pseudo Inverses"
+title = "Left, Right and Pseudo Inverses"
 slug = "chapter-28-left-and-right-inverses-and-pseudoinverse"
 topics = ["Linear Algebra"]
 

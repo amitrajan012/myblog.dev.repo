@@ -1,9 +1,9 @@
 +++
 date = "2018-05-28T04:22:38+01:00"
-description = "ISLR Moving Beyond Linearity"
+description = "ISLR Chapter 7: Moving Beyond Linearity"
 draft = false
 tags = ["ISLR", "Resampling", "Moving Beyond Linearity", "Polynomial Regression", "Step Functions", "Basis Functions"]
-title = "ISLR Chapter 7: Moving Beyond Linearity (Part 1: Polynomial Regression, Step Functions, Basis Functions)"
+title = "Polynomial Regression, Step Functions, Basis Functions"
 topics = ["ISLR"]
 
 +++

@@ -1,9 +1,9 @@
 +++
 date = "2018-06-06T06:27:22+01:00"
-description = "ISLR Moving Beyond Linearity"
+description = "ISLR Chapter 7: Moving Beyond Linearity"
 draft = false
 tags = ["ISLR", "Resampling", "Moving Beyond Linearity", "Exercises", "Conceptual"]
-title = "ISLR Chapter 7: Moving Beyond Linearity (Part 5: Exercises - Conceptual)"
+title = "Moving Beyond Linearity: Conceptual Exercises"
 topics = ["ISLR"]
 
 +++

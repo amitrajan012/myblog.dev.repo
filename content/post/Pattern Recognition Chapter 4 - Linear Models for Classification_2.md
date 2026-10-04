@@ -3,7 +3,7 @@ date = "2022-06-29T23:07:28+01:00"
 description = "Pattern Recognition (Bishop): Chapter 4"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Linear Models", "Classification", "Discriminant Functions", "Two Classes", "Weight Vector", "Bias", "Multiple Classes", "one-versus-the-rest", "one-versus-one"]
-title = "Linear Models for Clasification - Discriminant Functions"
+title = "Linear Models for Classification - Discriminant Functions (Part 2)"
 slug = "pattern-recognition-chapter-4-linear-models-for-classification_2"
 topics = ["Pattern Recognition"]
 

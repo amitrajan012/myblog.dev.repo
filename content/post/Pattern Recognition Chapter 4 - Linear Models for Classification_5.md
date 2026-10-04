@@ -3,7 +3,7 @@ date = "2022-07-02T23:07:28+01:00"
 description = "Pattern Recognition (Bishop): Chapter 4"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Linear Models", "Classification", "Perceptron Algorithm", "Least Squares", "Learning Rate"]
-title = "Linear Models for Clasification - The Perceptron Algorithm"
+title = "Linear Models for Classification - The Perceptron Algorithm"
 slug = "pattern-recognition-chapter-4-linear-models-for-classification_5"
 topics = ["Pattern Recognition"]
 

@@ -1,9 +1,9 @@
 +++
 date = "2018-06-20T02:24:24+01:00"
-description = "ISLR Support Vector Machines"
+description = "ISLR Chapter 9: Support Vector Machines"
 draft = false
 tags = ["ISLR", "Support Vector Machines", "Support Vector Classifiers"]
-title = "ISLR Chapter 9: Support Vector Machines (Part 2: Support Vector Classifiers)"
+title = "Support Vector Classifiers"
 topics = ["ISLR"]
 
 +++

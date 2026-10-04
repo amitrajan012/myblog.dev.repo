@@ -81,3 +81,12 @@ enableRobotsTXT = true
 [params.book]
   # Set to true once data/book.yaml has your real title and contents.
   enabled = true
+
+# "Related notes" at the foot of each note and book post.
+[related]
+  includeNewer = true
+  threshold = 0
+  toLower = true
+  [[related.indices]]
+    name = "tags"
+    weight = 100

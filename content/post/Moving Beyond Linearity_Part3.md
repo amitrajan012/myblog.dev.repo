@@ -1,9 +1,9 @@
 +++
 date = "2018-05-30T06:02:06+01:00"
-description = "ISLR Moving Beyond Linearity"
+description = "ISLR Chapter 7: Moving Beyond Linearity"
 draft = false
 tags = ["ISLR", "Resampling", "Moving Beyond Linearity", "Smoothing Splines"]
-title = "ISLR Chapter 7: Moving Beyond Linearity (Part 3: Smoothing Splines)"
+title = "Smoothing Splines"
 topics = ["ISLR"]
 
 +++

@@ -3,7 +3,7 @@ date = "2018-08-17T19:02:16+01:00"
 description = "Think Stats: Chapter 4"
 draft = false
 tags = ["Think Stats", "Normal Distribution", "Exponential Distribution", "LogNormal Distribution"]
-title = "Think Stats: Chapter 4"
+title = "Continuous Distributions"
 slug = "chapter-4-continuous-distributions"
 topics = ["Think Stats"]
 

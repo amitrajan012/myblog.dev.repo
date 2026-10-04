@@ -3,7 +3,7 @@ date = "2018-09-10T11:13:31+01:00"
 description = "Think Stats: Chapter 9"
 draft = false
 tags = ["Think Stats", "Standard scores", "Covariance", "Correlation", "Spearman’s rank correlation", "Least squares fit", "Goodness of fit"]
-title = "Think Stats: Chapter 9"
+title = "Correlation"
 slug = "chapter-9-correlation"
 topics = ["Think Stats"]
 

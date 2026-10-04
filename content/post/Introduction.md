@@ -1,10 +1,10 @@
 
 +++
 date = "2018-05-02T11:14:32+01:00"
-description = "ISLR Introduction"
+description = "ISLR Chapter 1: Introduction"
 draft = false
 tags = ["ISLR", "Introduction"]
-title = "ISLR Chapter 1: Introduction"
+title = "Introduction to Statistical Learning"
 topics = ["ISLR"]
 
 +++

@@ -1,10 +1,10 @@
 
 +++
 date = "2018-05-16T10:20:15+01:00"
-description = "ISLR Classification"
+description = "ISLR Chapter 4: Classification"
 draft = false
 tags = ["ISLR", "Classification", "Exercises", "Applied"]
-title = "ISLR Chapter 4: Classification (Part 4: Exercises- Applied)"
+title = "Classification: Applied Exercises"
 topics = ["ISLR"]
 
 +++

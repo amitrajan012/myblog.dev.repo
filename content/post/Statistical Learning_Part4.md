@@ -1,9 +1,9 @@
 +++
 date = "2018-05-06T07:24:34+01:00"
-description = "ISLR Statistical Learning"
+description = "ISLR Chapter 2: Statistical Learning"
 draft = false
 tags = ["ISLR", "Statistical Learning", "Exercises", "Applied"]
-title = "ISLR Chapter 2: Statistical Learning (Part 4: Exercises - Applied)"
+title = "Statistical Learning: Applied Exercises"
 topics = ["ISLR"]
 
 +++

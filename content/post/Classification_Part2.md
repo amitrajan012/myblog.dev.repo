@@ -1,9 +1,9 @@
 +++
 date = "2018-05-14T11:12:28+01:00"
-description = "ISLR Classification"
+description = "ISLR Chapter 4: Classification"
 draft = false
 tags = ["ISLR", "Classification", "Linear Discriminant Analysis"]
-title = "ISLR Chapter 4: Classification (Part 2: Linear Discriminant Analysis)"
+title = "Linear Discriminant Analysis"
 topics = ["ISLR"]
 
 +++

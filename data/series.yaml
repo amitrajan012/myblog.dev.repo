@@ -1,6 +1,7 @@
 # One entry per textbook series. `topic` must match the post's `topics` front matter.
 - topic: Pattern Recognition
   short: Bishop
+  seo: Bishop PRML
   label: "Bishop · PRML"
   name: Pattern Recognition and Machine Learning
   blurb: Probability, linear models, neural networks, kernels, graphical models and EM.
@@ -10,6 +11,7 @@
   icon: curve
 - topic: Linear Algebra
   short: Strang
+  seo: Strang Linear Algebra
   label: "Gilbert Strang · MIT 18.06"
   name: Linear Algebra
   blurb: Subspaces, projections, least squares, determinants, eigenvalues and the SVD.

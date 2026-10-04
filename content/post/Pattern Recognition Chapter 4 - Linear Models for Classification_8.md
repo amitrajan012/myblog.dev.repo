@@ -3,7 +3,7 @@ date = "2022-07-05T23:07:28+01:00"
 description = "Pattern Recognition (Bishop): Chapter 4"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Linear Models", "Classification", "Probabilistic Discriminative Models", "Basis Functions", "Logistic Regression", "Multiclass Logistic Regression", "Probit Regression"]
-title = "Linear Models for Clasification - Probabilistic Discriminative Models"
+title = "Linear Models for Classification - Probabilistic Discriminative Models"
 slug = "pattern-recognition-chapter-4-linear-models-for-classification_8"
 topics = ["Pattern Recognition"]
 

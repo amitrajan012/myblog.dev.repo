@@ -1,9 +1,9 @@
 +++
 date = "2018-06-19T12:14:23+01:00"
-description = "ISLR Support Vector Machines"
+description = "ISLR Chapter 9: Support Vector Machines"
 draft = false
 tags = ["ISLR", "Support Vector Machines", "Maximal Margin Classifier"]
-title = "ISLR Chapter 9: Support Vector Machines (Part 1: Maximal Margin Classifier)"
+title = "Maximal Margin Classifier"
 topics = ["ISLR"]
 
 +++

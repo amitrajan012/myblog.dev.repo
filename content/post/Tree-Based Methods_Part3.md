@@ -1,9 +1,9 @@
 +++
 date = "2018-06-14T07:14:13+01:00"
-description = "ISLR Tree-Based Methods"
+description = "ISLR Chapter 8: Tree-Based Methods"
 draft = false
 tags = ["ISLR", "Tree-Based Methods", "Exercises", "Conceptual"]
-title = "ISLR Chapter 8: Tree-Based Methods (Part 3: Exercises - Conceptual)"
+title = "Tree-Based Methods: Conceptual Exercises"
 topics = ["ISLR"]
 
 +++

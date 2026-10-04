@@ -1,9 +1,9 @@
 +++
 date = "2018-06-13T13:04:28+01:00"
-description = "ISLR Tree-Based Methods"
+description = "ISLR Chapter 8: Tree-Based Methods"
 draft = false
 tags = ["ISLR", "Tree-Based Methods", "Bagging", "Random Forests", "Boosting"]
-title = "ISLR Chapter 8: Tree-Based Methods (Part 2: Bagging, Random Forests, Boosting)"
+title = "Bagging, Random Forests, Boosting"
 topics = ["ISLR"]
 
 +++

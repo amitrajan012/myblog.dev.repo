@@ -3,7 +3,7 @@ date = "2022-07-04T23:07:28+01:00"
 description = "Pattern Recognition (Bishop): Chapter 4"
 draft = false
 tags = ["Bishop", "Pattern Recognition", "Linear Models", "Classification", "Probabilistic Generative Models", "Class Priors", "Class-conditional Densities", "Maximum Likelihood Solution"]
-title = "Linear Models for Clasification - Probabilistic Generative Models (Maximum Likelihood Solution)"
+title = "Linear Models for Classification - Probabilistic Generative Models (Maximum Likelihood Solution)"
 slug = "pattern-recognition-chapter-4-linear-models-for-classification_7"
 topics = ["Pattern Recognition"]
 

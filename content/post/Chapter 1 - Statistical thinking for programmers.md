@@ -3,7 +3,7 @@ date = "2018-08-05T10:02:08+01:00"
 description = "Think Stats: Chapter 1"
 draft = false
 tags = ["Think Stats"]
-title = "Think Stats: Chapter 1"
+title = "Statistical Thinking for Programmers"
 slug = "chapter-1-statistical-thinking-for-programmers"
 topics = ["Think Stats"]
 

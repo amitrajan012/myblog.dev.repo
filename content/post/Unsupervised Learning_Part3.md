@@ -1,9 +1,9 @@
 +++
 date = "2018-07-09T17:09:41+01:00"
-description = "ISLR Unsupervised Learning"
+description = "ISLR Chapter 10: Unsupervised Learning"
 draft = false
 tags = ["ISLR", "Unsupervised Learning", "Clustering Methods", "K-Means Clustering"]
-title = "ISLR Chapter 10: Unsupervised Learning (Part 3: Clustering Methods, K-Means Clustering)"
+title = "K-Means Clustering"
 topics = ["ISLR"]
 
 +++

@@ -1,0 +1,17 @@
+{{- /* Search-result title: topic first, then book + chapter. The on-page H1 stays .Title. */ -}}
+{{- $t := printf "%s · %s" .Title site.Title -}}
+{{- if .IsHome -}}
+  {{- $t = printf "%s — Notes on machine learning" site.Title -}}
+{{- else if and .IsPage (eq .Section "post") -}}
+  {{- $m := partial "meta.html" . -}}
+  {{- with $m.series -}}
+    {{- $topic := $.Title -}}
+    {{- if and (eq $m.topic "Pattern Recognition") (in $topic " - ") }}{{ $topic = delimit (after 1 (split $topic " - ")) " - " }}{{ end -}}
+    {{- $book := .seo | default .short -}}
+    {{- $t = printf "%s | %s" $topic $book -}}
+    {{- with $m.chapter }}{{ $t = printf "%s Ch. %s" $t . }}{{ end -}}
+  {{- end -}}
+{{- else if eq .Section "book-blog" -}}
+  {{- if .IsPage }}{{ $t = printf "%s | Counting to Intelligence" .Title }}{{ end -}}
+{{- end -}}
+{{- return $t -}}

@@ -3,7 +3,7 @@ date = "2018-08-22T09:12:36+01:00"
 description = "Think Stats: Chapter 5"
 draft = false
 tags = ["Think Stats", "Probability", "Monty Hall Problem", "Binomial Distribution", "Bayes's Theorem"]
-title = "Think Stats: Chapter 5"
+title = "Probability"
 slug = "chapter-5-probability"
 topics = ["Think Stats"]
 
