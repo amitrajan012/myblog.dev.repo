@@ -8,7 +8,7 @@
 {{ range $i, $p := $list }}{{ if eq $p.RelPermalink $.RelPermalink }}{{ $idx = $i }}{{ end }}{{ end }}
 {{ $siblings := slice }}
 {{ if $m.chapter }}{{ range $list }}{{ $pm := partial "meta.html" . }}{{ if eq $pm.chapter $m.chapter }}{{ $siblings = $siblings | append . }}{{ end }}{{ end }}{{ end }}
-{{ $accent := "#2F45C5" }}{{ with $m.series }}{{ $accent = .color }}{{ end }}
+{{ $accent := "#0F766E" }}{{ with $m.series }}{{ $accent = .color }}{{ end }}
 
 <div class="progress" aria-hidden="true"><div id="progress-bar" style="background:{{ $accent | safeCSS }}"></div></div>
 

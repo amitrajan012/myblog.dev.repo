@@ -1,7 +1,7 @@
 /* notebook theme — tokens */
 :root{
   --bg:#FAFAF8; --surface:#FFFFFF; --ink:#15171C; --ink-2:#3F444E; --muted:#5B606B;
-  --rule:#E3E3DE; --rule-2:#ECECE7; --chip:#F1F1EC; --accent:#2F45C5; --accent-dark:#1F2F8F;
+  --rule:#E3E3DE; --rule-2:#ECECE7; --chip:#F1F1EC; --accent:#0F766E; --accent-dark:#0B5A54;
   --book:#0F766E; --book-dark:#0E2A27; --book-tint:#E1F1EE; --book-mint:#7FD1C4;
   --serif:'Newsreader',Georgia,'Times New Roman',serif;
   --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
@@ -128,7 +128,7 @@ a.card:hover{border-color:var(--ink);color:var(--ink)}
 .topic-group .kicker{font-size:12px;color:var(--ink-2)}
 .topic-group .chips{margin-top:0}
 .about-card{margin-top:20px;background:var(--ink);color:var(--bg);border-radius:var(--r);padding:28px}
-.about-card a{color:#B9C3FF}
+.about-card a{color:#7FD1C4}
 .about-line{margin:0;font-family:var(--serif);font-size:22px;line-height:1.35}
 .about-card.inline{background:transparent;padding:0;margin-top:40px}
 .social{display:flex;gap:8px;margin-top:16px}
@@ -137,10 +137,14 @@ a.card:hover{border-color:var(--ink);color:var(--ink)}
 .social a:hover{border-color:currentColor}
 
 /* list pages */
-.list-hero{border-bottom:1px solid var(--rule);padding:72px 0 40px}
+.list-hero{border-bottom:1px solid var(--rule);padding:36px 0 24px}
+.list-hero .wrap{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:18px}
+.list-hero .kicker,.list-hero .lede{flex-basis:100%}
+.list-hero .kicker{order:0}.list-hero h1{order:1}.list-hero .mono{order:2}.list-hero .lede{order:3;margin-top:10px}
+.list-hero + .section-tight{padding-top:28px}
 .list-hero .lede{margin-top:16px}
-.list-hero .mono{margin:20px 0 0;font-size:13px}
-.group-head{margin:48px 0 14px;font-family:var(--serif);font-weight:500;font-size:26px}
+.list-hero .mono{margin:0;font-size:13px}
+.group-head{margin:40px 0 12px;font-family:var(--serif);font-weight:500;font-size:26px}
 .group-head:first-child{margin-top:0}
 
 /* note page */
