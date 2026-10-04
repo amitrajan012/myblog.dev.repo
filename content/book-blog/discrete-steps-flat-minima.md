@@ -3,7 +3,7 @@ title = "The Mistake That Makes Gradient Descent Work"
 date = 2026-10-04T06:28:22+00:00
 draft = false
 postkind = "concept"
-tags = ["Gradient Descent", "Optimization", "Implicit Regularization", "Flat Minima"]
+tags = ["Counting to Intelligence", "Gradient Descent", "Optimization", "Implicit Regularization", "Flat Minima"]
 +++
 
 Machine learning starts with a simple idea: find the model that makes the fewest mistakes. We measure those mistakes with a loss function, and training is the process of driving that loss downward. The natural conclusion is that we should keep descending until we reach the lowest possible point—the deepest valley in the landscape.

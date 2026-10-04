@@ -16,6 +16,9 @@
   </div>
   <h1 class="note-title">{{ .Title }}</h1>
   {{ with .Params.subtitle }}<p class="promise">{{ . }}</p>{{ end }}
+  {{ with .Params.tags }}
+  <div class="chips">{{ range . }}{{ with site.GetPage (printf "/tags/%s" (urlize .)) }}<a class="tag{{ if eq .Title site.Data.book.title }} tag-book{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ end }}</div>
+  {{ end }}
   {{ with $chref }}
   <a class="bb-where" href="{{ "/book/#contents" | relURL }}">
     <span class="mono">Where this sits in the book</span>

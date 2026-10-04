@@ -8,7 +8,7 @@ subtitle = "One sentence: the question this post answers."
 # Optional — link the post to its place in the book:
 # chapter = 6
 # section = "6.5"
-tags = []
+tags = ["Counting to Intelligence"]
 +++
 
 {{< problem >}}

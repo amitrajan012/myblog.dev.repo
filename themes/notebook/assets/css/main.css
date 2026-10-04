@@ -316,3 +316,4 @@ a.chapter:hover .ch-title{color:var(--book)}
 .bb-empty p{line-height:1.6}
 .page-book .pill.is-on{background:var(--book-dark);border-color:var(--book-dark)}
 .page-book .more{color:var(--book)}
+.tag.tag-book{background:var(--book-tint);border-color:transparent;color:var(--book)}

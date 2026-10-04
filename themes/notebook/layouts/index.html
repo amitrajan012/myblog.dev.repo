@@ -18,7 +18,7 @@
     </div>
     {{ with $latest }}{{ $m := partial "meta.html" . }}{{ $isBook := eq .Section "book-blog" }}
     <a class="card latest{{ if $isBook }} latest-book{{ end }}" href="{{ .RelPermalink }}">
-      <div class="latest-top"><span class="kicker {{ if $isBook }}book-ink{{ else }}accent{{ end }}">Latest{{ if $isBook }} · The Book{{ end }}</span><time class="mono muted" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time></div>
+      <div class="latest-top"><span class="kicker {{ if $isBook }}book-ink{{ else }}accent{{ end }}">Latest{{ if $isBook }} · {{ site.Data.book.title }}{{ end }}</span><time class="mono muted" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time></div>
       <h2>{{ .Title }}</h2>
       {{ if $isBook }}
         <p class="muted">{{ with .Params.subtitle }}{{ . }}{{ else }}{{ partial "book-kind.html" . }}{{ with partial "book-chref.html" . }} · {{ . }}{{ end }}{{ end }}</p>
@@ -87,7 +87,7 @@
     <h2 class="display-2">From the notebook</h2>
     <div class="filters" role="group" aria-label="Filter by series" data-count="{{ site.Params.notebook.recentCount | default 12 }}">
       <button type="button" class="pill is-on" data-filter="all" aria-pressed="true">All</button>
-      {{ if where site.RegularPages "Section" "book-blog" }}<button type="button" class="pill" data-filter="book" aria-pressed="false">Book</button>{{ end }}
+      {{ if where site.RegularPages "Section" "book-blog" }}<button type="button" class="pill" data-filter="book" aria-pressed="false">{{ site.Data.book.title }}</button>{{ end }}
       {{ range site.Data.series }}<button type="button" class="pill" data-filter="{{ urlize .short }}" aria-pressed="false">{{ .short }}</button>{{ end }}
       <button type="button" class="pill" data-filter="other" aria-pressed="false">Other notes</button>
     </div>

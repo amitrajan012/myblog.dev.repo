@@ -85,6 +85,8 @@ def main():
     if a.chapter: fm.append(f'chapter = {a.chapter}')
     if a.section: fm.append(f'section = "{a.section}"')
     tags = [t.strip() for t in a.tags.split(',') if t.strip()]
+    book = re.search(r'^title:\s*"(.*)"', open(os.path.join(HERE, '..', 'data', 'book.yaml'), encoding='utf-8').read(), re.M)
+    if book and book.group(1) not in tags: tags.insert(0, book.group(1))   # every book post carries the book's tag
     if tags: fm.append('tags = ' + json.dumps(tags, ensure_ascii=False))
     fm.append('+++')
     open(dest, 'w', encoding='utf-8').write('\n'.join(fm) + '\n\n' + protect_math(body))
