@@ -6,12 +6,10 @@ layout = "about"
   list = "never"
 +++
 
-I’m Amit Rajan. I’m currently Head of Engineering.
+Welcome. I’m Amit Rajan.
 
-I got here through hands-on work. I’ve been a machine learning engineer and a data scientist, and I’ve also led the UI development for a product. That mix means I care about the whole path: the model, the system around it, and the screen a person actually uses.
+Currently, I lead engineering teams, but my perspective is built on years of getting my hands dirty—from training machine learning models and analyzing data to building user interfaces from scratch. Because of that background, I care as much about the elegance of a system’s underlying architecture as I do about the screen a person uses.
 
-This site is my notebook. Most of it is chapter-by-chapter notes on the textbooks that shaped how I think about machine learning: Bishop’s *Pattern Recognition and Machine Learning*, Gilbert Strang’s *Linear Algebra*, *An Introduction to Statistical Learning* and *Think Stats*.
+I built this space as an open notebook. A large part of it is dedicated to chapter notes on books that fundamentally shaped how I think about AI and math—principally Bishop’s *Pattern Recognition and Machine Learning*, Gilbert Strang’s *Linear Algebra*, *ISLR*, and *Think Stats*.
 
-I’m also writing a book that explains machine learning to curious readers who don’t think in equations. Sections appear here first.
-
-I read a lot. Much of it ends up here.
+I’m also drafting a book aimed at making machine learning accessible to curious readers who don't necessarily think in equations. I publish those sections here first, along with notes on whatever else I’m currently reading.
