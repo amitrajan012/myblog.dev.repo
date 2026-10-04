@@ -7,12 +7,14 @@ Usage:
 What it does:
   * takes the title from the first "# " heading (and removes that heading from the body)
   * writes content/book-blog/<file-name>.md with front matter
+  * copies local images (![alt](../figures/x.svg)) into static/img/book-blog/<file-name>/
+    and points the post at the copies
   * protects LaTeX: Hugo's Markdown engine treats "\\," "\\{" "\\|" "_" etc. as Markdown,
     which silently corrupts maths. Inside $...$ and $$...$$ every ASCII punctuation
     character is backslash-escaped, so the page shows exactly the TeX you wrote.
 Re-running it overwrites the blog copy; the source file is never changed.
 """
-import argparse, datetime, json, os, re, string, sys
+import argparse, datetime, json, os, re, shutil, string, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PUNCT = set(string.punctuation) - {'$'}
@@ -45,6 +47,19 @@ def protect_math(md):
         out.append(md[i]); i += 1
     return ''.join(out)
 
+def copy_images(body, src_dir, slug):
+    def repl(m):
+        alt, url = m.group(1), m.group(2).strip()
+        if re.match(r'^(https?:|/|data:)', url): return m.group(0)
+        src = os.path.normpath(os.path.join(src_dir, url))
+        if not os.path.exists(src): sys.exit(f'Image not found: {src}')
+        dest_dir = os.path.join(HERE, '..', 'static', 'img', 'book-blog', slug)
+        os.makedirs(dest_dir, exist_ok=True)
+        shutil.copy2(src, os.path.join(dest_dir, os.path.basename(src)))
+        print('copied image', os.path.basename(src))
+        return f'![{alt}](/img/book-blog/{slug}/{os.path.basename(src)})'
+    return re.sub(r'!\[([^\]]*)\]\(([^)\s]+)\)', repl, body)
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('source'); ap.add_argument('--kind', default='concept', choices=['concept', 'excerpt'])
@@ -57,6 +72,7 @@ def main():
     title = m.group(1).strip()
     body = (text[:m.start()] + text[m.end():]).lstrip('\n')
     slug = os.path.splitext(os.path.basename(a.source))[0]
+    body = copy_images(body, os.path.dirname(os.path.abspath(a.source)), slug)
     dest = os.path.join(HERE, '..', 'content', 'book-blog', slug + '.md')
     date = a.date
     if not date and os.path.exists(dest):   # keep the original publish date on re-import

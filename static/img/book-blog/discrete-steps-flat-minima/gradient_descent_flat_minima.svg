@@ -1,0 +1,41 @@
+<svg viewBox="0 0 600 540" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <rect x="8" y="8" width="584" height="524" rx="28" fill="#FFFFFF" stroke="#E8E8E8" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="300" y="70" text-anchor="middle" font-size="27" font-weight="600" fill="#1A1A1A">Why discrete steps prefer flat valleys</text>
+
+  <!-- ===== LEFT PANEL: sharp valley ===== -->
+  <!-- ground line -->
+  <line x1="95" y1="445" x2="265" y2="445" stroke="#1A1A1A" stroke-width="2"/>
+  <!-- sharp narrow valley -->
+  <path d="M130,160 Q180,670 230,160" fill="none" stroke="#1A1A1A" stroke-width="3"/>
+  <!-- true minimum -->
+  <circle cx="180" cy="420" r="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+  <!-- overshooting steps (accent) -->
+  <circle cx="155" cy="357" r="7" fill="#C8472B"/>
+  <circle cx="210" cy="330" r="7" fill="#C8472B"/>
+  <path d="M158,352 Q188,300 207,326" fill="none" stroke="#C8472B" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arrowRed)"/>
+  <text x="180" y="500" text-anchor="middle" font-size="17" font-weight="600" fill="#1A1A1A">Sharp valley</text>
+  <text x="180" y="522" text-anchor="middle" font-size="15" fill="#6B6B6B">a step jumps clear over the floor</text>
+
+  <!-- ===== RIGHT PANEL: flat valley ===== -->
+  <line x1="335" y1="445" x2="505" y2="445" stroke="#1A1A1A" stroke-width="2"/>
+  <!-- wide gentle valley -->
+  <path d="M340,300 Q420,520 500,300" fill="none" stroke="#1A1A1A" stroke-width="3"/>
+  <!-- true minimum -->
+  <circle cx="420" cy="410" r="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+  <!-- settling steps (accent) -->
+  <circle cx="388" cy="392" r="7" fill="#C8472B"/>
+  <circle cx="420" cy="408" r="7" fill="#C8472B"/>
+  <circle cx="444" cy="400" r="7" fill="#C8472B"/>
+  <path d="M392,394 Q406,408 416,407" fill="none" stroke="#C8472B" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arrowRed)"/>
+  <path d="M424,408 Q435,408 440,402" fill="none" stroke="#C8472B" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arrowRed)"/>
+  <text x="420" y="500" text-anchor="middle" font-size="17" font-weight="600" fill="#1A1A1A">Flat valley</text>
+  <text x="420" y="522" text-anchor="middle" font-size="15" fill="#6B6B6B">the same step lands and stays</text>
+
+  <defs>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#C8472B"/>
+    </marker>
+  </defs>
+</svg>

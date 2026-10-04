@@ -32,6 +32,8 @@ Now imagine a narrow valley with steep walls. The situation changes completely. 
 
 The sharper the valley, the more severe the problem. A narrow valley can keep throwing the walker from one side to the other. A broad valley gives it room to settle.
 
+![Why discrete steps prefer flat valleys: in a sharp valley a step jumps clear over the floor; in a flat valley the same step lands and stays.](/img/book-blog/discrete-steps-flat-minima/gradient_descent_flat_minima.svg)
+
 This creates an interesting bias. Gradient descent is not equally comfortable everywhere in the loss landscape. Sharp regions are difficult to settle into because finite steps can carry the optimizer straight through them. Flatter regions are more forgiving. The optimizer can move into them without constantly being kicked back out.
 
 Given enough time, this means that discrete gradient descent naturally tends to favor wider, flatter regions of the landscape.
@@ -68,8 +70,6 @@ The mistake is the feature.
 
 ## Appendix: Where the Penalty Comes From
 
-*The derivation below is optional. The main argument does not depend on it. It is here for readers who want to see exactly how the hidden regularization emerges.*
-
 The mathematical difference between continuous gradient flow and discrete gradient descent can be exposed with a Taylor expansion. The idea is simple: describe where a continuously moving parameter vector will be after a short interval, including not only its current direction of motion but also how that direction is changing. Then compare that prediction with the actual step made by gradient descent.
 
 In continuous gradient flow, the parameters $\\phi$ move in the direction of the negative gradient of the loss $L$:
@@ -78,7 +78,7 @@ $$
 \\frac\{d\\phi\(t\)\}\{dt\} \= \-\\nabla L\(\\phi\(t\)\)\.
 $$
 
-Expanding the trajectory a short time $\\Delta t$ into the future gives
+Expanding the trajectory a short time $\\Delta t$ into the future with a Taylor expansion gives
 
 $$
 \\phi\(t \+ \\Delta t\)
@@ -153,7 +153,7 @@ The next step is to ask whether we can find a modified loss whose continuous gra
 Suppose that modified loss has the form
 
 $$
-\\tilde\{L\}\(\\phi\)
+\\widetilde\{L\}\(\\phi\)
 \=
 L\(\\phi\)
 \+
@@ -165,7 +165,7 @@ Its gradient flow is then
 $$
 \\frac\{d\\phi\}\{dt\}
 \=
-\-\\nabla\\tilde\{L\}
+\-\\nabla\\widetilde\{L\}
 \=
 \-\\nabla L\(\\phi\)
 \-
@@ -253,7 +253,7 @@ Substituting this into the modified objective gives
 
 $$
 \\boxed\{
-\\tilde\{L\}\_\{\\mathrm\{GD\}\}\[\\phi\]
+\\widetilde\{L\}\_\{\\mathrm\{GD\}\}\[\\phi\]
 \=
 L\[\\phi\]
 \+
