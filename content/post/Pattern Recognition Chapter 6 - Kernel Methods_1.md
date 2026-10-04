@@ -82,24 +82,23 @@ Substituting it back to the linear regression model, we get
 $$\begin{align}
 y(X) = W^T\phi(X) = a^T\Phi\phi(X) =
 a^T\begin{bmatrix}
-\phi(X_1)^T \\\\
-\phi(X_2)^T \\\\
-... \\\\
+\phi(X_1)^T \\
+\phi(X_2)^T \\
+... \\
 \phi(X_N)^T
 \end{bmatrix}\phi(X) = 
 a^T\begin{bmatrix}
-\phi(X_1)^T \phi(X)\\\\
-\phi(X_2)^T \phi(X)\\\\
-... \\\\
+\phi(X_1)^T \phi(X)\\
+\phi(X_2)^T \phi(X)\\
+... \\
 \phi(X_N)^T \phi(X)
 \end{bmatrix}
 \end{align}$$
 
-$$\begin{align}
-= a^T\begin{bmatrix}
-k(X_1,X)\\\\
-k(X_2,X)\\\\
-... \\\\
+$$\begin{align} = a^T\begin{bmatrix}
+k(X_1,X)\\
+k(X_2,X)\\
+... \\
 k(X_N,X)
 \end{bmatrix} = \bf{k}(X)^Ta =
 \bf{k}(X)^T(K + \lambda I_{N})^{-1}t

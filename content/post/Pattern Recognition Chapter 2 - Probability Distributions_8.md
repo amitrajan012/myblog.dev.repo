@@ -29,8 +29,7 @@ $$\begin{align}
 p(x|\mu) = Bern(x|\mu) = \mu^x(1-\mu)^{1-x} = exp[x\ln \mu + (1-x)\ln(1-\mu)]
 \end{align}$$
 
-$$\begin{align}
-= exp\bigg[x\ln \bigg(\frac{\mu}{1-\mu}\bigg) + \ln(1-\mu)\bigg] = (1-\mu) exp\bigg[x\ln \bigg(\frac{\mu}{1-\mu}\bigg)\bigg]
+$$\begin{align} = exp\bigg[x\ln \bigg(\frac{\mu}{1-\mu}\bigg) + \ln(1-\mu)\bigg] = (1-\mu) exp\bigg[x\ln \bigg(\frac{\mu}{1-\mu}\bigg)\bigg]
 \end{align}$$
 
 Comparing this with the expression for the exponetial family of distribution, we get
@@ -77,16 +76,13 @@ $$\begin{align}
 p(X|\mu) = exp\bigg[ \sum_{k=1}^{M} x_k \ln \mu_k\bigg] = exp\bigg[ \sum_{k=1}^{M-1} x_k \ln \mu_k + x_M \ln \mu_M\bigg]
 \end{align}$$
 
-$$\begin{align}
-= exp\bigg[ \sum_{k=1}^{M-1} x_k \ln \mu_k + \bigg(1 - \sum_{k=1}^{M-1}x_k\bigg) \ln\bigg(1 - \sum_{k=1}^{M-1}\mu_k\bigg)\bigg]
+$$\begin{align} = exp\bigg[ \sum_{k=1}^{M-1} x_k \ln \mu_k + \bigg(1 - \sum_{k=1}^{M-1}x_k\bigg) \ln\bigg(1 - \sum_{k=1}^{M-1}\mu_k\bigg)\bigg]
 \end{align}$$
 
-$$\begin{align}
-= exp\bigg[ \sum_{k=1}^{M-1} x_k \ln\bigg(\frac{\mu_k}{1 - \sum_{j=1}^{M-1}\mu_j}\bigg) + \ln\bigg(1 - \sum_{k=1}^{M-1}\mu_k\bigg)\bigg]
+$$\begin{align} = exp\bigg[ \sum_{k=1}^{M-1} x_k \ln\bigg(\frac{\mu_k}{1 - \sum_{j=1}^{M-1}\mu_j}\bigg) + \ln\bigg(1 - \sum_{k=1}^{M-1}\mu_k\bigg)\bigg]
 \end{align}$$
 
-$$\begin{align}
-= \bigg(1 - \sum_{k=1}^{M-1}\mu_k\bigg)exp\bigg[ \sum_{k=1}^{M-1} x_k \ln\bigg(\frac{\mu_k}{1 - \sum_{j=1}^{M-1}\mu_j}\bigg)\bigg]
+$$\begin{align} = \bigg(1 - \sum_{k=1}^{M-1}\mu_k\bigg)exp\bigg[ \sum_{k=1}^{M-1} x_k \ln\bigg(\frac{\mu_k}{1 - \sum_{j=1}^{M-1}\mu_j}\bigg)\bigg]
 \end{align}$$
 
 Comparing this with the general expression for exponential distribution, we get 

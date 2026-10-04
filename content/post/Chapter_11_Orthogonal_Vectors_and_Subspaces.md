@@ -16,11 +16,11 @@ Orthogonal means <b>perpendicular</b>. For two vectors $x,y$, they are orthogona
 We can conclude the dot product condition from Pythoagoras Theorem as follows:
 
 $$\begin{align}
-\lVert x \rVert^2 + \lVert y \rVert^2 = \lVert x+y \rVert^2 \\\\
-x^Tx + y^Ty = (x+y)^T(x+y) \\\\
-x^Tx + y^Ty = x^Tx + y^Ty + x^Ty + y^Tx \\\\
-x^Ty + y^Tx = 0 \\\\
-2x^Ty = 0 \\\\
+\lVert x \rVert^2 + \lVert y \rVert^2 = \lVert x+y \rVert^2 \\
+x^Tx + y^Ty = (x+y)^T(x+y) \\
+x^Tx + y^Ty = x^Tx + y^Ty + x^Ty + y^Tx \\
+x^Ty + y^Tx = 0 \\
+2x^Ty = 0 \\
 x^Ty = 0
 \end{align}$$
 
@@ -36,18 +36,18 @@ Null Space consists of the solution vectors $x$ of the equation $Ax=0$. If we ex
 
 $$\begin{align}
 \begin{bmatrix}
-    row1 \\\\
-    row2 \\\\
-    ... \\\\
+    row1 \\
+    row2 \\
+    ... \\
     rowN
 \end{bmatrix} 
 \begin{bmatrix}
     x
 \end{bmatrix} =
 \begin{bmatrix}
-    0 \\\\
-    0 \\\\
-    ... \\\\
+    0 \\
+    0 \\
+    ... \\
     0
 \end{bmatrix} 
 \end{align}$$
@@ -70,17 +70,17 @@ One of the examples of unsolvalbe $Ax=b$ is as follows:
 
 $$\begin{align}
 \begin{bmatrix}
-    1 & 1 \\\\
-    1 & 2 \\\\
+    1 & 1 \\
+    1 & 2 \\
     1 & 5
 \end{bmatrix} 
 \begin{bmatrix}
-    x_1 \\\\
+    x_1 \\
     x_2
 \end{bmatrix}=
 \begin{bmatrix}
-    b_1 \\\\
-    b_2 \\\\
+    b_1 \\
+    b_2 \\
     b_3
 \end{bmatrix}
 \end{align}$$
@@ -89,20 +89,20 @@ Transforming this equation into the form $A^TA\hat{x} = A^Tb$, we get
 
 $$\begin{align}
 \begin{bmatrix}
-    3 & 8 \\\\
+    3 & 8 \\
     8 & 30
 \end{bmatrix} 
 \begin{bmatrix}
-    \hat{x_1} \\\\
+    \hat{x_1} \\
     \hat{x_2}
 \end{bmatrix}=
 \begin{bmatrix}
-    1 & 1 & 1 \\\\
+    1 & 1 & 1 \\
     1 & 2 & 5
 \end{bmatrix}
 \begin{bmatrix}
-    b_1 \\\\
-    b_2 \\\\
+    b_1 \\
+    b_2 \\
     b_3
 \end{bmatrix}
 \end{align}$$

@@ -16,7 +16,7 @@ A set of <b>Orthonormal Vectors</b> can be defined as:
 $$\begin{align}
 q_i^Tq_j = 
 \begin{cases}
-    0 ,& \text{if } i \neq j \\\\
+    0 ,& \text{if } i \neq j \\
     1 ,& \text{if } i=j
 \end{cases}
 \end{align}$$
@@ -27,9 +27,9 @@ When these set of $n$ orthonormal vectors are put into a matrix $Q$ such that $Q
 
 $$\begin{align}
 Q = \frac{1}{2}\begin{bmatrix}
-    1 & 1 & 1 & 1 \\\\
-    1 & -1 & 1 & -1 \\\\
-    1 & 1 & -1 & -1 \\\\
+    1 & 1 & 1 & 1 \\
+    1 & -1 & 1 & -1 \\
+    1 & 1 & -1 & -1 \\
     1 & -1 & -1 & 1
 \end{bmatrix}
 \end{align}$$
@@ -38,8 +38,8 @@ A rectangular matrix with <b>orthonormal columns</b> is shown below.
 
 $$\begin{align}
 Q = \frac{1}{3}\begin{bmatrix}
-    1 & -2 & 2 \\\\
-    2 & -1 & -2 \\\\
+    1 & -2 & 2 \\
+    2 & -1 & -2 \\
     2 & 2 & 1
 \end{bmatrix}
 \end{align}$$
@@ -72,43 +72,43 @@ We can compute $A,B$ and hence $q_A,q_B$ the same way as we did for a two vector
 
 $$\begin{align}
 a = \begin{bmatrix}
-    1 \\\\
-    1 \\\\
+    1 \\
+    1 \\
     1
 \end{bmatrix}, b = \begin{bmatrix}
-    1 \\\\
-    0 \\\\
+    1 \\
+    0 \\
     2
 \end{bmatrix} \implies
 A = \begin{bmatrix}
-    1 \\\\
-    1 \\\\
+    1 \\
+    1 \\
     1
 \end{bmatrix}, B = \begin{bmatrix}
-    1 \\\\
-    1 \\\\
+    1 \\
+    1 \\
     1
 \end{bmatrix} - \frac{3}{3}\begin{bmatrix}
-    1 \\\\
-    0 \\\\
+    1 \\
+    0 \\
     2
 \end{bmatrix} =
 \begin{bmatrix}
-    0 \\\\
-    -1 \\\\
+    0 \\
+    -1 \\
     1
 \end{bmatrix}
 \end{align}$$
 
 $$\begin{align}
 q_A = \frac{1}{\sqrt{3}}\begin{bmatrix}
-    1 \\\\
-    1 \\\\
+    1 \\
+    1 \\
     1
 \end{bmatrix}, B =
 \frac{1}{\sqrt{2}}\begin{bmatrix}
-    0 \\\\
-    -1 \\\\
+    0 \\
+    -1 \\
     1
 \end{bmatrix}
 \end{align}$$

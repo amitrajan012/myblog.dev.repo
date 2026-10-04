@@ -19,34 +19,34 @@ The vector $x$ and constant $\lambda$ satisfying the equation $Ax = \lambda x$ a
 
 
 * <b>Permutation Matrix</b>: Let us take an example of a permutation matrix $A = \begin{bmatrix}
-0 & 1 \\\\
+0 & 1 \\
 1 & 0
 \end{bmatrix}$, the eigenvalues and eigenvectors are $\lambda_1 = 1, x_1 = \begin{bmatrix}
-1 \\\\
+1 \\
 1
 \end{bmatrix}; \lambda_2 = -1, x_2 = \begin{bmatrix}
--1 \\\\
+-1 \\
 1
 \end{bmatrix}$.
 
 
 * <b>Rotation Matrix</b>: Let $Q = \begin{bmatrix}
-0 & -1 \\\\
+0 & -1 \\
 1 & 0
 \end{bmatrix}$, then $\begin{vmatrix}
--\lambda & -1 \\\\
+-\lambda & -1 \\
 1 & -\lambda
 \end{vmatrix} = 0 \implies \lambda^2 + 1 = 0 \implies \lambda = \pm i$. Here eigenvalues are not real. It should be noted that the eigenvalues are complex conjugate of each other. Intutively, finding the eigenvectors of a rotation matrix is like finding vectors which when rotated by $90^\circ$ comes out to be the same. Only vector having this property is the $0$ vector.
 
 
 * <b>Traiangular Matrix</b>: Let $Q = \begin{bmatrix}
-3 & 1 \\\\
+3 & 1 \\
 0 & 3
 \end{bmatrix}$, then $\begin{vmatrix}
-3-\lambda & 1 \\\\
+3-\lambda & 1 \\
 0 & 3-\lambda
 \end{vmatrix} = 0 \implies (3-\lambda)^2 = 0 \implies \lambda_1 = 3,\lambda_2 = 3$. We get $x_1 = x_2 = \begin{bmatrix}
-1\\\\
+1\\
 0
 \end{bmatrix}$. Hence, if we get repeated eigenvalues, we can have shortage of eigenvectors.
 
@@ -58,19 +58,19 @@ One of the most important fact about eigenvalue is: <b>Sum of the eigenvalues of
 We can rewrite the equation $Ax = \lambda x$ as $(A - \lambda I)x = 0$. For this equation to have any other solution apart from $x=0$, the matrix $A - \lambda I$ has to be <b>singular</b>, i.e. $|A - \lambda I| = 0$. Now to find $x$ is like finding the <b>null space</b> of $(A - \lambda I)$.
 
 <b>Example:</b> Take $A = \begin{bmatrix}
-3 & 1 \\\\
+3 & 1 \\
 1 & 3
 \end{bmatrix}$. Then, $|A - \lambda I| = \begin{vmatrix}
-3-\lambda & 1 \\\\
+3-\lambda & 1 \\
 1 & 3-\lambda
 \end{vmatrix} = (3-\lambda)^2 - 1 = \lambda^2 - 6\lambda + 8$. In the equation $\lambda^2 - 6\lambda + 8$, $6$ is the <b>trace (sum of diagonal elements)</b> and $8$ is the <b>determinant</b> of matrix $A$. On solving this equation, we get the eigenvalues as $\lambda_1 = 4,\lambda_2 = 2$. The eigenvector $x_1$ can be obtained by solving the equation $(A - \lambda_1I)x_1 = 0 \implies (A - 4I)x_1 = 0 \implies \begin{bmatrix}
--1 & 1 \\\\
+-1 & 1 \\
 1 & -1
 \end{bmatrix}x_1 = 0 \implies x_1 = \begin{bmatrix}
-1 \\\\
+1 \\
 1 
 \end{bmatrix}$. Similarly, for $\lambda_2$, $x_2 = \begin{bmatrix}
--1 \\\\
+-1 \\
 1 
 \end{bmatrix}$.
 

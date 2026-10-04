@@ -51,8 +51,7 @@ $$r = \frac{\sum _{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum _{i=1}^{n}
 
 R-statistic is given as (Replacing $\bar{y} = 0, \beta_0 = 0$):
 
-$$R^2 = 1 - \frac{RSS}{TSS} = 1 - \frac{\sum _{i=1}^{n} (\widehat{y_i} - y_i)^2}{\sum _{i=1}^{n} (y_i - \bar{y})^2}
- = 1 - \frac{\sum _{i=1}^{n} (\widehat{y_i} - y_i)^2}{\sum _{i=1}^{n} (y_i)^2} =  1 - \frac{\sum _{i=1}^{n}(\beta_0 + \beta_1 x_i - y_i)^2}{\sum _{i=1}^{n} (y_i)^2} = 1 - \frac{\sum _{i=1}^{n} (\beta_1 x_i - y_i)^2}{\sum _{i=1}^{n} (y_i)^2}$$
+$$R^2 = 1 - \frac{RSS}{TSS} = 1 - \frac{\sum _{i=1}^{n} (\widehat{y_i} - y_i)^2}{\sum _{i=1}^{n} (y_i - \bar{y})^2} = 1 - \frac{\sum _{i=1}^{n} (\widehat{y_i} - y_i)^2}{\sum _{i=1}^{n} (y_i)^2} =  1 - \frac{\sum _{i=1}^{n}(\beta_0 + \beta_1 x_i - y_i)^2}{\sum _{i=1}^{n} (y_i)^2} = 1 - \frac{\sum _{i=1}^{n} (\beta_1 x_i - y_i)^2}{\sum _{i=1}^{n} (y_i)^2}$$
 
 $\beta_1$ is given as:
 
@@ -61,5 +60,4 @@ $$\beta_1 = \frac{\sum _{i=1}^{n} (x_i - \bar{x}) (y_i - \bar{y})}{\sum _{i=1}^{
 
 Replacing $\beta_1$ in the above equation and solving we get,
 
-$$R^2 = \frac{\sum_i (y_i)^2 - (\sum_i (y_i)^2 + \sum_i (\beta_1x_i)^2 - \sum_i{2\beta_1 x_i y_i})}{\sum_i (y_i)^2}
-= \frac{\sum_i{2\beta_1 x_i y_i} - \sum_i (\beta_1x_i)^2}{\sum_i (y_i)^2} = r^2$$
+$$R^2 = \frac{\sum_i (y_i)^2 - (\sum_i (y_i)^2 + \sum_i (\beta_1x_i)^2 - \sum_i{2\beta_1 x_i y_i})}{\sum_i (y_i)^2} = \frac{\sum_i{2\beta_1 x_i y_i} - \sum_i (\beta_1x_i)^2}{\sum_i (y_i)^2} = r^2$$

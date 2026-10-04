@@ -12,9 +12,9 @@ topics = ["Linear Algebra"]
 ## 23.1 Complex Vectors/Matrices
 
 Let $z = \begin{bmatrix}
-z_1 \\\\
-z_2 \\\\
-... \\\\
+z_1 \\
+z_2 \\
+... \\
 z_n
 \end{bmatrix}$ be a complex vector in $C^n$. The expresson $z^Tz$ doesn't represent the length of the vector $z$. Instead it's length is represented by $\overline{z}^Tz$. $\overline{z}^T$ is also called as $z^H$ and is called as <b>Hermitian of a matrix</b>. Hence, the length of a complex vector is $z^Hz = |z_1|^2 + |z_2|^2 + ... + |z_n|^2$. Similarly, for a complex matrix $A$ to be symmetric, $A^H = A$ with diagonal elements being real. In a complex domain, we call symmetric matrices as <b>Hermitian Matrices</b>. For two vectors $x$ and $y$ in a complex plane are perpendicular to each other if and only if $y^Hx = 0$. Hence, for an orrhogonal matrix (matrix with orthonormal columns) $Q$ in complex plane, $Q^HQ = I$. These orthogonal matrices in the complex plane are called as <b>Unitary Matrices</b>. 
 
@@ -24,10 +24,10 @@ A $n \times n$ <b>Fourier Matrix</b> is shown below.
 
 $$\begin{align}
 F_n = \begin{bmatrix}
-1 & 1 & 1 & ... & 1 \\\\
-1 & w & w^2 & ... & w^{n-1} \\\\
-1 & w^2 & w^4 & ... & w^{2(n-1)} \\\\
-.. & .. & .. & .. & .. \\\\
+1 & 1 & 1 & ... & 1 \\
+1 & w & w^2 & ... & w^{n-1} \\
+1 & w^2 & w^4 & ... & w^{2(n-1)} \\
+.. & .. & .. & .. & .. \\
 1 & w^{n-1} & w^{2(n-1)} & ... & w^{(n-1)(n-1)}
 \end{bmatrix}
 \end{align}$$
@@ -38,14 +38,14 @@ For $n=4$, $w=e^{i\frac{2\pi}{4}} = i$, $w^2 = -1$, $w^3 = -i$ and $w^4 = 1$. Th
 
 $$\begin{align}
 F_4 = \begin{bmatrix}
-1 & 1 & 1 & 1 \\\\
-1 & i & i^2 & i^3 \\\\
-1 & i^2 & i^4 & i^6 \\\\
+1 & 1 & 1 & 1 \\
+1 & i & i^2 & i^3 \\
+1 & i^2 & i^4 & i^6 \\
 1 & i^3 & i^6 & i^9
 \end{bmatrix} = \begin{bmatrix}
-1 & 1 & 1 & 1 \\\\
-1 & i & -1 & -i \\\\
-1 & -1 & 1 & -1 \\\\
+1 & 1 & 1 & 1 \\
+1 & i & -1 & -i \\
+1 & -1 & 1 & -1 \\
 1 & -i & -1 & i
 \end{bmatrix}
 \end{align}$$
@@ -54,10 +54,10 @@ It should be noted that the columns of this matrix is orthogonal. All the column
 
 $$\begin{align}
 F_{2k} = \begin{bmatrix}
-I & D \\\\
+I & D \\
 I & -D
 \end{bmatrix}\begin{bmatrix}
-F_k & 0 \\\\
+F_k & 0 \\
 0 & F_k
 \end{bmatrix}P
 \end{align}$$

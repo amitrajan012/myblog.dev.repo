@@ -1,0 +1,6 @@
+{{- /* Maths kept verbatim by Goldmark passthrough; Hugo HTML-escapes it (so "<" stays text) and hand it to MathJax with unambiguous delimiters. */ -}}
+{{- if eq .Type "block" -}}
+\[{{ .Inner }}\]
+{{- else -}}
+\({{ .Inner }}\)
+{{- end -}}

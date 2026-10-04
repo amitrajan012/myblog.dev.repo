@@ -17,10 +17,10 @@ Matrices $A$ and $B$ are <b>similar</b> if for some invertible matrix $M$, $B=M^
 
 $$\begin{align}
 A = \begin{bmatrix}
-2 & 1 \\\\
+2 & 1 \\
 1 & 2
 \end{bmatrix};\Lambda = \begin{bmatrix}
-3 & 0 \\\\
+3 & 0 \\
 0 & 1
 \end{bmatrix}
 \end{align}$$
@@ -29,16 +29,16 @@ We can find a lot of values of $M$ and hence $B$ and one of it is as follows:
 
 $$\begin{align}
 \begin{bmatrix}
-1 & -4 \\\\
+1 & -4 \\
 0 & 1
 \end{bmatrix}\begin{bmatrix}
-2 & 1 \\\\
+2 & 1 \\
 1 & 2
 \end{bmatrix}\begin{bmatrix}
-1 & 4 \\\\
+1 & 4 \\
 0 & 1
 \end{bmatrix}=\begin{bmatrix}
--2 & -15 \\\\
+-2 & -15 \\
 1 & 6
 \end{bmatrix} = B
 \end{align}$$
@@ -52,24 +52,24 @@ Let $A$ and $B$ are similar matrices and $\lambda$ is one of the eigen values of
 ## 25.3 Non-diagonalizable Matrix and Jordan Form
 
 Let the eigenvalues of $A$ are same. For example, let us say $\lambda_1 = \lambda_2 = 4$. In this case, <b>one family of similar matrices</b> is just the matrix $\begin{bmatrix}
-4 & 0 \\\\
+4 & 0 \\
 0 & 4
 \end{bmatrix}$ as for all $M$, $M^{-1}\begin{bmatrix}
-4 & 0 \\\\
+4 & 0 \\
 0 & 4
 \end{bmatrix}M = \begin{bmatrix}
-4 & 0 \\\\
+4 & 0 \\
 0 & 4
 \end{bmatrix}$.
 
 </b>Another family of similar matrices</b> will have matrices in the form of $\begin{bmatrix}
-4 & 1 \\\\
+4 & 1 \\
 0 & 4
 \end{bmatrix}, \begin{bmatrix}
-4 & 0 \\\\
+4 & 0 \\
 17 & 4
 \end{bmatrix}, \begin{bmatrix}
-5 & 1 \\\\
+5 & 1 \\
 -1 & 3
 \end{bmatrix}$, where the first matrix representing the simplest (the best we can get to a diagonal matrix) matrix in the family. This matrix is called in the <b>Jordan Form</b>. A matrix in the Jordan Form can be divided into <b>Jordan Blocks</b> and each Jordan Block has one eigenvalue in it. In a nutshell, <b>every square matrix $A$ is similar to a Jordan Matrix $J$ with $n$ Jordan Blocks where $n$ is the number of eigenvalues of $A$</b>, as we have one eigenvalue per Jordan Block. When the matrix $A$ is diagonalizable, i.e. it has distinct eigenvalues, then $J = \Lambda$.
 

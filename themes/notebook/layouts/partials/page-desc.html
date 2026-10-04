@@ -2,7 +2,7 @@
 {{- $d := "" -}}
 {{- $clean := "" -}}
 {{- if .IsPage -}}
-  {{- $clean = .Plain | plainify | htmlUnescape | replaceRE `\$\$[\s\S]*?\$\$` " " | replaceRE `\$[^$\n]*\$` " " | replaceRE `^\s*[\d.]+\s+` "" | replaceRE `\s+` " " | strings.TrimSpace -}}
+  {{- $clean = .Plain | plainify | htmlUnescape | replaceRE `\\\[[\s\S]*?\\\]` " " | replaceRE `\\\([\s\S]*?\\\)` " " | replaceRE `\$\$[\s\S]*?\$\$` " " | replaceRE `\$[^$\n]*\$` " " | replaceRE `^\s*[\d.]+\s+` "" | replaceRE `\s+` " " | strings.TrimSpace -}}
 {{- end -}}
 {{- if .IsHome -}}
   {{- $d = "Amit Rajan's ML notebook: chapter-by-chapter notes and derivations on Bishop, Strang, ISLR and Think Stats, plus the book Counting to Intelligence." -}}

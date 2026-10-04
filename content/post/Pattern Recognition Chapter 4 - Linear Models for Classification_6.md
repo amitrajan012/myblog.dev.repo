@@ -17,8 +17,7 @@ $$\begin{align}
 p(C_1|X) = \frac{p(X|C_1)p(C_1)}{p(X)} = \frac{p(X|C_1)p(C_1)}{p(X|C_1)p(C_1) + p(X|C_2)p(C_2)}
 \end{align}$$
 
-$$\begin{align}
-= \frac{1}{1+exp(-a)} = \sigma(a)
+$$\begin{align} = \frac{1}{1+exp(-a)} = \sigma(a)
 \end{align}$$
 
 where
@@ -71,16 +70,13 @@ $$\begin{align}
 a = \ln \bigg(\frac{p(X|C_1)}{p(X|C_2)} \times \frac{p(C_1)}{p(C_2)}\bigg) = \ln \frac{p(X|C_1)}{p(X|C_2)} + \ln \frac{p(C_1)}{p(C_2)}
 \end{align}$$
 
-$$\begin{align}
-= \ln \frac{exp \bigg[-\frac{1}{2}(X-\mu_1)^T \Sigma^{-1} (X - \mu_1)\bigg]}{exp \bigg[-\frac{1}{2}(X-\mu_2)^T \Sigma^{-1} (X - \mu_2)\bigg]} + \ln \frac{p(C_1)}{p(C_2)}
+$$\begin{align} = \ln \frac{exp \bigg[-\frac{1}{2}(X-\mu_1)^T \Sigma^{-1} (X - \mu_1)\bigg]}{exp \bigg[-\frac{1}{2}(X-\mu_2)^T \Sigma^{-1} (X - \mu_2)\bigg]} + \ln \frac{p(C_1)}{p(C_2)}
 \end{align}$$
 
-$$\begin{align}
-= (\mu_1^T - \mu_2^T)\Sigma^{-1}X - \frac{1}{2}\mu_1^T\Sigma^{-1}\mu_1 + \frac{1}{2}\mu_2^T\Sigma^{-1}\mu_2 + \ln \frac{p(C_1)}{p(C_2)}
+$$\begin{align} = (\mu_1^T - \mu_2^T)\Sigma^{-1}X - \frac{1}{2}\mu_1^T\Sigma^{-1}\mu_1 + \frac{1}{2}\mu_2^T\Sigma^{-1}\mu_2 + \ln \frac{p(C_1)}{p(C_2)}
 \end{align}$$
 
-$$\begin{align}
-= W^TX + W_0
+$$\begin{align} = W^TX + W_0
 \end{align}$$
 
 Hence, the posterior distribution is given as

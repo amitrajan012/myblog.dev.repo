@@ -16,10 +16,10 @@ A vector space in two and three dimensions is $R^2$ and $R^3$.
 
 We can make some common observations about vector spaces. Let $u,v$ be two vectors, then their linear combination can be described as $w=au+bv$ where $a,b$ are scalars. If $a=b=0$, $w=au+bv=0$. This means that <b>for any vector space (which contains vectors $u,v$), the zero vector will always be in it</b>. This observation gives us a powerful tool to deduce whether a set is a vector space or not. If zero vector is not in the set, it's not a vector space.
 
-A vector space that is contained within another vector space is called a <b>subspace</b> of that space. A space defined in $R^2$ contianing just zero vector as $S=\bigg\\{\begin{bmatrix}
-    0 \\\\
+A vector space that is contained within another vector space is called a <b>subspace</b> of that space. A space defined in $R^2$ contianing just zero vector as $S=\bigg\{\begin{bmatrix}
+    0 \\
     0 
-\end{bmatrix}\bigg\\}$ is a <b>subspace</b> as any linear combination of zero vector is still a zero vector. Another example of subspace in $R^2$ is <b>a line passing through origin</b> as any multiple of the vector will also be on the line and hence fulfilling the criteria of a vector space. Any plane passing through origin is a subspace in $R^3$ as linear combination of the vectors in the plane will still reside in the plane.
+\end{bmatrix}\bigg\}$ is a <b>subspace</b> as any linear combination of zero vector is still a zero vector. Another example of subspace in $R^2$ is <b>a line passing through origin</b> as any multiple of the vector will also be on the line and hence fulfilling the criteria of a vector space. Any plane passing through origin is a subspace in $R^3$ as linear combination of the vectors in the plane will still reside in the plane.
 
 ## 4.2 Union and Intersection of Vector Space
 
@@ -30,20 +30,20 @@ The <b>intersection of the subspaces denoted as $S_1 \cap S_2$ is a subspace</b>
 ## 4.3 Column Space
 
 Given a matrix $A$, it's columns and all their linear combinations form a vector space called as the <b>column space</b> $C(A)$ of $A$. For example, for the matrix $A = \begin{bmatrix}
-    1 & 3 \\\\
-    2 & 3 \\\\
+    1 & 3 \\
+    2 & 3 \\
     4 & 1 
 \end{bmatrix}$ it's column space $C(A)$ is a plane passing through $\begin{bmatrix}
-    0 \\\\
-    0 \\\\
+    0 \\
+    0 \\
     0
 \end{bmatrix}$ (origin), $\begin{bmatrix}
-    1 \\\\
-    2 \\\\
+    1 \\
+    2 \\
     4
 \end{bmatrix}$, $\begin{bmatrix}
-    3 \\\\
-    3 \\\\
+    3 \\
+    3 \\
     1
 \end{bmatrix}$ in $R^3$. 
 
@@ -51,20 +51,20 @@ Let us look at another example. Following matrix $A$ is in $R^4$. The <b>column 
 
 $$\begin{align}
 A = \begin{bmatrix}
-    1 & 1 & 2 \\\\
-    2 & 1 & 3 \\\\
-    3 & 1 & 4 \\\\
+    1 & 1 & 2 \\
+    2 & 1 & 3 \\
+    3 & 1 & 4 \\
     4 & 1 & 5
 \end{bmatrix},
 x = \begin{bmatrix}
-    x_1 \\\\
-    x_2 \\\\
+    x_1 \\
+    x_2 \\
     x_3
 \end{bmatrix},
 b = \begin{bmatrix}
-    b_1 \\\\
-    b_2 \\\\
-    b_3 \\\\
+    b_1 \\
+    b_2 \\
+    b_3 \\
     b_4
  \end{bmatrix}
 \end{align}$$
@@ -73,31 +73,31 @@ The system of linear equation $Ax = b$ can be further reduced to:
 
 $$\begin{align}
 Ax =b \implies\begin{bmatrix}
-    1 & 1 & 2 \\\\
-    2 & 1 & 3 \\\\
-    3 & 1 & 4 \\\\
+    1 & 1 & 2 \\
+    2 & 1 & 3 \\
+    3 & 1 & 4 \\
     4 & 1 & 5
 \end{bmatrix} \begin{bmatrix}
-    x_1 \\\\
-    x_2 \\\\
+    x_1 \\
+    x_2 \\
     x_3
 \end{bmatrix} = b
  \implies x_1\begin{bmatrix}
-    1 \\\\
-    2 \\\\
-    3 \\\\
+    1 \\
+    2 \\
+    3 \\
     4 
 \end{bmatrix} +
 x_2\begin{bmatrix}
-    1 \\\\
-    1 \\\\
-    1 \\\\
+    1 \\
+    1 \\
+    1 \\
     1 
 \end{bmatrix} +
 x_3\begin{bmatrix}
-    2 \\\\
-    3 \\\\
-    4 \\\\
+    2 \\
+    3 \\
+    4 \\
     5 
 \end{bmatrix} = b
 \end{align}$$
@@ -112,40 +112,40 @@ If we further look at the columns of $A$, $col_3$ is a linear combination of $co
 
 $$\begin{align}
 Ax=0 \implies \begin{bmatrix}
-    1 & 1 & 2 \\\\
-    2 & 1 & 3 \\\\
-    3 & 1 & 4 \\\\
+    1 & 1 & 2 \\
+    2 & 1 & 3 \\
+    3 & 1 & 4 \\
     4 & 1 & 5
 \end{bmatrix} \begin{bmatrix}
-    x_1 \\\\
-    x_2 \\\\
+    x_1 \\
+    x_2 \\
     x_3
 \end{bmatrix} = 
  \begin{bmatrix}
-    0 \\\\
-    0 \\\\
-    0 \\\\
+    0 \\
+    0 \\
+    0 \\
     0 
 \end{bmatrix}
 \end{align}$$
 
 Some the vectors which will be in the null space of $A$ are: $\begin{bmatrix}
-    0 \\\\
-    0 \\\\
+    0 \\
+    0 \\
     0
 \end{bmatrix},
 \begin{bmatrix}
-    1 \\\\
-    1 \\\\
+    1 \\
+    1 \\
     -1
 \end{bmatrix},
 \begin{bmatrix}
-    2 \\\\
-    2 \\\\
+    2 \\
+    2 \\
     -2
 \end{bmatrix},...$ In general, all vectors of the form $\begin{bmatrix}
-    c \\\\
-    c \\\\
+    c \\
+    c \\
     -c
 \end{bmatrix}$ forms the <b>null space of $A$</b>.
 

@@ -29,9 +29,9 @@ Consider a training data having $N$ input output pairs $\{X_n,t_n\}$ where each 
 
 $$\begin{align}
 \chi = \begin{bmatrix}
-\tilde{X_1}^T \\\\
-\tilde{X_2}^T \\\\
-... \\\\
+\tilde{X_1}^T \\
+\tilde{X_2}^T \\
+... \\
 \tilde{X_N}^T
 \end{bmatrix}_{N \times (D+1)}
 \end{align}$$
@@ -48,9 +48,9 @@ The matrix $\chi\tilde{W}$ can be given as
 
 $$\begin{align}
 \chi\tilde{W} = \begin{bmatrix}
-\tilde{X_1}^TW_1 & \tilde{X_1}^TW_2 & ... & \tilde{X_1}^TW_K \\\\
-\tilde{X_2}^TW_1 & \tilde{X_2}^TW_2 & ... & \tilde{X_2}^TW_K \\\\
-... & ... & ... & ...\\\\
+\tilde{X_1}^TW_1 & \tilde{X_1}^TW_2 & ... & \tilde{X_1}^TW_K \\
+\tilde{X_2}^TW_1 & \tilde{X_2}^TW_2 & ... & \tilde{X_2}^TW_K \\
+... & ... & ... & ...\\
 \tilde{X_N}^TW_1 & \tilde{X_N}^TW_2 & ... & \tilde{X_N}^TW_K
 \end{bmatrix}_{N \times K}
 \end{align}$$
@@ -59,9 +59,9 @@ If we offset subtract the output vector from the above matrix, we have
 
 $$\begin{align}
 \chi\tilde{W} - T = \begin{bmatrix}
-\tilde{X_1}^TW_1 - t_{11} & \tilde{X_1}^TW_2 - t_{12} & ... & \tilde{X_1}^TW_K - t_{1K}\\\\
-\tilde{X_2}^TW_1 - t_{21} & \tilde{X_2}^TW_2 - t_{22} & ... & \tilde{X_2}^TW_K - t_{2K}\\\\
-... & ... & ... & ...\\\\
+\tilde{X_1}^TW_1 - t_{11} & \tilde{X_1}^TW_2 - t_{12} & ... & \tilde{X_1}^TW_K - t_{1K}\\
+\tilde{X_2}^TW_1 - t_{21} & \tilde{X_2}^TW_2 - t_{22} & ... & \tilde{X_2}^TW_K - t_{2K}\\
+... & ... & ... & ...\\
 \tilde{X_N}^TW_1 - t_{N1} & \tilde{X_N}^TW_2 - t_{N2} & ... & \tilde{X_N}^TW_K - t_{NK}
 \end{bmatrix}_{N \times K}
 \end{align}$$
@@ -70,9 +70,9 @@ Considering $(\chi\tilde{W} - T)^T(\chi\tilde{W} - T)$ and just focusing on its 
 
 $$\begin{align}
 (\chi\tilde{W} - T)^T(\chi\tilde{W} - T) = \begin{bmatrix}
-\sum_{n=1}^{N}(\tilde{X_n}^TW_1 - t_{n1})^2 &  &  & \\\\
- & \sum_{n=1}^{N}(\tilde{X_n}^TW_2 - t_{n2})^2 &  & \\\\
- &  & ... & \\\\
+\sum_{n=1}^{N}(\tilde{X_n}^TW_1 - t_{n1})^2 &  &  & \\
+ & \sum_{n=1}^{N}(\tilde{X_n}^TW_2 - t_{n2})^2 &  & \\
+ &  & ... & \\
  &  &  & \sum_{n=1}^{N}(\tilde{X_n}^TW_K - t_{nK})^2
 \end{bmatrix}_{K \times K}
 \end{align}$$
@@ -83,8 +83,7 @@ $$\begin{align}
 \frac{1}{2}Tr\bigg((\chi\tilde{W} - T)^T(\chi\tilde{W} - T)\bigg) = \frac{1}{2}\sum_{k=1}^{K}\sum_{n=1}^{N}(\tilde{X_n}^TW_k - t_{nk})^2
 \end{align}$$
 
-$$\begin{align}
-= \frac{1}{2}\sum_{n=1}^{N}\sum_{k=1}^{K}(\tilde{X_n}^TW_k - t_{nk})^2
+$$\begin{align} = \frac{1}{2}\sum_{n=1}^{N}\sum_{k=1}^{K}(\tilde{X_n}^TW_k - t_{nk})^2
 \end{align}$$
 
 The quantity $(\tilde{X_n}^TW_k - t_{nk})^2$ can be viewed as how much the output for $X_n$ for class $C_k$ deviates from the desired output $t_k$. The sum $\sum_{k=1}^{K}(\tilde{X_n}^TW_k - t_{nk})^2$ is the total deviation (combined for all the classes) for the input $X_n$. When this is summed over all teh data points, we get the desired sum-of-squares error. Hence, $\frac{1}{2}Tr\bigg((\chi\tilde{W} - T)^T(\chi\tilde{W} - T)\bigg)$ needs to be minimzed with respect to $\tilde{W}$ to get the optimal parameter. Taking derivative with respect to $\tilde{W}$ and equating it to $0$, we get the optimized solution as

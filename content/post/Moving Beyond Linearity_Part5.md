@@ -42,8 +42,7 @@ $$f_1(\xi) = β_0 + β_1 \xi + β_2 \xi^2 + β_3 \xi^3$$
 Replacing $x=\xi$ in $f_2(x)$, we get
 
 $$f_2(\xi) = a_2 + b_2 \xi + c_2 \xi^2 + d_2 \xi^3 =
-(\beta_0 - \beta_4 \xi^3) + (\beta_1 + 3\beta_4 \xi^2) \xi + (\beta_2 - 3\beta_4 \xi) \xi^2 + (\beta_3 + \beta_4) \xi^3 \\
-= β_0 + β_1 \xi + β_2 \xi^2 + β_3 \xi^3$$
+(\beta_0 - \beta_4 \xi^3) + (\beta_1 + 3\beta_4 \xi^2) \xi + (\beta_2 - 3\beta_4 \xi) \xi^2 + (\beta_3 + \beta_4) \xi^3 \\ = β_0 + β_1 \xi + β_2 \xi^2 + β_3 \xi^3$$
 
 Hence $f(x)$ is continuous at $\xi$.
 

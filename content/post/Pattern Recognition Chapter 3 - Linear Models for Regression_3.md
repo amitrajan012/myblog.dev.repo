@@ -49,8 +49,7 @@ $$\begin{align}
 [y(X;D) - E_D[y(X;D)] + E_D[y(X;D)]- h(X)]^2
 \end{align}$$
 
-$$\begin{align}
-= (y(X;D) - E_D[y(X;D)])^2 + (E_D[y(X;D)]- h(X))^2
+$$\begin{align} = (y(X;D) - E_D[y(X;D)])^2 + (E_D[y(X;D)]- h(X))^2
 \end{align}$$
 
 $$\begin{align}
@@ -63,8 +62,7 @@ $$\begin{align}
 E_D\bigg[2(y(X;D) - E_D[y(X;D)])(E_D[y(X;D)]- h(X))\bigg]
 \end{align}$$
 
-$$\begin{align}
-= 2(E_D[y(X;D)] - E_D[y(X;D)])(E_D[y(X;D)]- h(X)) = 0
+$$\begin{align} = 2(E_D[y(X;D)] - E_D[y(X;D)])(E_D[y(X;D)]- h(X)) = 0
 \end{align}$$
 
 Hence, the expression reduces to
@@ -73,12 +71,10 @@ $$\begin{align}
 E_D\bigg[(y(X;D) - h(X))^2\bigg]
 \end{align}$$
 
-$$\begin{align}
-= \bigg(E_D[y(X;D)]- h(X)\bigg)^2 + E_D\bigg[(y(X;D) - E_D[y(X;D)])^2\bigg]
+$$\begin{align} = \bigg(E_D[y(X;D)]- h(X)\bigg)^2 + E_D\bigg[(y(X;D) - E_D[y(X;D)])^2\bigg]
 \end{align}$$
 
-$$\begin{align}
-= \bigg(bias\bigg)^2 + variance
+$$\begin{align} = \bigg(bias\bigg)^2 + variance
 \end{align}$$
 
 The first term, called as <b>bias</b> represents <b>the extent to which the average prediction over all data sets $E_D[y(X;D)]$ differs from the desired regression function $h(X)$</b>. The second term, called the <b>variance, measures the extent to which the solutions for individual data sets $y(X;D)$ vary around their average $E_D[y(X;D)$, and hence this measures the extent to which the function $y(X;D)$ is sensitive to the particular choice of data set</b>. Hence, <b>expected loss is the sum of squared bias, variance and noise</b>.

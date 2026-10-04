@@ -103,12 +103,10 @@ $$\begin{align}
 \tilde{L}(a) = \frac{1}{2}||W||^2 + C\sum_{n=1}^{N}\xi_n - \sum_{n=1}^{N}a_n[t_n y(X_n) - 1 + \xi_n] - \sum_{n=1}^{N}\mu_n \xi_n
 \end{align}$$
 
-$$\begin{align}
-= \frac{1}{2}||W||^2 - \sum_{n=1}^{N}a_n t_n y(X_n)+ C\sum_{n=1}^{N}\xi_n + \sum_{n=1}^{N}a_n[1 - \xi_n] - \sum_{n=1}^{N}(C - a_n) \xi_n
+$$\begin{align} = \frac{1}{2}||W||^2 - \sum_{n=1}^{N}a_n t_n y(X_n)+ C\sum_{n=1}^{N}\xi_n + \sum_{n=1}^{N}a_n[1 - \xi_n] - \sum_{n=1}^{N}(C - a_n) \xi_n
 \end{align}$$
 
-$$\begin{align}
-= \frac{1}{2}||W||^2 - \sum_{n=1}^{N}a_n t_n y(X_n)+ \sum_{n=1}^{N} a_n
+$$\begin{align} = \frac{1}{2}||W||^2 - \sum_{n=1}^{N}a_n t_n y(X_n)+ \sum_{n=1}^{N} a_n
 \end{align}$$
 
 $$\begin{align}

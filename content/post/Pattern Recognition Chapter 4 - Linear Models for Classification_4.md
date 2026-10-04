@@ -43,8 +43,7 @@ $$\begin{align}
 s_k^2 = \sum_{n \in C_k} (y_n - m_k)^2 = \sum_{n \in C_k} (W^TX_n - W^TM_k)^2
 \end{align}$$
 
-$$\begin{align}
-= \sum_{n \in C_k} (W^TX_n - W^TM_k)(W^TX_n - W^TM_k)^T = W^T\bigg[\sum_{n \in C_k} (X_n - M_k)(X_n - M_k)^T\bigg]W
+$$\begin{align} = \sum_{n \in C_k} (W^TX_n - W^TM_k)(W^TX_n - W^TM_k)^T = W^T\bigg[\sum_{n \in C_k} (X_n - M_k)(X_n - M_k)^T\bigg]W
 \end{align}$$
 
 Hence, the Fisher criterian can be simplified as

@@ -38,8 +38,7 @@ $$\begin{align}
 \frac{d\sigma}{da} = \frac{d\sigma(a)}{da} = \frac{-1}{[1 + exp(-a)]^2}exp(-a)(-1) = \frac{exp(-a)}{[1 + exp(-a)]^2} 
 \end{align}$$
 
-$$\begin{align}
-= \frac{1}{1 + exp(-a)}\bigg[1 - \frac{1}{1 + exp(-a)}\bigg] = \sigma(a)(1 - \sigma(a)) = \sigma(1 - \sigma)
+$$\begin{align} = \frac{1}{1 + exp(-a)}\bigg[1 - \frac{1}{1 + exp(-a)}\bigg] = \sigma(a)(1 - \sigma(a)) = \sigma(1 - \sigma)
 \end{align}$$
 
 For a data set $\{\phi_n, t_n\}$ where $\phi_n = \phi(X_n)$ for $n=1,2,...,N$ and $t_n \in \{0,1\}$, the likelihood function can be written as
@@ -66,8 +65,7 @@ $$\begin{align}
 \nabla E(W) = -\sum_{n=1}^{N} \frac{t_n}{y_n} \sigma(1 - \sigma)\phi_n - \frac{1 - t_n}{1 - y_n} \sigma(1 - \sigma)\phi_n
 \end{align}$$
 
-$$\begin{align}
-= -\sum_{n=1}^{N} \sigma(1 - \sigma)\phi_n\frac{t_n - y_n}{y_n(1-y_n)} = \sum_{n=1}^{N} y_n(1 - y_n)\phi_n\frac{y_n - t_n}{y_n(1-y_n)}
+$$\begin{align} = -\sum_{n=1}^{N} \sigma(1 - \sigma)\phi_n\frac{t_n - y_n}{y_n(1-y_n)} = \sum_{n=1}^{N} y_n(1 - y_n)\phi_n\frac{y_n - t_n}{y_n(1-y_n)}
 \end{align}$$
 
 $$\begin{align}
@@ -95,7 +93,7 @@ This posterior probability model can directly be maximized with respect to param
 $$\begin{align}
 \frac{\delta y_k}{\delta a_j} = 
 \begin{cases}
-    \frac{-exp(a_k)exp(a_j)}{[\sum_j exp(a_j)]^2} = -y_ky_j, & j \neq k\\\\
+    \frac{-exp(a_k)exp(a_j)}{[\sum_j exp(a_j)]^2} = -y_ky_j, & j \neq k\\
     \frac{\sum_j exp(a_j) exp(a_k) - exp(a_k) exp(a_k)}{[\sum_j exp(a_j)]^2} = y_k[1 - y_k], & j = k
 \end{cases}
 \end{align}$$
@@ -139,7 +137,7 @@ where $a=W^T\phi$ and $f(.)$ is activation function. We can design the activatio
 
 $$\begin{align}
 \begin{cases}
-    t_n = 1, & a_n \geq \theta\\\\
+    t_n = 1, & a_n \geq \theta\\
     t_n = 0, & otherwise
 \end{cases}
 \end{align}$$
@@ -166,20 +164,16 @@ $$\begin{align}
 f(a) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{a} exp\bigg(-\frac{\theta^2}{2}\bigg) d\theta
 \end{align}$$
 
-$$\begin{align}
-= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{0} exp\bigg(-\frac{\theta^2}{2}\bigg) d\theta + \frac{1}{\sqrt{2\pi}} \int_{0}^{a} exp\bigg(-\frac{\theta^2}{2}\bigg) d\theta
+$$\begin{align} = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{0} exp\bigg(-\frac{\theta^2}{2}\bigg) d\theta + \frac{1}{\sqrt{2\pi}} \int_{0}^{a} exp\bigg(-\frac{\theta^2}{2}\bigg) d\theta
 \end{align}$$
 
-$$\begin{align}
-= \frac{1}{\sqrt{2\pi}} \frac{\sqrt{\pi}}{\sqrt{2}} + \frac{1}{\sqrt{2\pi}} \int_{0}^{a} exp\bigg(-\frac{\theta^2}{2}\bigg) d\theta
+$$\begin{align} = \frac{1}{\sqrt{2\pi}} \frac{\sqrt{\pi}}{\sqrt{2}} + \frac{1}{\sqrt{2\pi}} \int_{0}^{a} exp\bigg(-\frac{\theta^2}{2}\bigg) d\theta
 \end{align}$$
 
-$$\begin{align}
-= \frac{1}{2} \bigg[ 1 + \frac{1}{\sqrt{2\pi}} \int_{0}^{a} exp\bigg(-\frac{\theta^2}{2}\bigg) d\theta \bigg]
+$$\begin{align} = \frac{1}{2} \bigg[ 1 + \frac{1}{\sqrt{2\pi}} \int_{0}^{a} exp\bigg(-\frac{\theta^2}{2}\bigg) d\theta \bigg]
 \end{align}$$
 
-$$\begin{align}
-= \frac{1}{2} \bigg[ 1 + \frac{1}{\sqrt{2}} erf(a) \bigg]
+$$\begin{align} = \frac{1}{2} \bigg[ 1 + \frac{1}{\sqrt{2}} erf(a) \bigg]
 \end{align}$$
 
 where 

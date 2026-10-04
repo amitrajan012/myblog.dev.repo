@@ -72,80 +72,65 @@ The mistake is the feature.
 
 The mathematical difference between continuous gradient flow and discrete gradient descent can be exposed with a Taylor expansion. The idea is simple: describe where a continuously moving parameter vector will be after a short interval, including not only its current direction of motion but also how that direction is changing. Then compare that prediction with the actual step made by gradient descent.
 
-In continuous gradient flow, the parameters $\\phi$ move in the direction of the negative gradient of the loss $L$:
+In continuous gradient flow, the parameters $\phi$ move in the direction of the negative gradient of the loss $L$:
 
 $$
-\\frac\{d\\phi\(t\)\}\{dt\} \= \-\\nabla L\(\\phi\(t\)\)\.
+\frac{d\phi(t)}{dt} = -\nabla L(\phi(t)).
 $$
 
-Expanding the trajectory a short time $\\Delta t$ into the future with a Taylor expansion gives
+Expanding the trajectory a short time $\Delta t$ into the future with a Taylor expansion gives
 
 $$
-\\phi\(t \+ \\Delta t\)
-\=
-\\phi\(t\)
-\+
-\\Delta t\\\,\\frac\{d\\phi\}\{dt\}
-\+
-\\frac\{\(\\Delta t\)\^2\}\{2\}\\\,\\frac\{d\^2\\phi\}\{dt\^2\}
-\+
-\\mathcal\{O\}\\big\(\(\\Delta t\)\^3\\big\)\.
+\phi(t + \Delta t) =
+\phi(t) +
+\Delta t\,\frac{d\phi}{dt} +
+\frac{(\Delta t)^2}{2}\,\frac{d^2\phi}{dt^2} +
+\mathcal{O}\big((\Delta t)^3\big).
 $$
 
 The second derivative follows from the chain rule:
 
 $$
-\\frac\{d\^2\\phi\}\{dt\^2\}
-\=
-\\frac\{d\}\{dt\}\\big\(\-\\nabla L\(\\phi\)\\big\)
-\=
-\-\\nabla\^2 L\(\\phi\)\\\,\\frac\{d\\phi\}\{dt\}
-\=
-\\nabla\^2 L\(\\phi\)\\\,\\nabla L\(\\phi\)\.
+\frac{d^2\phi}{dt^2} =
+\frac{d}{dt}\big(-\nabla L(\phi)\big) =
+-\nabla^2 L(\phi)\,\frac{d\phi}{dt} =
+\nabla^2 L(\phi)\,\nabla L(\phi).
 $$
 
 Substituting this into the expansion gives
 
 $$
-\\phi\(t \+ \\Delta t\)
-\=
-\\phi\(t\)
-\-
-\\Delta t\\\,\\nabla L\(\\phi\)
-\+
-\\frac\{\(\\Delta t\)\^2\}\{2\}
-\\nabla\^2 L\(\\phi\)\\\,\\nabla L\(\\phi\)
-\+
-\\mathcal\{O\}\\big\(\(\\Delta t\)\^3\\big\)\.
+\phi(t + \Delta t) =
+\phi(t) -
+\Delta t\,\nabla L(\phi) +
+\frac{(\Delta t)^2}{2}
+\nabla^2 L(\phi)\,\nabla L(\phi) +
+\mathcal{O}\big((\Delta t)^3\big).
 $$
 
 Gradient descent, however, uses the discrete update
 
 $$
-\\phi\_\{k\+1\}
-\=
-\\phi\_k
-\-
-\\alpha\\\,\\nabla L\(\\phi\_k\)\,
+\phi_{k+1} =
+\phi_k -
+\alpha\,\nabla L(\phi_k),
 $$
 
-where $\\alpha$ is the learning rate. Treating one gradient-descent step as a time interval of length $\\alpha$, the discrete trajectory is simply
+where $\alpha$ is the learning rate. Treating one gradient-descent step as a time interval of length $\alpha$, the discrete trajectory is simply
 
 $$
-\\phi\(t\+\\alpha\)
-\=
-\\phi\(t\)
-\-
-\\alpha\\\,\\nabla L\(\\phi\)\.
+\phi(t+\alpha) =
+\phi(t) -
+\alpha\,\nabla L(\phi).
 $$
 
 The continuous trajectory therefore contains an additional second-order term involving the curvature of the loss surface, while the discrete update does not. The difference between the two is approximately
 
 $$
-\\text\{drift\}
-\\approx
-\-\\frac\{\\alpha\^2\}\{2\}\\\,
-\\nabla\^2 L\(\\phi\)\\\,\\nabla L\(\\phi\)\.
+\text{drift}
+\approx
+-\frac{\alpha^2}{2}\,
+\nabla^2 L(\phi)\,\nabla L(\phi).
 $$
 
 The next step is to ask whether we can find a modified loss whose continuous gradient flow reproduces the behavior of the discrete update.
@@ -153,113 +138,94 @@ The next step is to ask whether we can find a modified loss whose continuous gra
 Suppose that modified loss has the form
 
 $$
-\\widetilde\{L\}\(\\phi\)
-\=
-L\(\\phi\)
-\+
-\\alpha R\(\\phi\)\.
+\widetilde{L}(\phi) =
+L(\phi) +
+\alpha R(\phi).
 $$
 
 Its gradient flow is then
 
 $$
-\\frac\{d\\phi\}\{dt\}
-\=
-\-\\nabla\\widetilde\{L\}
-\=
-\-\\nabla L\(\\phi\)
-\-
-\\alpha\\\,\\nabla R\(\\phi\)\.
+\frac{d\phi}{dt} =
+-\nabla\widetilde{L} =
+-\nabla L(\phi) -
+\alpha\,\nabla R(\phi).
 $$
 
-Now expand this trajectory to second order in $\\alpha$:
+Now expand this trajectory to second order in $\alpha$:
 
 $$
-\\phi\(t \+ \\alpha\)
-\\approx
-\\phi\(t\)
-\-
-\\alpha\\\,\\nabla L\(\\phi\)
-\-
-\\alpha\^2\\\,\\nabla R\(\\phi\)
-\+
-\\frac\{\\alpha\^2\}\{2\}\\\,
-\\nabla\^2 L\(\\phi\)\\\,\\nabla L\(\\phi\)\.
+\phi(t + \alpha)
+\approx
+\phi(t) -
+\alpha\,\nabla L(\phi) -
+\alpha^2\,\nabla R(\phi) +
+\frac{\alpha^2}{2}\,
+\nabla^2 L(\phi)\,\nabla L(\phi).
 $$
 
 We want this to match the actual discrete step,
 
 $$
-\\phi\(t\+\\alpha\)
-\=
-\\phi\(t\)
-\-
-\\alpha\\nabla L\(\\phi\)\.
+\phi(t+\alpha) =
+\phi(t) -
+\alpha\nabla L(\phi).
 $$
 
 The first-order terms already agree, so the second-order terms must cancel:
 
 $$
-\-\\alpha\^2\\\,\\nabla R\(\\phi\)
-\+
-\\frac\{\\alpha\^2\}\{2\}\\\,
-\\nabla\^2 L\(\\phi\)\\\,\\nabla L\(\\phi\)
-\=
-0\.
+-\alpha^2\,\nabla R(\phi) +
+\frac{\alpha^2}{2}\,
+\nabla^2 L(\phi)\,\nabla L(\phi) = 0.
 $$
 
 Therefore,
 
 $$
-\\nabla R\(\\phi\)
-\=
-\\frac\{1\}\{2\}\\\,
-\\nabla\^2 L\(\\phi\)\\\,\\nabla L\(\\phi\)\.
+\nabla R(\phi) =
+\frac{1}{2}\,
+\nabla^2 L(\phi)\,\nabla L(\phi).
 $$
 
 We can use the identity
 
 $$
-\\nabla
-\\left\(
-\\frac\{1\}\{2\}\\\|\\nabla L\(\\phi\)\\\|\^2
-\\right\)
-\=
-\\nabla\^2 L\(\\phi\)\\\,\\nabla L\(\\phi\)\,
+\nabla
+\left(
+\frac{1}{2}\|\nabla L(\phi)\|^2
+\right) =
+\nabla^2 L(\phi)\,\nabla L(\phi),
 $$
 
 which means
 
 $$
-\\nabla R\(\\phi\)
-\=
-\\frac\{1\}\{4\}
-\\nabla
-\\left\(
-\\\|\\nabla L\(\\phi\)\\\|\^2
-\\right\)\.
+\nabla R(\phi) =
+\frac{1}{4}
+\nabla
+\left(
+\|\nabla L(\phi)\|^2
+\right).
 $$
 
 Integrating gives
 
 $$
-R\(\\phi\)
-\=
-\\frac\{1\}\{4\}
-\\\|\\nabla L\(\\phi\)\\\|\^2\.
+R(\phi) =
+\frac{1}{4}
+\|\nabla L(\phi)\|^2.
 $$
 
 Substituting this into the modified objective gives
 
 $$
-\\boxed\{
-\\widetilde\{L\}\_\{\\mathrm\{GD\}\}\[\\phi\]
-\=
-L\[\\phi\]
-\+
-\\frac\{\\alpha\}\{4\}
-\\\|\\nabla L\(\\phi\)\\\|\^2
-\}
+\boxed{
+\widetilde{L}_{\mathrm{GD}}[\phi] =
+L[\phi] +
+\frac{\alpha}{4}
+\|\nabla L(\phi)\|^2
+}
 $$
 
 The result is the hidden regularizer. To this order, discrete gradient descent behaves as though the original loss had been augmented by a term proportional to the squared gradient magnitude. Where the landscape is steep, this additional cost is larger; where the landscape is flat, it becomes smaller. The mathematics therefore reproduces the intuition from the main text: discrete steps create a bias away from sharply varying regions and toward flatter ones.

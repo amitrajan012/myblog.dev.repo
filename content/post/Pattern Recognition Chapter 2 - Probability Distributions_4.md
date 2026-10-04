@@ -15,13 +15,13 @@ If two sets of variables are jointly Gaussian, then the conditional distribution
 
 $$\begin{align}
 X = \begin{pmatrix}
-X_a\\\\
+X_a\\
 X_b
 \end{pmatrix};\mu = \begin{pmatrix}
-\mu_a\\\\
+\mu_a\\
 \mu_b
 \end{pmatrix};\Sigma = \begin{pmatrix}
-\Sigma_{aa} & \Sigma_{ab}\\\\
+\Sigma_{aa} & \Sigma_{ab}\\
 \Sigma_{ba} & \Sigma_{bb}
 \end{pmatrix}
 \end{align}$$
@@ -30,7 +30,7 @@ As $\Sigma$ is symmetric, i.e. $\Sigma^T = \Sigma$. This implies that $\Sigma_{a
 
 $$\begin{align}
 \Lambda = \begin{pmatrix}
-\Lambda_{aa} & \Lambda_{ab}\\\\
+\Lambda_{aa} & \Lambda_{ab}\\
 \Lambda_{ba} & \Lambda_{bb}
 \end{pmatrix}
 \end{align}$$
@@ -41,21 +41,19 @@ $$\begin{align}
 \Delta^2 = -\frac{1}{2}(X-\mu)^T\Sigma^{-1}(X-\mu)
 \end{align}$$
 
-$$\begin{align}
-= -\frac{1}{2}\begin{pmatrix}
-X_a-\mu_a\\\\
+$$\begin{align} = -\frac{1}{2}\begin{pmatrix}
+X_a-\mu_a\\
 X_b-\mu_b
 \end{pmatrix}^T\begin{pmatrix}
-\Lambda_{aa} & \Lambda_{ab}\\\\
+\Lambda_{aa} & \Lambda_{ab}\\
 \Lambda_{ba} & \Lambda_{bb}
 \end{pmatrix}\begin{pmatrix}
-X_a-\mu_a\\\\
+X_a-\mu_a\\
 X_b-\mu_b
 \end{pmatrix}
 \end{align}$$
 
-$$\begin{align}
-= -\frac{1}{2}(X_a-\mu_a)^T\Lambda_{aa}(X_a-\mu_a) -\frac{1}{2}(X_a-\mu_a)^T\Lambda_{ab}(X_b-\mu_b)
+$$\begin{align} = -\frac{1}{2}(X_a-\mu_a)^T\Lambda_{aa}(X_a-\mu_a) -\frac{1}{2}(X_a-\mu_a)^T\Lambda_{ab}(X_b-\mu_b)
 \end{align}$$
 $$\begin{align}
 -\frac{1}{2}(X_b-\mu_b)^T\Lambda_{ba}(X_a-\mu_a) -\frac{1}{2}(X_b-\mu_b)^T\Lambda_{bb}(X_b-\mu_b)
@@ -93,8 +91,7 @@ $$\begin{align}
 \mu_{a|b} = \Sigma_{a|b}\bigg(\Lambda_{aa}\mu_a - \Lambda_{ab}(X_b - \mu_b)\bigg)
 \end{align}$$
 
-$$\begin{align}
-= \Lambda_{aa}^{-1}\bigg(\Lambda_{aa}\mu_a - \Lambda_{ab}(X_b - \mu_b)\bigg) = \mu_a - \Lambda_{aa}^{-1}\Lambda_{ab}(X_b - \mu_b) 
+$$\begin{align} = \Lambda_{aa}^{-1}\bigg(\Lambda_{aa}\mu_a - \Lambda_{ab}(X_b - \mu_b)\bigg) = \mu_a - \Lambda_{aa}^{-1}\Lambda_{ab}(X_b - \mu_b)
 \end{align}$$
 
 Using matrix algebra, we can express the mean and covariance of conditional distribution in termes of partitioned mean and covariance matrix of joint distribution as

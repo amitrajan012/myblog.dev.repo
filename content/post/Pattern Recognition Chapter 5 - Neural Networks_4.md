@@ -35,12 +35,10 @@ $$\begin{align}
 \frac{\partial^2 E_n}{\partial a_j^2} = \frac{\partial}{\partial a_j}\bigg(\frac{\partial E_n}{\partial a_j}\bigg)
 \end{align}$$
 
-$$\begin{align}
-= \frac{\partial}{\partial a_j}\bigg[\sum_k \frac{\partial E_n}{\partial a_k} \frac{\partial a_k}{\partial z_j} \frac{\partial z_j}{\partial a_j}\bigg] = \frac{\partial}{\partial a_j}\bigg[ h^{'}(a_j)\sum_k W_{kj} \frac{\partial E_n}{\partial a_k} \bigg]
+$$\begin{align} = \frac{\partial}{\partial a_j}\bigg[\sum_k \frac{\partial E_n}{\partial a_k} \frac{\partial a_k}{\partial z_j} \frac{\partial z_j}{\partial a_j}\bigg] = \frac{\partial}{\partial a_j}\bigg[ h^{'}(a_j)\sum_k W_{kj} \frac{\partial E_n}{\partial a_k} \bigg]
 \end{align}$$
 
-$$\begin{align}
-= h^{''}(a_j)\sum_k W_{kj} \frac{\partial E_n}{\partial a_k} + h^{'}(a_j)\sum_k \frac{\partial}{\partial a_j}\bigg[ W_{kj} \frac{\partial E_n}{\partial a_k} \bigg]
+$$\begin{align} = h^{''}(a_j)\sum_k W_{kj} \frac{\partial E_n}{\partial a_k} + h^{'}(a_j)\sum_k \frac{\partial}{\partial a_j}\bigg[ W_{kj} \frac{\partial E_n}{\partial a_k} \bigg]
 \end{align}$$
 
 $$\begin{align}

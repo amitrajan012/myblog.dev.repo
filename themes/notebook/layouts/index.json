@@ -6,7 +6,7 @@
   {{- $isBook := eq .Section "book-blog" -}}
   {{- $series := "Other notes" -}}{{- $key := $m.key -}}
   {{- if $isBook }}{{ $series = site.Data.book.title }}{{ $key = "book" }}{{ else if $m.series }}{{ $series = $m.series.short }}{{ end -}}
-  {{- $text := .Plain | plainify | htmlUnescape | replaceRE `\$\$[\s\S]*?\$\$` " " | replaceRE `\$[^$\n]*\$` " " | replaceRE `\s+` " " -}}
+  {{- $text := .Plain | plainify | htmlUnescape | replaceRE `\\\[[\s\S]*?\\\]` " " | replaceRE `\\\([\s\S]*?\\\)` " " | replaceRE `\$\$[\s\S]*?\$\$` " " | replaceRE `\$[^$\n]*\$` " " | replaceRE `\s+` " " -}}
   {{- $line := $m.line -}}{{- if $isBook }}{{ $line = partial "book-kind.html" . }}{{ end -}}
   {{- $out = $out | append (dict "t" .Title "u" .RelPermalink "d" (.Date.Format "02 Jan 06") "s" $series "k" $key "l" $line "g" (.Params.tags | default slice) "x" $text) -}}
 {{- end -}}

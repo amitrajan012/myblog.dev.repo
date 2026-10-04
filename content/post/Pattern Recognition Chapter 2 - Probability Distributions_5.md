@@ -38,8 +38,7 @@ $$\begin{align}
 \ln p(Z) = \ln p(X) + \ln p(Y|X)
 \end{align}$$
 
-$$\begin{align}
-= -\frac{1}{2}(X-\mu)^T\Lambda(X-\mu) -\frac{1}{2}(Y-AX-b)^TL(Y-AX-b) + const
+$$\begin{align} = -\frac{1}{2}(X-\mu)^T\Lambda(X-\mu) -\frac{1}{2}(Y-AX-b)^TL(Y-AX-b) + const
 \end{align}$$
 
 The above expression is a quadratic form of the componnets of $Z$ and hence the joint distribution is Gaussian. Its mean and precison matrix ($R$) can be computed using the coefficients of the quadratic form of $Z$ (i.e. $\begin{pmatrix}

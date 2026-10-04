@@ -130,7 +130,7 @@ In a <b>Bayesian</b> setting, we choose <b>prior distributions</b> $p(\mathbf{w}
 For a real-valued variable $x$, the <b>gaussian</b> or <b>normal</b> distribution is defined as:
 
 $$\begin{align}
-N(x|\mu,\sigma^2) = \frac{1}{(2\pi\sigma^2)^{1/2}}exp\left\\{{\frac{-1}{2\sigma^2}(x-\mu)^2}\right\\}
+N(x|\mu,\sigma^2) = \frac{1}{(2\pi\sigma^2)^{1/2}}exp\left\{{\frac{-1}{2\sigma^2}(x-\mu)^2}\right\}
 \end{align}$$
 
 where $\mu$ is the <b>mean</b> and $\sigma^2$ being <b>variance</b> ($\sigma$ being <b>standard deviation</b>). Reciprocal of the variance $\beta = \frac{1}{\sigma^2}$ is called as <b>precision</b>. Being a probability distribution, it satisfies following properties.
@@ -169,8 +169,7 @@ $$\begin{align}
 ln(p(\mathbf{x}|\mu,\sigma^2)) = \sum_{n=1}^{N}ln[N(x_n|\mu,\sigma^2)]
 \end{align}$$
 
-$$\begin{align}
-= \frac{-1}{2\sigma^2}\sum_{n=1}^{N}(x_n - \mu)^2 - \frac{N}{2}ln(2\pi) - \frac{N}{2}ln(\sigma^2)
+$$\begin{align} = \frac{-1}{2\sigma^2}\sum_{n=1}^{N}(x_n - \mu)^2 - \frac{N}{2}ln(2\pi) - \frac{N}{2}ln(\sigma^2)
 \end{align}$$
 
 Taking derivative with respect to $\mu$ and equating it to $0$, we get
@@ -228,7 +227,7 @@ ln(p(\mathbf{t|x}, \mathbf{w}, \beta)) = \frac{-\beta}{2}\sum_{n=1}^{N}\{y(x_n,\
 The maximum likelihood estimator of the polynomial coefficient $\mathbf{w}$ deonted as $\mathbf{w_{ML}}$ is obtained by maximizing the log likelihood with respect to $\mathbf{w}$. As the last two terms $- \frac{N}{2}ln(2\pi) + \frac{N}{2}ln(\beta)$ does not depend on $\mathbf{w}$, we can omit them, i.e. we simply have to maximize $\frac{-\beta}{2}\sum_{n=1}^{N}\{y(x_n,\mathbf{w}) - t_n\}^2$ w.r.t. $\mathbf{w}$. $\beta$ being a constant, we can remove it and by reversing the sign, <b>we have to minimize</b> $\frac{1}{2}\sum_{n=1}^{N}\{y(x_n,\mathbf{w}) - t_n\}^2$, which is the <b>sum of squares error fucntion</b>. Hence, <b>the sum-of-squares error function has arisen as a consequence of maximizing likelihood under the assumption of a Gaussian noise distribution</b>. Maximizing w.r.t. $\beta$, we get
 
 $$\begin{align}
-\beta_{ML} = \frac{1}{N}\sum_{n=1}^{N}\\{y(x_n,\mathbf{w_{ML}}) - t_n\\}^2
+\beta_{ML} = \frac{1}{N}\sum_{n=1}^{N}\{y(x_n,\mathbf{w_{ML}}) - t_n\}^2
 \end{align}$$
 
 Using the bayseian approach, we can even get the error in predictio of $t$ as we get the <b>predictive distribution</b> over $t$ instead of just a point estimate. The predictive distribution is given as
@@ -241,13 +240,13 @@ p(t | x, \mathbf{w_{ML}}, \beta_{ML}) = N(t|y(x,\mathbf{w_{ML}}),\beta^{-1}_{ML}
 If we further include the <b>prior distribution</b> of $\mathbf{w}$ and assume that it follows a <b>gaussian distribution</b> with mean $0$ and precision $\alpha$. As we know that the <b>multivaraite gaussian</b> for a $D$ dimensional vector is given as
 
 $$\begin{align}
-N(\mathbf{x|\mu,\Sigma}) = \frac{1}{(2\pi)^{D/2}} \frac{1}{|\mathbf{\Sigma}|^{1/2}} exp\left\\{{\frac{-1}{2}(\mathbf{x-\mu})^T}\mathbf{\Sigma}^{-1}(\mathbf{x-\mu})\right\\}
+N(\mathbf{x|\mu,\Sigma}) = \frac{1}{(2\pi)^{D/2}} \frac{1}{|\mathbf{\Sigma}|^{1/2}} exp\left\{{\frac{-1}{2}(\mathbf{x-\mu})^T}\mathbf{\Sigma}^{-1}(\mathbf{x-\mu})\right\}
 \end{align}$$
 
 where $\mathbf{x,\mu}$ are $D$ dimensional vectors and $\mathbf{\Sigma}$ is a $D \times D$ <b>covariance matrix</b>. The covariance matrix for the distribution of $\mathbf{w}$ can be represented as $\mathbf{\Sigma} = \alpha^{-1}\mathbf{I}$, where $\mathbf{I}$ is a $(M+1) \times (M+1)$ matrix, which gives us $|\mathbf{\Sigma}| = \frac{1}{\alpha^{M+1}}$. Hence, we get
 
 $$\begin{align}
-p(\mathbf{w}|\alpha) = N(\mathbf{w} |0,\alpha^{-1}\mathbf{I}) = \left(\frac{\alpha}{2\pi}\right)^{(M+1)/2} exp\left\\{{\frac{-\alpha}{2}\mathbf{w}^T}\mathbf{w}\right\\}
+p(\mathbf{w}|\alpha) = N(\mathbf{w} |0,\alpha^{-1}\mathbf{I}) = \left(\frac{\alpha}{2\pi}\right)^{(M+1)/2} exp\left\{{\frac{-\alpha}{2}\mathbf{w}^T}\mathbf{w}\right\}
 \end{align}$$
 
 Using Bayes' Theorem, we have

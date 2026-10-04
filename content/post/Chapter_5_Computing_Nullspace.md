@@ -15,8 +15,8 @@ The idea behind this exercise is to come up with an algorithm to find the nullsp
 
 $$\begin{align}
 A = \begin{bmatrix}
-    1 & 2 & 2 & 2 \\\\
-    2 & 4 & 6 & 8 \\\\
+    1 & 2 & 2 & 2 \\
+    2 & 4 & 6 & 8 \\
     3 & 6 & 8 & 10
 \end{bmatrix}
 \end{align}$$
@@ -25,20 +25,20 @@ One of the first thing to notice in $A$ is that $row_3$ is a linear combination 
 
 $$\begin{align}
 A = \begin{bmatrix}
-    1 & 2 & 2 & 2 \\\\
-    2 & 4 & 6 & 8 \\\\
+    1 & 2 & 2 & 2 \\
+    2 & 4 & 6 & 8 \\
     3 & 6 & 8 & 10
 \end{bmatrix}
 \xrightarrow{\text{S1}}
 \begin{bmatrix}
-    1 & 2 & 2 & 2 \\\\
-    0 & 0 & 2 & 4 \\\\
+    1 & 2 & 2 & 2 \\
+    0 & 0 & 2 & 4 \\
     0 & 0 & 2 & 4
 \end{bmatrix}
 \xrightarrow{\text{S3}}
 \begin{bmatrix}
-    1 & 2 & 2 & 2 \\\\
-    0 & 0 & 2 & 4 \\\\
+    1 & 2 & 2 & 2 \\
+    0 & 0 & 2 & 4 \\
     0 & 0 & 0 & 0
 \end{bmatrix} = U
 \end{align}$$
@@ -47,55 +47,55 @@ The resultant matrix after the elimination steps is $U$ which is in the <b>echel
 
 $$\begin{align}
 x_1\begin{bmatrix}
-    1  \\\\
-    0  \\\\
+    1  \\
+    0  \\
     0
 \end{bmatrix} +
 x_2\begin{bmatrix}
-    2  \\\\
-    0  \\\\
+    2  \\
+    0  \\
     0
 \end{bmatrix} +
 x_3\begin{bmatrix}
-    2  \\\\
-    2  \\\\
+    2  \\
+    2  \\
     0
 \end{bmatrix} +
 x_4\begin{bmatrix}
-    2  \\\\
-    4  \\\\
+    2  \\
+    4  \\
     0
 \end{bmatrix} = 
 \begin{bmatrix}
-    0  \\\\
-    0  \\\\
+    0  \\
+    0  \\
     0
 \end{bmatrix}
 \end{align}$$
 
 The values in $x$ corresponding to the free columns (here they are $x_2,x_4$) can be assigned any values and then we can find the values of $x_1,x_3$ to complete the solution. We can systematically assign values to the multipliers corresponding to the free columns. Let $x_2=1,x_4=0$, this gives $x_1=-2,x_3=0$ and hence $\begin{bmatrix}
-    -2 \\\\
-    1 \\\\
-    0 \\\\
+    -2 \\
+    1 \\
+    0 \\
     0
 \end{bmatrix}$ is a solution (or any multiple of this vector), a vector in the <b>null space</b>. Another choice for free variables can be $x_2=0,x_4=1$, which gives $x_1=2,x_3=-2$ and hence $\begin{bmatrix}
-    2 \\\\
-    0 \\\\
-    -2 \\\\
+    2 \\
+    0 \\
+    -2 \\
     1
 \end{bmatrix}$ is another solution (or any multiple of this vector), another vector in the <b>null space</b>. Hence, the general solution can be given as:
 
 $$\begin{align}
 x = c\begin{bmatrix}
-    -2  \\\\
-    1  \\\\
-    0 \\\\
+    -2  \\
+    1  \\
+    0 \\
     0
 \end{bmatrix} +
 d\begin{bmatrix}
-    2  \\\\
-    0  \\\\
-    -2 \\\\
+    2  \\
+    0  \\
+    -2 \\
     1
 \end{bmatrix}
 \end{align}$$
@@ -108,39 +108,39 @@ Another thing to note is the number of individual solutions is equal to the numb
 $$\begin{align}
 U =
 \begin{bmatrix}
-    1 & 2 & 2 & 2 \\\\
-    0 & 0 & 2 & 4 \\\\
+    1 & 2 & 2 & 2 \\
+    0 & 0 & 2 & 4 \\
     0 & 0 & 0 & 0
 \end{bmatrix} \rightarrow
 \begin{bmatrix}
-    1 & 2 & 0 & -2 \\\\
-    0 & 0 & 1 & 2 \\\\
+    1 & 2 & 0 & -2 \\
+    0 & 0 & 1 & 2 \\
     0 & 0 & 0 & 0
 \end{bmatrix} = R
 \end{align}$$
 
 If we further examine the matrix $R$, it can be noticed that an <b>identity matrix</b> $\begin{bmatrix}
-    1 & 0  \\\\
+    1 & 0  \\
     0 & 1 
 \end{bmatrix} = I$ sits in the <b>pivot rows and columns</b> ($row_1, row_2, col_1, col_2$). Corresponding entries in the <b>free columns</b> are $\begin{bmatrix}
-    2 & -2  \\\\
+    2 & -2  \\
     0 & 2 
 \end{bmatrix} = F$. If we look at $I$ and $F$, they are nothing but the rearranged individual solutions with sign switched for $F$. Let us just rearrnage the reduced row-echelon matrix $R$ as follows, where the last matrix is nothing but matrix represented in the <b>block form</b>. We have to find $x$ such that $Rx=0$.
 
 $$\begin{align}
 R = 
 \begin{bmatrix}
-    1 & 2 & 0 & -2 \\\\
-    0 & 0 & 1 & 2 \\\\
+    1 & 2 & 0 & -2 \\
+    0 & 0 & 1 & 2 \\
     0 & 0 & 0 & 0
 \end{bmatrix} \rightarrow
 \begin{bmatrix}
-    1 & 0 & 2 & -2 \\\\
-    0 & 1 & 0 & 2 \\\\
+    1 & 0 & 2 & -2 \\
+    0 & 1 & 0 & 2 \\
     0 & 0 & 0 & 0
 \end{bmatrix} = 
 \begin{bmatrix}
-    I & F \\\\
+    I & F \\
     0 & 0 
 \end{bmatrix}
 \end{align}$$
@@ -149,10 +149,10 @@ For the given R in the block form, the solution can be given as:
 
 $$\begin{align}
  \begin{bmatrix}
-    I & F \\\\
+    I & F \\
     0 & 0 
 \end{bmatrix}\begin{bmatrix}
-    -F \\\\
+    -F \\
     I
 \end{bmatrix} = 0
 \end{align}$$
@@ -161,13 +161,13 @@ Hence, the final solution in the rearranged form is:
 
 $$\begin{align}
  \begin{bmatrix}
-    -F \\\\
+    -F \\
     I
 \end{bmatrix} =
 \begin{bmatrix}
-    -2 & 0 \\\\
-    2 & -2 \\\\
-    1 & 0 \\\\
+    -2 & 0 \\
+    2 & -2 \\
+    1 & 0 \\
     0 & 1
 \end{bmatrix}
 \end{align}$$
@@ -178,9 +178,9 @@ Let us look at one more example. The system of equations which we have to solve 
 
 $$\begin{align}
 B = \begin{bmatrix}
-    1 & 2 & 3 \\\\
-    2 & 4 & 6 \\\\
-    2 & 6 & 8 \\\\
+    1 & 2 & 3 \\
+    2 & 4 & 6 \\
+    2 & 6 & 8 \\
     2 & 8 & 10
 \end{bmatrix} 
 \end{align}$$
@@ -189,46 +189,46 @@ The transformation of $B$ into <b>row-reduced echelon form</b> can be given as f
 
 $$\begin{align}
 B = \begin{bmatrix}
-    1 & 2 & 3 \\\\
-    2 & 4 & 6 \\\\
-    2 & 6 & 8 \\\\
+    1 & 2 & 3 \\
+    2 & 4 & 6 \\
+    2 & 6 & 8 \\
     2 & 8 & 10
 \end{bmatrix} \rightarrow
 \begin{bmatrix}
-    1 & 2 & 3 \\\\
-    0 & 0 & 0 \\\\
-    0 & 2 & 2 \\\\
+    1 & 2 & 3 \\
+    0 & 0 & 0 \\
+    0 & 2 & 2 \\
     0 & 4 & 4
 \end{bmatrix} \rightarrow
 \begin{bmatrix}
-    1 & 2 & 3 \\\\
-    0 & 2 & 2 \\\\
-    0 & 0 & 0 \\\\
-    0 & 0 & 0 \\\\
+    1 & 2 & 3 \\
+    0 & 2 & 2 \\
+    0 & 0 & 0 \\
+    0 & 0 & 0 \\
 \end{bmatrix} \rightarrow
 \begin{bmatrix}
-    1 & 0 & 1 \\\\
-    0 & 2 & 2 \\\\
-    0 & 0 & 0 \\\\
-    0 & 0 & 0 \\\\
+    1 & 0 & 1 \\
+    0 & 2 & 2 \\
+    0 & 0 & 0 \\
+    0 & 0 & 0 \\
 \end{bmatrix} \rightarrow
 \begin{bmatrix}
-    1 & 0 & 1 \\\\
-    0 & 1 & 1 \\\\
-    0 & 0 & 0 \\\\
-    0 & 0 & 0 \\\\
+    1 & 0 & 1 \\
+    0 & 1 & 1 \\
+    0 & 0 & 0 \\
+    0 & 0 & 0 \\
 \end{bmatrix}
 \end{align}$$
 
 $$\begin{align}
 I = 
 \begin{bmatrix}
-    1 & 0\\\\
+    1 & 0\\
     0 & 1
 \end{bmatrix};
 F = 
 \begin{bmatrix}
-    1 \\\\
+    1 \\
     1 
 \end{bmatrix}
 \end{align}$$
@@ -236,12 +236,12 @@ F =
 Hence the <b>null space</b> can be given as
 $$\begin{align}
 c\begin{bmatrix}
-    -F \\\\
+    -F \\
     I
 \end{bmatrix} =
 c\begin{bmatrix}
-    -1 \\\\
-    -1 \\\\
+    -1 \\
+    -1 \\
     1
 \end{bmatrix} 
 \end{align}$$

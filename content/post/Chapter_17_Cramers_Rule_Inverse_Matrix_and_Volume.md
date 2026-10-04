@@ -15,16 +15,16 @@ $A^{-1}$ can be given as $A^{-1} = \frac{1}{|A|}C^T$, where $C^T$ is the matrix 
 
 $$\begin{align}
 \begin{bmatrix}
-    a_{11} & ... & a_{1n}\\\\
-    : & : & :\\\\
+    a_{11} & ... & a_{1n}\\
+    : & : & :\\
     a_{n1} & ... & a_{nn}
 \end{bmatrix}\begin{bmatrix}
-    C_{11} & ... & C_{n1}\\\\
-    : & : & :\\\\
+    C_{11} & ... & C_{n1}\\
+    : & : & :\\
     C_{1n} & ... & C_{nn}
 \end{bmatrix}=\begin{bmatrix}
-    |A| & 0 & 0\\\\
-    0 & |A| & 0\\\\
+    |A| & 0 & 0\\
+    0 & |A| & 0\\
     0 & 0 & |A|
 \end{bmatrix}=|A|I
 \end{align}$$ 
@@ -44,13 +44,13 @@ For the <b>identity matrix</b> $I$, the box is a unit cube and the statement hol
 One of the important property to note is let's say we double one of the edges of the box. This will double the volume. Doubling the edge means multiplying one of the rows by $2$ which doubles the determinant of the matrix as well. Hence, the volume satisfies the property <b>3a (discussed in Chapter 15)</b>.
 
 <b>Property 3b</b> says that, for any square matrix $A$, $|A|$ behaves like a linear function of a row if all the other rows are keep fixed, i.e. $\begin{vmatrix}
-a+a^{'} & b+b^{'} \\\\
+a+a^{'} & b+b^{'} \\
 c & d
 \end{vmatrix}=\begin{vmatrix}
-a & b \\\\
+a & b \\
 c & d
 \end{vmatrix}+\begin{vmatrix}
-a^{'} & b^{'} \\\\
+a^{'} & b^{'} \\
 c & d
 \end{vmatrix}$
 

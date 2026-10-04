@@ -34,8 +34,8 @@ Let $A$ be a matrix representing a two-dimensional space with the basis as vecto
 
 {{% fluid_img "/img/Linear_Algebra/Projection_Multi.png" %}}
 
-Or, we can say that the error vector $e$ is perpendicular to both the basis vectors $a_1$ and $a_2$, i.e. $a_1^T(b-A\hat{x}) = 0$ and $a_2^T(b-A\hat{x}) = 0$. In the matrix form,  $\begin{bmatrix}a_1^T \\\\
-a_2^T\end{bmatrix}(b - A\hat{x}) = \begin{bmatrix}0 \\\\
+Or, we can say that the error vector $e$ is perpendicular to both the basis vectors $a_1$ and $a_2$, i.e. $a_1^T(b-A\hat{x}) = 0$ and $a_2^T(b-A\hat{x}) = 0$. In the matrix form,  $\begin{bmatrix}a_1^T \\
+a_2^T\end{bmatrix}(b - A\hat{x}) = \begin{bmatrix}0 \\
  0\end{bmatrix}$ or $A^T(b-A\hat{x}) = 0$. 
  
  This equation tells us that the error vector $e = b-A\hat{x}$ is in the <b>null space</b> of $A^T$. We know that the null space of $A^T$ is perpendicular to the <b>column space</b> of $A$. This means that the above derived equation is sound. The above equation can be rewriten as: $A^TA\hat{x} = A^Tb$. Hence,

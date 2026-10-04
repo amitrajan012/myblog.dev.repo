@@ -22,23 +22,23 @@ For a matrix $M$, some of the examples of matrix spaces are: <b>Upper Triangular
 
 $$\begin{align}
 \begin{bmatrix}
-    1 & 0 & 0 \\\\
-    0 & 0 & 0 \\\\
+    1 & 0 & 0 \\
+    0 & 0 & 0 \\
     0 & 0 & 0
 \end{bmatrix},
 \begin{bmatrix}
-    0 & 1 & 0 \\\\
-    0 & 0 & 0 \\\\
+    0 & 1 & 0 \\
+    0 & 0 & 0 \\
     0 & 0 & 0
 \end{bmatrix},
 \begin{bmatrix}
-    0 & 0 & 1 \\\\
-    0 & 0 & 0 \\\\
+    0 & 0 & 1 \\
+    0 & 0 & 0 \\
     0 & 0 & 0
 \end{bmatrix},...,
 \begin{bmatrix}
-    0 & 0 & 0 \\\\
-    0 & 0 & 0 \\\\
+    0 & 0 & 0 \\
+    0 & 0 & 0 \\
     0 & 0 & 1
 \end{bmatrix}
 \end{align}$$

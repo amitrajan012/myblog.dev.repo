@@ -24,7 +24,7 @@ $$\begin{align}
 p(z_k = 1) = \pi_k
 \end{align}$$
 
-where the parameter $\pi_k$ must satisfy $0 << \pi_k << 1$ and $\sum_k \pi_k = 1$. This marginal distribution can also be written as
+where the parameter $\pi_k$ must satisfy $0 \leq \pi_k \leq 1$ and $\sum_k \pi_k = 1$. This marginal distribution can also be written as
 
 $$\begin{align}
 p(z) = \prod_{k=1}^{K} \pi_k^{z_k}
@@ -56,20 +56,16 @@ $$\begin{align}
 \gamma(z_k) = p(z_k = 1 | X) = \frac{p(z_k=1)p(X|z_k=1)}{p(X)}
 \end{align}$$
 
-$$\begin{align}
-= \frac{p(z_k=1)p(X|z_k=1)}{\sum_z p(X,z)}
+$$\begin{align} = \frac{p(z_k=1)p(X|z_k=1)}{\sum_z p(X,z)}
 \end{align}$$
 
-$$\begin{align}
-= \frac{p(z_k=1)p(X|z_k=1)}{\sum_z p(z)p(X|z)}
+$$\begin{align} = \frac{p(z_k=1)p(X|z_k=1)}{\sum_z p(z)p(X|z)}
 \end{align}$$
 
-$$\begin{align}
-= \frac{p(z_k=1)p(X|z_k=1)}{\sum_{j=1}^{K} p(z_j=1)p(X|z_j=1)}
+$$\begin{align} = \frac{p(z_k=1)p(X|z_k=1)}{\sum_{j=1}^{K} p(z_j=1)p(X|z_j=1)}
 \end{align}$$
 
-$$\begin{align}
-= \frac{\pi_k N(X|\mu_k, \Sigma_k)}{\sum_{j=1}^{K} \pi_j N(X|\mu_j, \Sigma_j)}
+$$\begin{align} = \frac{\pi_k N(X|\mu_k, \Sigma_k)}{\sum_{j=1}^{K} \pi_j N(X|\mu_j, \Sigma_j)}
 \end{align}$$
 
 $\pi_k$ can be viewed as the prior probability of $z_k =1$ and $\gamma(z_k)$ as the posterior probability once we have observed $X$. $\gamma(z_k)$ is also called as <b>responsibility</b> that component $k$ takes for explaining the observation $X$.

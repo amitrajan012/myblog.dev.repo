@@ -31,23 +31,23 @@ Let the equation of the best fitted line be $y=C+Dt$. For individual points, we 
 
 $$\begin{align}
 \begin{bmatrix}
-    1 & 1 \\\\
-    1 & 2 \\\\
+    1 & 1 \\
+    1 & 2 \\
     1 & 3
 \end{bmatrix} 
 \begin{bmatrix}
-    C \\\\
+    C \\
     D
 \end{bmatrix}=
 \begin{bmatrix}
-    1 \\\\
-    2 \\\\
+    1 \\
+    2 \\
     2
 \end{bmatrix}=
 b
 \end{align}$$
 
-To get the best fitted line, we have to minimize the combined errors for all the points. These errors are $e_1, e_2, e_3$ in the figure. This error vector can be represnted as $Ax-b$. Instead of minimizing the sum of these error vectors, we can minimize their sum of squares or <b>norm squared</b>, which is represented as $\lVert e \rVert^2 = \lVert Ax-b \rVert^2$. So, the best fitted line can be derived by solving $Ax^{'}=b$ where $x^{'}$ is the best fitted line with parameters $x^{'} = \begin{bmatrix} C^{'} \\\\
+To get the best fitted line, we have to minimize the combined errors for all the points. These errors are $e_1, e_2, e_3$ in the figure. This error vector can be represnted as $Ax-b$. Instead of minimizing the sum of these error vectors, we can minimize their sum of squares or <b>norm squared</b>, which is represented as $\lVert e \rVert^2 = \lVert Ax-b \rVert^2$. So, the best fitted line can be derived by solving $Ax^{'}=b$ where $x^{'}$ is the best fitted line with parameters $x^{'} = \begin{bmatrix} C^{'} \\
     D^{'}
 \end{bmatrix}$. 
 
@@ -58,16 +58,16 @@ Ax^{'} = b \implies A^TAx^{'} = A^Tb
 $$\begin{align}
 A^TA = 
 \begin{bmatrix}
-    1 & 1 & 1 \\\\
+    1 & 1 & 1 \\
     1 & 2 & 3
 \end{bmatrix} 
 \begin{bmatrix}
-    1 & 1 \\\\
-    1 & 2 \\\\
+    1 & 1 \\
+    1 & 2 \\
     1 & 3
 \end{bmatrix}=
 \begin{bmatrix}
-    3 & 6 \\\\
+    3 & 6 \\
     6 & 14
 \end{bmatrix} 
 \end{align}$$
@@ -75,16 +75,16 @@ A^TA =
 $$\begin{align}
 A^Tb = 
 \begin{bmatrix}
-    1 & 1 & 1 \\\\
+    1 & 1 & 1 \\
     1 & 2 & 3
 \end{bmatrix} 
 \begin{bmatrix}
-    1 \\\\
-    2 \\\\
+    1 \\
+    2 \\
     2
 \end{bmatrix}=
 \begin{bmatrix}
-    5 \\\\
+    5 \\
     11
 \end{bmatrix} 
 \end{align}$$
@@ -93,15 +93,15 @@ Hence, the equation get reduced as follows. Same equations can be drived by taki
 
 $$\begin{align}
 \begin{bmatrix}
-    3 & 6 \\\\
+    3 & 6 \\
     6 & 14
 \end{bmatrix} 
 \begin{bmatrix}
-    C^{'} \\\\
+    C^{'} \\
     D^{'}
 \end{bmatrix}=
 \begin{bmatrix}
-    5 \\\\
+    5 \\
     11
 \end{bmatrix}
 \end{align}$$

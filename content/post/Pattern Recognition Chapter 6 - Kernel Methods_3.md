@@ -114,7 +114,7 @@ To find the conditional distribution $p(t_{N+1}|T_N)$, we can use the results in
 
 $$\begin{align}
 C_{N+1}= \begin{pmatrix}
-c && k^T\\\\
+c && k^T\\
 k && C_N
 \end{pmatrix}
 \end{align}$$

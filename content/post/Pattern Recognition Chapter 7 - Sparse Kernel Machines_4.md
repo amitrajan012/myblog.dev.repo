@@ -79,7 +79,7 @@ To obtain sparse solution, this quadratic error function can be replaced be an $
 $$\begin{align}
 E_{\epsilon}(y(X) - t) =
     \begin{cases}
-      0, & \text{if}\  |y(X)-t| < \epsilon\\\\
+      0, & \text{if}\  |y(X)-t| < \epsilon\\
       |y(X)-t| - \epsilon, & \text{otherwise}
 \end{cases}
 \end{align}$$

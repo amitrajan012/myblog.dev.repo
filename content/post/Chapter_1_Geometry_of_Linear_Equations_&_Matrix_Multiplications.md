@@ -16,7 +16,7 @@ The fundamental goal of linear algebra is to solve a system of linear equations.
 
 $$\begin{align}
 2x-y = 0
-\\\\
+\\
 -x+2y = 3
 \end{align}$$
 
@@ -24,15 +24,15 @@ The above system of linear equation when written in matrix multiplication form c
 
 $$\begin{align}
 \begin{bmatrix}
-    2 & -1 \\\\
+    2 & -1 \\
     -1 & 2
 \end{bmatrix}
 \begin{bmatrix}
-    x \\\\
+    x \\
     y
 \end{bmatrix} = 
 \begin{bmatrix}
-    0 \\\\
+    0 \\
     3
 \end{bmatrix}
 \end{align}$$
@@ -45,15 +45,15 @@ The above system of linear equation can be rewritten as
 
 $$\begin{align}
 x\begin{bmatrix}
-    2 \\\\
+    2 \\
     -1 
 \end{bmatrix}
 +y\begin{bmatrix}
-    -1 \\\\
+    -1 \\
     2
 \end{bmatrix} = 
 \begin{bmatrix}
-    0 \\\\
+    0 \\
     3
 \end{bmatrix}
 \end{align}$$
@@ -70,12 +70,12 @@ For the demonstration purpose, let the matrices $A,B$ be
 
 $$\begin{align}
 A = \begin{bmatrix}
-    2 & -1 & 3\\\\
+    2 & -1 & 3\\
     -1 & 2 & 4
 \end{bmatrix},
 B = \begin{bmatrix}
-    0 & 1\\\\
-    2 & 1 \\\\
+    0 & 1\\
+    2 & 1 \\
     3 & 5
 \end{bmatrix}
 \end{align}$$
@@ -87,8 +87,8 @@ $$\begin{align}
 C_{11} = \begin{bmatrix}
     2 & -1 & 3
 \end{bmatrix} \cdot \begin{bmatrix}
-    0 \\\\
-    2  \\\\
+    0 \\
+    2  \\
     3 
 \end{bmatrix} = 7
 \end{align}$$
@@ -97,8 +97,8 @@ $$\begin{align}
 C_{12} = \begin{bmatrix}
     2 & -1 & 3
 \end{bmatrix} \cdot \begin{bmatrix}
-    1 \\\\
-    1  \\\\
+    1 \\
+    1  \\
     5 
 \end{bmatrix} = 16
 \end{align}$$
@@ -107,8 +107,8 @@ $$\begin{align}
 C_{21} = \begin{bmatrix}
     -1 & 2 & 4
 \end{bmatrix} \cdot \begin{bmatrix}
-    0 \\\\
-    2  \\\\
+    0 \\
+    2  \\
     3 
 \end{bmatrix} = 16
 \end{align}$$
@@ -117,19 +117,19 @@ $$\begin{align}
 C_{22} = \begin{bmatrix}
     -1 & 2 & 4
 \end{bmatrix} \cdot \begin{bmatrix}
-    1 \\\\
-    1  \\\\
+    1 \\
+    1  \\
     5 
 \end{bmatrix} = 21
 \end{align}$$
 
 $$\begin{align}
 C = \begin{bmatrix}
-    C_{11} & C_{12} \\\\
+    C_{11} & C_{12} \\
     C_{21} & C_{22}
 \end{bmatrix} =
 \begin{bmatrix}
-    7 & 16 \\\\
+    7 & 16 \\
     16 & 21
 \end{bmatrix}
 \end{align}$$
@@ -138,65 +138,64 @@ C = \begin{bmatrix}
 The entry in the column $j$ of the resultant matrix $C$ is the product of first matrix $A$ and column $j$ of the second matrix $B$. This means that <b>columns of $C$ are combinations of columns of $A$</b>.
 
 $$\begin{align}
-C_{\_1} = \begin{bmatrix}
-    2 & -1 & 3 \\\\
+C_{_1} = \begin{bmatrix}
+    2 & -1 & 3 \\
     -1 & 2 & 4
 \end{bmatrix} \begin{bmatrix}
-    0 \\\\
-    2  \\\\
+    0 \\
+    2  \\
     3 
 \end{bmatrix} = 
 0\begin{bmatrix}
-    2 \\\\
+    2 \\
     -1
 \end{bmatrix}
 +2\begin{bmatrix}
-    -1 \\\\
+    -1 \\
     2
 \end{bmatrix}
 +3\begin{bmatrix}
-    3 \\\\
+    3 \\
     4
 \end{bmatrix}
 =\begin{bmatrix}
-    7 \\\\
+    7 \\
     16
 \end{bmatrix}
 \end{align}$$
 
 $$\begin{align}
-C_{\_2} = \begin{bmatrix}
-    2 & -1 & 3 \\\\
+C_{_2} = \begin{bmatrix}
+    2 & -1 & 3 \\
     -1 & 2 & 4
 \end{bmatrix} \begin{bmatrix}
-    1 \\\\
-    1  \\\\
+    1 \\
+    1  \\
     5 
 \end{bmatrix} = 
 1\begin{bmatrix}
-    2 \\\\
+    2 \\
     -1
 \end{bmatrix}
 +1\begin{bmatrix}
-    -1 \\\\
+    -1 \\
     2
 \end{bmatrix}
 +5\begin{bmatrix}
-    3 \\\\
+    3 \\
     4
 \end{bmatrix}
 =\begin{bmatrix}
-    16 \\\\
+    16 \\
     21
 \end{bmatrix}
 \end{align}$$
 
 $$\begin{align}
 C = \begin{bmatrix}
-    C_{\_1} & C_{\_2} 
-\end{bmatrix} 
-= \begin{bmatrix}
-    7 & 16 \\\\
+    C_{_1} & C_{_2} 
+\end{bmatrix} = \begin{bmatrix}
+    7 & 16 \\
     16 & 21
 \end{bmatrix} 
 \end{align}$$
@@ -207,8 +206,8 @@ C_1 = \begin{bmatrix}
     2 & -1 & 3
 \end{bmatrix}
 \begin{bmatrix}
-    0 & 1 \\\\
-    2 & 1 \\\\
+    0 & 1 \\
+    2 & 1 \\
     3 & 5
 \end{bmatrix} = 
 2\begin{bmatrix}
@@ -229,8 +228,8 @@ $$\begin{align}
 C_2 = \begin{bmatrix}
     -1 & 2 & 4
 \end{bmatrix} \begin{bmatrix}
-    0 & 1\\\\
-    2 & 1\\\\
+    0 & 1\\
+    2 & 1\\
     3 & 5
 \end{bmatrix} = 
 -1\begin{bmatrix}
@@ -249,11 +248,10 @@ C_2 = \begin{bmatrix}
 
 $$\begin{align}
 C = \begin{bmatrix}
-    C_1 \\\\
+    C_1 \\
     C_2 
-\end{bmatrix}
-= \begin{bmatrix}
-    7 & 16 \\\\
+\end{bmatrix} = \begin{bmatrix}
+    7 & 16 \\
     16 & 21
 \end{bmatrix} 
 \end{align}$$
@@ -262,42 +260,39 @@ C = \begin{bmatrix}
 
 $$\begin{align}
 C_{1} = \begin{bmatrix}
-    2\\\\
+    2\\
     -1
 \end{bmatrix} 
 \begin{bmatrix}
     0 & 1
-\end{bmatrix}
-= \begin{bmatrix}
-    0 & 2 \\\\
+\end{bmatrix} = \begin{bmatrix}
+    0 & 2 \\
     0 & -1
 \end{bmatrix} 
 \end{align}$$
 
 $$\begin{align}
 C_{2} = \begin{bmatrix}
-    -1\\\\
+    -1\\
     2
 \end{bmatrix} 
 \begin{bmatrix}
     2 & 1
-\end{bmatrix}
-= \begin{bmatrix}
-    -2 & -1 \\\\
+\end{bmatrix} = \begin{bmatrix}
+    -2 & -1 \\
     4 & 2
 \end{bmatrix} 
 \end{align}$$
 
 $$\begin{align}
 C_{3} = \begin{bmatrix}
-    3\\\\
+    3\\
     4
 \end{bmatrix} 
 \begin{bmatrix}
     3 & 5
-\end{bmatrix}
-= \begin{bmatrix}
-    9 & 15 \\\\
+\end{bmatrix} = \begin{bmatrix}
+    9 & 15 \\
     12 & 20
 \end{bmatrix} 
 \end{align}$$
@@ -305,17 +300,16 @@ C_{3} = \begin{bmatrix}
 $$\begin{align}
 C = C_{1} + C_{2} + C_{3} =
 \begin{bmatrix}
-    0 & 2 \\\\
+    0 & 2 \\
     0 & -1
 \end{bmatrix} + \begin{bmatrix}
-    -2 & -1 \\\\
+    -2 & -1 \\
     4 & 2
 \end{bmatrix} + \begin{bmatrix}
-    9 & 15 \\\\
+    9 & 15 \\
     12 & 20
-\end{bmatrix} 
-= \begin{bmatrix}
-    7 & 16 \\\\
+\end{bmatrix} = \begin{bmatrix}
+    7 & 16 \\
     16 & 21
 \end{bmatrix} 
 \end{align}$$
@@ -324,12 +318,12 @@ C = C_{1} + C_{2} + C_{3} =
 
 $$\begin{align}
 A = \left[\begin{array}{c c| c} 
-	2 & -1 & 3\\\\ 
+	2 & -1 & 3\\ 
 	-1 & 2 & 4 
 \end{array}\right];
 B = \left[\begin{array}{c c} 
-	0 & 1 \\\\
-	2 & 1 \\\\
+	0 & 1 \\
+	2 & 1 \\
   \hline
   3 & 5
 \end{array}\right] 
@@ -338,7 +332,7 @@ A = \left[\begin{array}{c | c}
 	A_{22} & A_{21}
 \end{array}\right];
 B = \left[\begin{array}{c c} 
-	B_{22} \\\\
+	B_{22} \\
   \hline
   B_{12}
 \end{array}\right] \end{align}$$
@@ -346,15 +340,15 @@ B = \left[\begin{array}{c c}
 where 
 $$\begin{align}
 A_{22} = \left[\begin{array}{c c} 
-	2 & -1\\\\
+	2 & -1\\
 	-1 & 2
 \end{array}\right];
 A_{21} = \left[\begin{array}{c} 
-	3\\\\ 
+	3\\ 
 	4
 \end{array}\right];
 B_{22} = \left[\begin{array}{c c} 
-	0 & 1\\\\ 
+	0 & 1\\ 
 	2 & 1
 \end{array}\right];
 B_{12} = \left[\begin{array}{c c} 
@@ -367,38 +361,33 @@ AB = \left[\begin{array}{c | c}
 	A_{22} & A_{21}
 \end{array}\right]
 \left[\begin{array}{c c} 
-	B_{22} \\\\
+	B_{22} \\
   \hline
   B_{12}
-\end{array}\right] 
-= A_{22}B_{22} + A_{21}B_{12}
-=  \left[\begin{array}{c c} 
-	2 & -1\\\\
+\end{array}\right] = A_{22}B_{22} + A_{21}B_{12} =  \left[\begin{array}{c c}
+	2 & -1\\
 	-1 & 2
 \end{array}\right]
 \left[\begin{array}{c c} 
-	0 & 1\\\\
+	0 & 1\\
 	2 & 1
-\end{array}\right]
-+
+\end{array}\right] +
 \left[\begin{array}{c} 
-	3\\\\
+	3\\
 	4
 \end{array}\right]
 \left[\begin{array}{c c} 
 	3 & 5
 \end{array}\right]\end{align}$$
 
-$$\begin{align}
-= \left[\begin{array}{c c} 
-	-2 & 1\\\\ 
+$$\begin{align} = \left[\begin{array}{c c}
+	-2 & 1\\ 
 	4 & 1
 \end{array}\right] + \left[\begin{array}{c c} 
-	9 & 15\\\\
+	9 & 15\\
 	12 & 20
-\end{array}\right]
-= \left[\begin{array}{c c} 
-	7 & 16\\\\  
+\end{array}\right] = \left[\begin{array}{c c}
+	7 & 16\\  
 	16 & 21
 \end{array}\right]
 \end{align}$$

@@ -13,7 +13,7 @@ topics = ["Linear Algebra"]
 ## 24.1 Positive Definite Matrices
 
 These are the complete tests for a $2 \times 2$ matrix $A = \begin{bmatrix}
-a & b \\\\
+a & b \\
 b & c
 \end{bmatrix}$ for being Positive Definite:
 
@@ -23,10 +23,10 @@ b & c
 * $x^TAx > 0;\forall x$
 
 The matrix for which any of these conditions holds with equality instead are called as <b>positive semi-definite matrices</b>. For example, the matrix  $A = \begin{bmatrix}
-2 & 6 \\\\
+2 & 6 \\
 6 & 18
 \end{bmatrix}$ is a positive-semidifinite matrix. Let us run the $x^TAx > 0$ test on this matrix. Let $x = \begin{bmatrix}
-x_1  \\\\
+x_1  \\
 x_2
 \end{bmatrix}$, then
 
@@ -34,22 +34,22 @@ $$\begin{align}
 x^TAx = \begin{bmatrix}
 x_1 & x_2
 \end{bmatrix}\begin{bmatrix}
-2 & 6 \\\\
+2 & 6 \\
 6 & 18
 \end{bmatrix}\begin{bmatrix}
-x_1  \\\\
+x_1  \\
 x_2
 \end{bmatrix} = 2x_1^2 + 12x_1x_2 + 18x_2^2
 \end{align}$$
 
 The matrix $A$ is not positive definite as $x^TAx \not>0;\forall x$. If we take $A = \begin{bmatrix}
-2 & 6 \\\\
+2 & 6 \\
 6 & 7
 \end{bmatrix}$, this matrix is definitely not positive definite. The expression $x^TAx = 2x^2 + 12xy + 7y^2$ where $x = \begin{bmatrix}
-x  \\\\
+x  \\
 y
 \end{bmatrix}$. For $A = \begin{bmatrix}
-2 & 6 \\\\
+2 & 6 \\
 6 & 20
 \end{bmatrix}$, the matrix is positive definite as $x^TAx = 2x^2 + 12xy + 20y^2 > 0$ for all values. The plot of $x^TAx$ for two matrices is shown in below figure.
 
@@ -97,13 +97,13 @@ Another way to find whether $x^TAx$ is always positive or not is by completing t
 
 $$\begin{align}
 A = \begin{bmatrix}
-2 & 6 \\\\
+2 & 6 \\
 6 & 20
 \end{bmatrix} = \begin{bmatrix}
-1 & 0 \\\\
+1 & 0 \\
 3 & 1
 \end{bmatrix}\begin{bmatrix}
-2 & 6 \\\\
+2 & 6 \\
 0 & 2
 \end{bmatrix}=LU
 \end{align}$$
@@ -111,7 +111,7 @@ A = \begin{bmatrix}
 This can seen be one of the reasons for the pivots being positive for a positive definite matrix as positive pivots will give us positive completed square.
 
 Let us take a $3 \times 3$ matrix $A = \begin{bmatrix}
-2 & -1 & 0 \\\\
--1 & 2 & -1 \\\\
+2 & -1 & 0 \\
+-1 & 2 & -1 \\
 0 & -1 & 2 
 \end{bmatrix}$. Is this matrix positive definite? The values of sub-determinants of this matrix are: $2,3,4$ and hence it is positive definite. We can find the pivots using the fact that <b>product of pivots give us the determinants</b>. Hence first pivot is $2$, second pivot is $\frac{3}{2}$ and the third pivot is $\frac{4}{2 \times \frac{3}{2}} = \frac{4}{3}$. Pivots are also positive and hence the matrix is positive definite.

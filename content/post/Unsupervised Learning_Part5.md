@@ -23,17 +23,14 @@ $$\frac{1}{|C_k|} \sum _{i, i^{'} \in C_k} \sum _{j=1}^{p} (x _{ij} - x _{i^{'}j
 where $\bar{x} _{kj} = \frac{1}{|C_k|} \sum _{i \in C_k} x _{ij}$, is the mean of feature $j$ in cluster $C_k$. Expanding LHS, we get
 
 $$\frac{1}{|C_k|} \sum _{i, i^{'} \in C_k} \sum _{j=1}^{p} (x _{ij} - x _{i^{'}j})^2 =
-\frac{1}{|C_k|} \sum _{i, i^{'} \in C_k} \sum _{j=1}^{p} x _{ij}^2 + \frac{1}{|C_k|} \sum _{i, i^{'} \in C_k} \sum _{j=1}^{p} x _{i^{'}j}^2 - \frac{2}{|C_k|} \sum _{i, i^{'} \in C_k} \sum _{j=1}^{p} x _{ij}x _{i^{'}j} \\
-= 2 \sum _{i \in C_k} \sum _{j=1}^{p} x _{ij}^2 - \frac{2}{|C_k|} \sum _{i, i^{'} \in C_k} \sum _{j=1}^{p} x _{ij}x _{i^{'}j} $$
+\frac{1}{|C_k|} \sum _{i, i^{'} \in C_k} \sum _{j=1}^{p} x _{ij}^2 + \frac{1}{|C_k|} \sum _{i, i^{'} \in C_k} \sum _{j=1}^{p} x _{i^{'}j}^2 - \frac{2}{|C_k|} \sum _{i, i^{'} \in C_k} \sum _{j=1}^{p} x _{ij}x _{i^{'}j} \\ = 2 \sum _{i \in C_k} \sum _{j=1}^{p} x _{ij}^2 - \frac{2}{|C_k|} \sum _{i, i^{'} \in C_k} \sum _{j=1}^{p} x _{ij}x _{i^{'}j} $$
 
 Expanding RHS and substituting the value of $\bar{x} _{kj}$, we get
 
 $$2\sum _{i \in C_k} \sum _{j=1}^{p} (x _{ij} - \bar{x} _{kj})^2 =
-2\sum _{i \in C_k} \sum _{j=1}^{p} x _{ij}^2 - 4\sum _{i \in C_k} \sum _{j=1}^{p} x _{ij}\bar{x} _{kj}
-+ 2\sum _{i \in C_k} \sum _{j=1}^{p} \bar{x} _{kj}^2 =
+2\sum _{i \in C_k} \sum _{j=1}^{p} x _{ij}^2 - 4\sum _{i \in C_k} \sum _{j=1}^{p} x _{ij}\bar{x} _{kj} + 2\sum _{i \in C_k} \sum _{j=1}^{p} \bar{x} _{kj}^2 =
 2\sum _{i \in C_k} \sum _{j=1}^{p} x _{ij}^2 - 4|C_k| \sum _{j=1}^{p} \bar{x} _{kj}^2 +
-2 |C_k| \sum _{j=1}^{p}\bar{x} _{kj}^2  = 2\sum _{i \in C_k} \sum _{j=1}^{p} x _{ij}^2 - 2|C_k| \sum _{j=1}^{p} \bar{x} _{kj}^2
-= 2\sum _{i \in C_k} \sum _{j=1}^{p} x _{ij}^2 - \frac{2}{|C_k|} \sum _{i, i^{'} \in C_k} \sum _{j=1}^{p} x _{ij}x _{i^{'}j} $$
+2 |C_k| \sum _{j=1}^{p}\bar{x} _{kj}^2  = 2\sum _{i \in C_k} \sum _{j=1}^{p} x _{ij}^2 - 2|C_k| \sum _{j=1}^{p} \bar{x} _{kj}^2 = 2\sum _{i \in C_k} \sum _{j=1}^{p} x _{ij}^2 - \frac{2}{|C_k|} \sum _{i, i^{'} \in C_k} \sum _{j=1}^{p} x _{ij}x _{i^{'}j} $$
 
 Hence, LHS and RHS are equal.
 

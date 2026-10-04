@@ -97,16 +97,13 @@ $$\begin{align}
 E[X] = \frac{1}{(2\pi)^{D/2}}\frac{1}{|\Sigma|^{1/2}} \int exp \bigg[\frac{-1}{2} Z^T\Sigma^{-1}Z\bigg] (Z+\mu)dZ
 \end{align}$$
 
-$$\begin{align}
-= \frac{1}{(2\pi)^{D/2}}\frac{1}{|\Sigma|^{1/2}} \bigg(\int exp \bigg[\frac{-1}{2} Z^T\Sigma^{-1}Z\bigg]ZdZ + \int exp \bigg[\frac{-1}{2} Z^T\Sigma^{-1}Z\bigg]\mu dZ\bigg) 
+$$\begin{align} = \frac{1}{(2\pi)^{D/2}}\frac{1}{|\Sigma|^{1/2}} \bigg(\int exp \bigg[\frac{-1}{2} Z^T\Sigma^{-1}Z\bigg]ZdZ + \int exp \bigg[\frac{-1}{2} Z^T\Sigma^{-1}Z\bigg]\mu dZ\bigg)
 \end{align}$$
 
-$$\begin{align}
-= \frac{1}{(2\pi)^{D/2}}\frac{1}{|\Sigma|^{1/2}} \bigg(0 + \int exp \bigg[\frac{-1}{2} Z^T\Sigma^{-1}Z\bigg]\mu dZ\bigg) 
+$$\begin{align} = \frac{1}{(2\pi)^{D/2}}\frac{1}{|\Sigma|^{1/2}} \bigg(0 + \int exp \bigg[\frac{-1}{2} Z^T\Sigma^{-1}Z\bigg]\mu dZ\bigg)
 \end{align}$$
 
-$$\begin{align}
-= \mu\frac{1}{(2\pi)^{D/2}}\frac{1}{|\Sigma|^{1/2}} \int exp \bigg[\frac{-1}{2} Z^T\Sigma^{-1}Z\bigg] dZ = \mu
+$$\begin{align} = \mu\frac{1}{(2\pi)^{D/2}}\frac{1}{|\Sigma|^{1/2}} \int exp \bigg[\frac{-1}{2} Z^T\Sigma^{-1}Z\bigg] dZ = \mu
 \end{align}$$
 
 The <b>second order moment</b> of a univariate Gaussian is given as $E[x^2]$. For a multivariate Gaussian, this is defined as $E[XX^T]$ and is computed as
@@ -115,12 +112,10 @@ $$\begin{align}
 E[XX^T] = \frac{1}{(2\pi)^{D/2}}\frac{1}{|\Sigma|^{1/2}} \int exp \bigg[\frac{-1}{2} (X-\mu)^T\Sigma^{-1}(X-\mu)\bigg]XX^TdX
 \end{align}$$
 
-$$\begin{align}
-= \frac{1}{(2\pi)^{D/2}}\frac{1}{|\Sigma|^{1/2}} \int exp \bigg[\frac{-1}{2} Z^T\Sigma^{-1}Z\bigg] (Z+\mu)(Z+\mu)^TdZ
+$$\begin{align} = \frac{1}{(2\pi)^{D/2}}\frac{1}{|\Sigma|^{1/2}} \int exp \bigg[\frac{-1}{2} Z^T\Sigma^{-1}Z\bigg] (Z+\mu)(Z+\mu)^TdZ
 \end{align}$$
 
-$$\begin{align}
-= \frac{1}{(2\pi)^{D/2}}\frac{1}{|\Sigma|^{1/2}} \int exp \bigg[\frac{-1}{2} Z^T\Sigma^{-1}Z\bigg] (ZZ^T + \mu Z^T + Z\mu^T + \mu\mu^T)dZ
+$$\begin{align} = \frac{1}{(2\pi)^{D/2}}\frac{1}{|\Sigma|^{1/2}} \int exp \bigg[\frac{-1}{2} Z^T\Sigma^{-1}Z\bigg] (ZZ^T + \mu Z^T + Z\mu^T + \mu\mu^T)dZ
 \end{align}$$
 
 The terms with $\mu Z^T,Z\mu^T$ will vanish as the expression inside the integral is an odd function. $\mu\mu^T$ being constant, the integral for the expression having it will be $\mu\mu^T$ (as the Gaussian distribution is normalized). The integral of the term with $ZZ^T$ will come out to be $\Sigma$. Hence,

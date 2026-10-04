@@ -70,4 +70,4 @@ The goal of image segmentation is to partition an image into regions each of whi
 
 It is important to distinguish between <b>lossless data compression</b>, in which the goal is to be able to reconstruct the original data exactly from the compressed representation, and <b>lossy data compression</b>, in which we accept some errors in the reconstruction in return for higher levels of compression than can be achieved in the lossless case.
 
-Lossy data compression can be achieved using $K$-means algorithm. For each data point the cluster to which it is assigned and for each cluster, the cluster mean is stored. Each data point is then approximated by its nearest cluster mean $\mu_k$. This saves a lot of space for $K << N$ and results in higher level of compression.
+Lossy data compression can be achieved using $K$-means algorithm. For each data point the cluster to which it is assigned and for each cluster, the cluster mean is stored. Each data point is then approximated by its nearest cluster mean $\mu_k$. This saves a lot of space for $K \ll N$ and results in higher level of compression.

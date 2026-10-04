@@ -12,42 +12,42 @@ topics = ["Linear Algebra"]
 ## 20.1 Differential Equations $\frac{du}{dt} = Au$
 
 <b>Example:</b> Let the system of differential equation to be solved is: $\frac{du_1}{dt} = -u_1 + 2u_2; \frac{du_2}{dt} = u_1 - 2u_2$ with initial condition of $u(0) = \begin{bmatrix}
-1 \\\\
+1 \\
 0
 \end{bmatrix}$. The matrix $A$ representing the coefficients of the equation is $A = \begin{bmatrix}
--1 & 2 \\\\
+-1 & 2 \\
 1 & -2
 \end{bmatrix}$. The eigenvalues of the matrix $A$ satisfies the equation $\lambda_1 + \lambda_2 = -3; \lambda_1 \times \lambda_2 = 0$, i.e. $\lambda_1 = 0, \lambda_2 = -3$ with the eigenvectors $x_1 = \begin{bmatrix}
-2 \\\\
+2 \\
 1
 \end{bmatrix}; x_2 = \begin{bmatrix}
-1 \\\\
+1 \\
 -1
 \end{bmatrix}$. The general solution of the set of differential equation is given as: $u(t) = c_1e^{\lambda_1t}x_1 + c_2e^{\lambda_2t}x_2$. Individual pure solutions can be checked by plugging in $e^{\lambda_1t}x_1$ and $e^{\lambda_2t}x_2$ to the equation $\frac{du}{dt} = Au$ and verifying the outcome.
 
 To compute the value of constants, we can plug in the values of $\lambda_1,\lambda_2,x_1,x_2$ in the equation. The updated equation is $u(t) = c_1 \begin{bmatrix}
-2 \\\\
+2 \\
 1
 \end{bmatrix}+ c_2e^{-3t}\begin{bmatrix}
-1 \\\\
+1 \\
 -1
 \end{bmatrix}$. Using $u(0) = \begin{bmatrix}
-1 \\\\
+1 \\
 0
 \end{bmatrix}$, we get $\begin{bmatrix}
-1 \\\\
+1 \\
 0
 \end{bmatrix} = c_1 \begin{bmatrix}
-2 \\\\
+2 \\
 1
 \end{bmatrix}+ c_2\begin{bmatrix}
-1 \\\\
+1 \\
 -1
 \end{bmatrix}$, which gives $c_1=c_2=\frac{1}{3}$. Hence the final solution is $u(t) = \frac{1}{3} \begin{bmatrix}
-2 \\\\
+2 \\
 1
 \end{bmatrix}+ \frac{1}{3}e^{-3t}\begin{bmatrix}
-1 \\\\
+1 \\
 -1
 \end{bmatrix}$.
 
@@ -58,7 +58,7 @@ The <b>condition of steady state</b> is insured when one of the eigenvalues is $
 The <b>value diverges</b> if for any of the eigenvalues $Re(\lambda) > 0$. One important thing to note is: <b>reversing the sign of a matrix reverses the sign of eigenvalues</b>. 
 
 The stability condition for a $2 \times 2$ matrix $A = \begin{bmatrix}
-a & b \\\\
+a & b \\
 c & d
 \end{bmatrix}$ is $Re(\lambda_1) < 0$ and $Re(\lambda_2) < 0$. This means that <b>trace</b>, $\lambda_1 + \lambda_2 < 0$ and the <b>determinant</b> $|A| = ad - bc > 0$. It should be noted that a negative trace isn't enough to make the matrix stable.
 
@@ -106,8 +106,8 @@ Another thing to note is the fact that a <b>diagonal matrix</b> is always decoup
 
 $$\begin{align}
 e^{\Lambda t} = \begin{bmatrix}
-e^{\lambda_1t} & ... & ... \\\\
-... & ... & ... \\\\
+e^{\lambda_1t} & ... & ... \\
+... & ... & ... \\
 ... & ... & e^{\lambda_nt}
 \end{bmatrix}
 \end{align}$$
@@ -115,22 +115,22 @@ e^{\lambda_1t} & ... & ... \\\\
 ## 20.3 Second Order Differential Equation
 
 Let $y^{''} + by^{'} + k = 0$ be a second order differential equation. If we take $u = \begin{bmatrix}
-y^{'} \\\\
+y^{'} \\
 y
 \end{bmatrix}$, then $u^{'} = \begin{bmatrix}
-y^{''} \\\\
+y^{''} \\
 y^{'}
 \end{bmatrix}$. Apart from this, we can add one more trivial equation $y^{'} = y^{'}$. Combining these things together, we get
 
 $$\begin{align}
 u^{'} = \begin{bmatrix}
-y^{''} \\\\
+y^{''} \\
 y^{'}
 \end{bmatrix} = \begin{bmatrix}
--b & -k \\\\
+-b & -k \\
 1 & 0
 \end{bmatrix}\begin{bmatrix}
-y^{'} \\\\
+y^{'} \\
 y
 \end{bmatrix}
 \end{align}$$

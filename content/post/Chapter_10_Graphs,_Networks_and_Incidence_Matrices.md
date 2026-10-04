@@ -19,10 +19,10 @@ The above graph can be represented using a matrix, called as <b>Incidence Matrix
  
 $$\begin{align}
 A = \begin{bmatrix}
-    -1 & 1 & 0 & 0 \\\\
-    0 & -1 & 1 & 0 \\\\
-    -1 & 0 & 1 & 0 \\\\
-    -1 & 0 & 0 & 1 \\\\
+    -1 & 1 & 0 & 0 \\
+    0 & -1 & 1 & 0 \\
+    -1 & 0 & 1 & 0 \\
+    -1 & 0 & 0 & 1 \\
     0 & 0 & -1 & 1 
 \end{bmatrix}
 \end{align}$$
@@ -36,45 +36,45 @@ To find the <b>null space</b> of the incidence matrix, we have to solve the equa
 
 $$\begin{align}
 \begin{bmatrix}
-    -1 & 1 & 0 & 0 \\\\
-    0 & -1 & 1 & 0 \\\\
-    -1 & 0 & 1 & 0 \\\\
-    -1 & 0 & 0 & 1 \\\\
+    -1 & 1 & 0 & 0 \\
+    0 & -1 & 1 & 0 \\
+    -1 & 0 & 1 & 0 \\
+    -1 & 0 & 0 & 1 \\
     0 & 0 & -1 & 1 
 \end{bmatrix}
 \begin{bmatrix}
-    x_1 \\\\
-    x_2 \\\\
-    x_3 \\\\
+    x_1 \\
+    x_2 \\
+    x_3 \\
     x_4
 \end{bmatrix} =
 \begin{bmatrix}
-    0 \\\\
-    0 \\\\
-    0 \\\\
-    0 \\\\
+    0 \\
+    0 \\
+    0 \\
+    0 \\
     0
 \end{bmatrix} \implies
 \begin{bmatrix}
-    x_2 - x_1 \\\\
-    x_3 - x_2 \\\\
-    x_3 - x_1 \\\\
-    x_4 - x_1 \\\\
+    x_2 - x_1 \\
+    x_3 - x_2 \\
+    x_3 - x_1 \\
+    x_4 - x_1 \\
     x_4 - x_3
 \end{bmatrix} = 
 \begin{bmatrix}
-    0 \\\\
-    0 \\\\
-    0 \\\\
-    0 \\\\
+    0 \\
+    0 \\
+    0 \\
+    0 \\
     0
 \end{bmatrix}
 \end{align}$$
 
 This gives us $c\begin{bmatrix}
-    1 \\\\
-    1 \\\\
-    1 \\\\
+    1 \\
+    1 \\
+    1 \\
     1
 \end{bmatrix}$ as the <b>basis for the null space</b>, i.e. $dim(N(A)) = 1$. 
 
@@ -88,22 +88,22 @@ Another way to form the incidence matrix is by grounding one of the nodes (makin
 
 $$\begin{align}
 \begin{bmatrix}
-    -1 & 0 & -1 & -1 & 0 \\\\
-    1 & -1 & 0 & 0 & 0 \\\\
-    0 & 1 & 1 & 0 & -1 \\\\
+    -1 & 0 & -1 & -1 & 0 \\
+    1 & -1 & 0 & 0 & 0 \\
+    0 & 1 & 1 & 0 & -1 \\
     0 & 0 & 0 & 1 & 1
 \end{bmatrix}
 \begin{bmatrix}
-    y_1 \\\\
-    y_2 \\\\
-    y_3 \\\\
-    y_4 \\\\
+    y_1 \\
+    y_2 \\
+    y_3 \\
+    y_4 \\
     y_5
 \end{bmatrix} =
 \begin{bmatrix}
-    0 \\\\
-    0 \\\\
-    0 \\\\
+    0 \\
+    0 \\
+    0 \\
     0
 \end{bmatrix} 
 \end{align}$$
@@ -116,9 +116,9 @@ The dimension of row space of the incidence matrix is $3 (rank = 3)$. Row Space 
 
 $$\begin{align}
 A^T = \begin{bmatrix}
-    -1 & 0 & -1 & -1 & 0 \\\\
-    1 & -1 & 0 & 0 & 0 \\\\
-    0 & 1 & 1 & 0 & -1 \\\\
+    -1 & 0 & -1 & -1 & 0 \\
+    1 & -1 & 0 & 0 & 0 \\
+    0 & 1 & 1 & 0 & -1 \\
     0 & 0 & 0 & 1 & 1
 \end{bmatrix}
 \end{align}$$

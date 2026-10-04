@@ -27,20 +27,20 @@ Let's take an example matrix $A$ to understand these four subspaces in a better 
 
 $$\begin{align}
 A = \begin{bmatrix}
-    1 & 2 & 3 & 1 \\\\
-    1 & 1 & 2 & 1 \\\\
+    1 & 2 & 3 & 1 \\
+    1 & 1 & 2 & 1 \\
     1 & 2 & 3 & 1
 \end{bmatrix} 
 \xrightarrow{\text{S1}}
 \begin{bmatrix}
-    1 & 2 & 3 & 1 \\\\
-    0 & 1 & 1 & 0 \\\\
+    1 & 2 & 3 & 1 \\
+    0 & 1 & 1 & 0 \\
     0 & 0 & 0 & 0
 \end{bmatrix}
 \xrightarrow{\text{S2}}
 \begin{bmatrix}
-    1 & 0 & 1 & 1 \\\\
-    0 & 1 & 1 & 0 \\\\
+    1 & 0 & 1 & 1 \\
+    0 & 1 & 1 & 0 \\
     0 & 0 & 0 & 0
 \end{bmatrix} = R
 \end{align}$$
@@ -49,15 +49,15 @@ where, the performed <b>row operations</b> on the matrix $A$ are: $S1: row_2 = -
 
 $$\begin{align}
 R = \begin{bmatrix}
-    I & F \\\\
+    I & F \\
     0 & 0 
 \end{bmatrix};
 I = \begin{bmatrix}
-    1 & 0 \\\\
+    1 & 0 \\
     0 & 1 
 \end{bmatrix}
 F = \begin{bmatrix}
-    1 & 1 \\\\
+    1 & 1 \\
     1 & 0 
 \end{bmatrix}
 \end{align}$$
@@ -78,20 +78,20 @@ The matrix $R$ is obtained by <b>row operations</b> on $A$. <b>Row operations pr
 
 $$\begin{align}
 I = \begin{bmatrix}
-    1 & 0 & 0 \\\\
-    0 & 1 & 0 \\\\
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
     0 & 0 & 1
 \end{bmatrix} 
 \xrightarrow{\text{S1}}
 \begin{bmatrix}
-    1 & 0 & 0 \\\\
-    1 & -1 & 0 \\\\
+    1 & 0 & 0 \\
+    1 & -1 & 0 \\
     -1 & 0 & 1
 \end{bmatrix}
 \xrightarrow{\text{S2}}
 \begin{bmatrix}
-    -1 & 2 & 0 \\\\
-    1 & -1 & 0 \\\\
+    -1 & 2 & 0 \\
+    1 & -1 & 0 \\
     -1 & 0 & 1
 \end{bmatrix} = E
 \end{align}$$
@@ -100,18 +100,17 @@ Hence, the above row reduction procedure can be written as:
 
 $$\begin{align}
 \begin{bmatrix}
-    -1 & 2 & 0 \\\\
-    1 & -1 & 0 \\\\
+    -1 & 2 & 0 \\
+    1 & -1 & 0 \\
     -1 & 0 & 1
 \end{bmatrix}
 \begin{bmatrix}
-    1 & 2 & 3 & 1 \\\\
-    1 & 1 & 2 & 1 \\\\
+    1 & 2 & 3 & 1 \\
+    1 & 1 & 2 & 1 \\
     1 & 2 & 3 & 1
-\end{bmatrix}
-= \begin{bmatrix}
-    1 & 0 & 1 & 1 \\\\
-    0 & 1 & 1 & 0 \\\\
+\end{bmatrix} = \begin{bmatrix}
+    1 & 0 & 1 & 1 \\
+    0 & 1 & 1 & 0 \\
     0 & 0 & 0 & 0
 \end{bmatrix}
 \end{align}$$
@@ -123,11 +122,10 @@ $$\begin{align}
     -1 & 0 & 1
 \end{bmatrix}
 \begin{bmatrix}
-    1 & 2 & 3 & 1 \\\\
-    1 & 1 & 2 & 1 \\\\
+    1 & 2 & 3 & 1 \\
+    1 & 1 & 2 & 1 \\
     1 & 2 & 3 & 1
-\end{bmatrix}
-= \begin{bmatrix}
+\end{bmatrix} = \begin{bmatrix}
     0 & 0 & 0 & 0
 \end{bmatrix}
 \end{align}$$

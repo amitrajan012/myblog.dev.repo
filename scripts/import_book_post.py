@@ -9,9 +9,10 @@ What it does:
   * writes content/book-blog/<file-name>.md with front matter
   * copies local images (![alt](../figures/x.svg)) into static/img/book-blog/<file-name>/
     and points the post at the copies
-  * protects LaTeX: Hugo's Markdown engine treats "\\," "\\{" "\\|" "_" etc. as Markdown,
-    which silently corrupts maths. Inside $...$ and $$...$$ every ASCII punctuation
-    character is backslash-escaped, so the page shows exactly the TeX you wrote.
+  * keeps LaTeX intact: the site's Markdown passes $...$ and $$...$$ through untouched
+    (Goldmark passthrough), so the TeX is copied as written. The one thing Markdown can
+    still break is a maths line that starts with "+", "-", "=", "*" or "1." (read as a
+    list item or heading underline), so such lines are joined onto the line above.
 Re-running it overwrites the blog copy; the source file is never changed.
 """
 import argparse, datetime, json, os, re, shutil, string, sys
@@ -19,8 +20,14 @@ import argparse, datetime, json, os, re, shutil, string, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 PUNCT = set(string.punctuation) - {'$'}
 
+BAD_LINE = re.compile(r'^\s*([+\-=*]|\d+[.)])(\s|$)')
+
 def protect(tex):
-    return ''.join('\\' + c if c in PUNCT else c for c in tex)
+    lines = tex.split('\n'); out = [lines[0]]
+    for ln in lines[1:]:
+        if BAD_LINE.match(ln): out[-1] = out[-1].rstrip() + ' ' + ln.strip()
+        else: out.append(ln)
+    return '\n'.join(out)
 
 def protect_math(md):
     out, i, n = [], 0, len(md)

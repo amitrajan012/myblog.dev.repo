@@ -15,13 +15,13 @@ Elimination is the method which is used to solve a system of linear equations. L
 
 $$\begin{align}
 A = \begin{bmatrix}
-    1 & 2 & 1\\\\
-    3 & 8 & 1\\\\
+    1 & 2 & 1\\
+    3 & 8 & 1\\
     0 & 4 & 1
 \end{bmatrix},
 b = \begin{bmatrix}
-    2 \\\\
-    12 \\\\
+    2 \\
+    12 \\
     2
 \end{bmatrix}
 \end{align}$$
@@ -33,9 +33,9 @@ To get $U$, certain elimination steps are followed. Usually the right hand side 
 $$\begin{align}
 A^{'} = \left[
 \begin{array}{ccc|c}
-1 & 2 & 1 & 2 \\\\
-3 & 8 & 1 & 12 \\\\
-0 & 4 & 1 & 12 \\\\
+1 & 2 & 1 & 2 \\
+3 & 8 & 1 & 12 \\
+0 & 4 & 1 & 12 \\
 \end{array}
 \right]
 \end{align}$$
@@ -49,13 +49,13 @@ The elimination steps for the matrix $A$ are as follows.
 
 $$\begin{align}
 A = \begin{bmatrix}
-    1 & 2 & 1\\\\
-    3 & 8 & 1\\\\
+    1 & 2 & 1\\
+    3 & 8 & 1\\
     0 & 4 & 1
 \end{bmatrix} \rightarrow
 \begin{bmatrix}
-    1 & 2 & 1\\\\
-    0 & 2 & -2\\\\
+    1 & 2 & 1\\
+    0 & 2 & -2\\
     0 & 4 & 1
 \end{bmatrix}
 \end{align}$$
@@ -64,18 +64,18 @@ A = \begin{bmatrix}
 
 $$\begin{align}
 A = \begin{bmatrix}
-    1 & 2 & 1\\\\
-    3 & 8 & 1\\\\
+    1 & 2 & 1\\
+    3 & 8 & 1\\
     0 & 4 & 1
 \end{bmatrix} \rightarrow
 \begin{bmatrix}
-    1 & 2 & 1\\\\
-    0 & 2 & -2\\\\
+    1 & 2 & 1\\
+    0 & 2 & -2\\
     0 & 4 & 1
 \end{bmatrix} \rightarrow
 U = \begin{bmatrix}
-    1 & 2 & 1\\\\
-    0 & 2 & -2\\\\
+    1 & 2 & 1\\
+    0 & 2 & -2\\
     0 & 0 & 5
 \end{bmatrix}
 \end{align}$$
@@ -90,8 +90,8 @@ $$\begin{align}
 -3 & 1 & 0
 \end{bmatrix}
 \begin{bmatrix}
-    1 & 2 & 1\\\\
-    3 & 8 & 1\\\\
+    1 & 2 & 1\\
+    3 & 8 & 1\\
     0 & 4 & 1
 \end{bmatrix} \end{align}$$
 $$\begin{align}= -3\begin{bmatrix}
@@ -113,8 +113,8 @@ $row_1$ and $row_2$ can remain unchanged by multiplying $A$ with $\begin{bmatrix
 $$\begin{align}
 E_{21} = 
 \begin{bmatrix}
-    1 & 0 & 0\\\\
-    -3 & 1 & 0\\\\
+    1 & 0 & 0\\
+    -3 & 1 & 0\\
     0 & 0 & 1
 \end{bmatrix}
 \end{align}$$
@@ -124,8 +124,8 @@ Similarly, $E_{32}$ in which $row_1, row_2$ are unchanged and new $row_3$ is obt
 $$\begin{align}
 E_{32} = 
 \begin{bmatrix}
-    1 & 0 & 0\\\\
-    0 & 1 & 0\\\\
+    1 & 0 & 0\\
+    0 & 1 & 0\\
     0 & -2 & 1
 \end{bmatrix}
 \end{align}$$
@@ -140,8 +140,8 @@ The above explained transformation steps come under the category of <b>row multi
 
 $$\begin{align}
 A = \begin{bmatrix}
-    0 & 2\\\\
-    1 & 8\\\\
+    0 & 2\\
+    1 & 8\\
 \end{bmatrix}
 \end{align}$$
 
@@ -151,12 +151,12 @@ To get the upper triangular matrix from $A$, no possible row multiplication and 
 
 $$\begin{align}
 A = \begin{bmatrix}
-    0 & 2\\\\
-    1 & 8\\\\
+    0 & 2\\
+    1 & 8\\
 \end{bmatrix} \rightarrow
 U = \begin{bmatrix}
-    1 & 8\\\\
-    0 & 2\\\\
+    1 & 8\\
+    0 & 2\\
 \end{bmatrix}
 \end{align}$$
 
@@ -166,8 +166,8 @@ The above <b>row substitution</b> operation can be achieved by using a special c
 
 $$\begin{align}
 P = \begin{bmatrix}
-    0 & 1\\\\
-    1 & 0\\\\
+    0 & 1\\
+    1 & 0\\
 \end{bmatrix}
 \end{align}$$
 
@@ -178,8 +178,8 @@ $$\begin{align}
     0 & 1
 \end{bmatrix}
 \begin{bmatrix}
-    0 & 2\\\\
-    1 & 8\\\\
+    0 & 2\\
+    1 & 8\\
 \end{bmatrix} = 
 0\begin{bmatrix}
     0 & 2
@@ -195,12 +195,12 @@ $$\begin{align}
 For a matrix which has $n$ rows, there can be a total of $n!$ <b>permutation matrices</b> as $n$ rows can be arranged in a total of $n!$ ways. For example, for a $2 \times 2$ matrix the set of permutation matrices are as follows. The first matrix belongs to the case when no row substitution takes place and the second matrix belongs to the case when $row_1$ and $row_2$ are interchanged. It should be noted that different matrices in the set of permutation matrices are constructed by <b>exchanging the rows of Identity Matrix</b>.
 
 $$\begin{align}
-\bigg\\{\begin{bmatrix}
-    1 & 0\\\\
-    0 & 1\\\\
+\bigg\{\begin{bmatrix}
+    1 & 0\\
+    0 & 1\\
 \end{bmatrix},
 \begin{bmatrix}
-    0 & 1\\\\
-    1 & 0\\\\
-\end{bmatrix} \bigg\\}
+    0 & 1\\
+    1 & 0\\
+\end{bmatrix} \bigg\}
 \end{align}$$

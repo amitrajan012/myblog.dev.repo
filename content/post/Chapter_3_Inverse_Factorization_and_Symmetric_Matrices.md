@@ -17,25 +17,25 @@ For a <b>singular</b> matrix $A$, the inverse does not exist and it's <b>determi
 
 $$\begin{align}
 \begin{bmatrix}
-    1 & 2\\\\
-    2 & 4\\\\
+    1 & 2\\
+    2 & 4\\
 \end{bmatrix}
 \begin{bmatrix}
-    2 \\\\
+    2 \\
     -1 
 \end{bmatrix}=
 \begin{bmatrix}
-    0 \\\\
+    0 \\
     0 
 \end{bmatrix}
 \end{align}$$
 
 The inverse of the product of two matrices given as $AB$ is $B^{-1}A^{-1}$. This can be verified as follows. Let $M$ be the inverse of $AB$.
 $$\begin{align}
-M(AB) = I \\\\
-M(AB)B^{-1} = IB^{-1} \\\\
-MA = B^{-1} \\\\
-MAA^{-1} = B^{-1}A^{-1} \\\\
+M(AB) = I \\
+M(AB)B^{-1} = IB^{-1} \\
+MA = B^{-1} \\
+MAA^{-1} = B^{-1}A^{-1} \\
 M = B^{-1}A^{-1}
 \end{align}$$
 
@@ -43,16 +43,16 @@ Multiplication of two matrices can be viewed as performing an operation on secon
 
 $$\begin{align}
 A = \begin{bmatrix}
-    1 & 2\\\\
-    3 & 8\\
+    1 & 2\\
+    3 & 8\
 \end{bmatrix},
 E_{21} = \begin{bmatrix}
-    1 & 0\\\\
-    -3 & 1\\
+    1 & 0\\
+    -3 & 1\
 \end{bmatrix},
 E_{21}A = \begin{bmatrix}
-    1 & 2\\\\
-    0 & 2\\
+    1 & 2\\
+    0 & 2\
 \end{bmatrix}
 \end{align}$$
 
@@ -60,8 +60,8 @@ Let us say we want to reverse this operation. This means that we want to get mat
 
 $$\begin{align}
 E_{21}^{-1} = \begin{bmatrix}
-    1 & 0\\\\
-    3 & 1\\
+    1 & 0\\
+    3 & 1\
 \end{bmatrix}
 \end{align}$$
 
@@ -69,16 +69,16 @@ It should be noted that $E_{21}^{-1}E_{21}=I$ and $E_{21}^{-1}$ is called the <b
 
 $$\begin{align}
 E_{21}^{-1}E_{21} = \begin{bmatrix}
-    1 & 0\\\\
-    3 & 1\\
+    1 & 0\\
+    3 & 1\
 \end{bmatrix}
 \begin{bmatrix}
-    1 & 0\\\\
-    -3 & 1\\
+    1 & 0\\
+    -3 & 1\
 \end{bmatrix}=
 \begin{bmatrix}
-    1 & 0\\\\
-    0 & 1\\
+    1 & 0\\
+    0 & 1\
 \end{bmatrix} = I
 \end{align}$$
 
@@ -87,16 +87,16 @@ The resultant matrix $E_{21}A = U$ is an <b>upper triangular matrix</b>. If we m
 $$\begin{align}
 A = LU \implies
 \begin{bmatrix}
-    1 & 2\\\\
-    3 & 8\\
+    1 & 2\\
+    3 & 8\
 \end{bmatrix} = 
 \begin{bmatrix}
-    1 & 0\\\\
-    3 & 1\\
+    1 & 0\\
+    3 & 1\
 \end{bmatrix}
 \begin{bmatrix}
-    1 & 2\\\\
-    0 & 2\\
+    1 & 2\\
+    0 & 2\
 \end{bmatrix}
 \end{align}$$
 
@@ -105,20 +105,20 @@ Another thing to notice is that all the diagonal elements of $L$ is $1$ but that
 $$\begin{align}
 A = LU = LDU^{'}\implies
 \begin{bmatrix}
-    1 & 2\\\\
-    3 & 8\\
+    1 & 2\\
+    3 & 8\
 \end{bmatrix} = 
 \begin{bmatrix}
-    1 & 0\\\\
-    3 & 1\\
+    1 & 0\\
+    3 & 1\
 \end{bmatrix}
 \begin{bmatrix}
-    1 & 0\\\\
-    0 & 2\\
+    1 & 0\\
+    0 & 2\
 \end{bmatrix}
 \begin{bmatrix}
-    1 & 2\\\\
-    0 & 1\\
+    1 & 2\\
+    0 & 1\
 \end{bmatrix}
 \end{align}$$
 
@@ -129,20 +129,20 @@ A = LU = LDU^{'}\implies
 $$\begin{align}
 A =
 \begin{bmatrix}
-    0 & 2 & 1\\\\
-    1 & 2 & 3\\\\
+    0 & 2 & 1\\
+    1 & 2 & 3\\
     1 & 6 & 3
 \end{bmatrix}
 \xrightarrow{\text{P}}
 \begin{bmatrix}
-    1 & 2 & 3\\\\
-    0 & 2 & 1\\\\
+    1 & 2 & 3\\
+    0 & 2 & 1\\
     1 & 6 & 3
 \end{bmatrix}
 \xrightarrow{\text{E}}
 \begin{bmatrix}
-    1 & 2 & 3\\\\
-    0 & 2 & 1\\\\
+    1 & 2 & 3\\
+    0 & 2 & 1\\
     0 & 0 & -2
 \end{bmatrix} = U
 \end{align}$$
@@ -152,8 +152,8 @@ The steps are: $P \equiv row_2 \leftrightarrow row_1$, $E \equiv row_3 \leftarro
 $$\begin{align}
 P =
 \begin{bmatrix}
-    0 & 1 & 0\\\\
-    1 & 0 & 0\\\\
+    0 & 1 & 0\\
+    1 & 0 & 0\\
     0 & 0 & 1
 \end{bmatrix}
 \end{align}$$
@@ -166,13 +166,13 @@ There is one more special class of matrices called as <b>symmetric matrices</b>.
 $$\begin{align}
 R =
 \begin{bmatrix}
-    1 & 3\\\\
-    2 & 3\\\\
+    1 & 3\\
+    2 & 3\\
     4 & 1
 \end{bmatrix},
 R^T = 
 \begin{bmatrix}
-    1 & 2 & 4\\\\
+    1 & 2 & 4\\
     3 & 3 & 1
 \end{bmatrix}
 \end{align}$$
@@ -182,16 +182,16 @@ Let us now evaluate $R^TR$ using <b>row times column method</b> of mtrix multipl
 $$\begin{align}
 R^TR =
 \begin{bmatrix}
-    1 & 2 & 4\\\\
+    1 & 2 & 4\\
     3 & 3 & 1
 \end{bmatrix}
 \begin{bmatrix}
-    1 & 3\\\\
-    2 & 3\\\\
+    1 & 3\\
+    2 & 3\\
     4 & 1
 \end{bmatrix}=
 \begin{bmatrix}
-    21 & 13\\\\
+    21 & 13\\
     13 & 19
 \end{bmatrix} = S
 \end{align}$$

@@ -75,16 +75,13 @@ $$\begin{align}
 \ln p(t|X,W,\beta) = \sum_{n=1}^{N} \ln N(t_n|W^T\phi(X_n), \beta^{-1})
 \end{align}$$
 
-$$\begin{align}
-= \sum_{n=1}^{N} \ln \bigg[ \frac{1}{(2\pi\beta^{-1})^{1/2}} exp\bigg(\frac{-\beta}{2}(t_n - W^T\phi(X_n))^2\bigg)\bigg]
+$$\begin{align} = \sum_{n=1}^{N} \ln \bigg[ \frac{1}{(2\pi\beta^{-1})^{1/2}} exp\bigg(\frac{-\beta}{2}(t_n - W^T\phi(X_n))^2\bigg)\bigg]
 \end{align}$$
 
-$$\begin{align}
-= \frac{N}{2}\ln\beta - \frac{N}{2}\ln(2\pi) - \frac{\beta}{2}\sum_{n=1}^{N} (t_n - W^T\phi(X_n))^2
+$$\begin{align} = \frac{N}{2}\ln\beta - \frac{N}{2}\ln(2\pi) - \frac{\beta}{2}\sum_{n=1}^{N} (t_n - W^T\phi(X_n))^2
 \end{align}$$
 
-$$\begin{align}
-= \frac{N}{2}\ln\beta - \frac{N}{2}\ln(2\pi) - \beta E_D(W)
+$$\begin{align} = \frac{N}{2}\ln\beta - \frac{N}{2}\ln(2\pi) - \beta E_D(W)
 \end{align}$$
 
 where

@@ -24,22 +24,22 @@ Prperties of determinant is as follows:
 
 
 3. (a)  For any square matrix $A$, $\begin{vmatrix}
-ta & tb \\\\
+ta & tb \\
 c & d
 \end{vmatrix}=t\begin{vmatrix}
-a & b \\\\
+a & b \\
 c & d
 \end{vmatrix}$
 
 
 3. (b)  For any square matrix $A$, $|A|$ behaves like a linear function of a row if all the other rows are keep fixed. $\begin{vmatrix}
-a+a^{'} & b+b^{'} \\\\
+a+a^{'} & b+b^{'} \\
 c & d
 \end{vmatrix}=\begin{vmatrix}
-a & b \\\\
+a & b \\
 c & d
 \end{vmatrix}+\begin{vmatrix}
-a^{'} & b^{'} \\\\
+a^{'} & b^{'} \\
 c & d
 \end{vmatrix}$
 
@@ -51,27 +51,27 @@ c & d
 
 $$\begin{align}
 |A| = \begin{vmatrix}
-    a & b \\\\
+    a & b \\
     c-la & d-lb
 \end{vmatrix}=
 \begin{vmatrix}
-    a & b \\\\
+    a & b \\
     c & d
 \end{vmatrix}+\begin{vmatrix}
-    a & b \\\\
+    a & b \\
     -la & -lb
 \end{vmatrix} [\text{From 3(b)}]
 \end{align}$$
 
 $$\begin{align}
 =\begin{vmatrix}
-    a & b \\\\
+    a & b \\
     c & d
 \end{vmatrix}+(-l)\begin{vmatrix}
-    a & b \\\\
+    a & b \\
     a & b
 \end{vmatrix} [\text{From 3(a)}]=\begin{vmatrix}
-    a & b \\\\
+    a & b \\
     c & d
 \end{vmatrix}+(-l)0 [\text{From 4}] = |A|
 \end{align}$$
@@ -81,11 +81,11 @@ $$\begin{align}
 
 $$\begin{align}
 t|A| = t\begin{vmatrix}
-    0 & 0 \\\\
+    0 & 0 \\
     c & d
 \end{vmatrix}=
 \begin{vmatrix}
-    0 & 0 \\\\
+    0 & 0 \\
     c & d
 \end{vmatrix}=|A| [\text{From 3(b)}] 
 \implies t|A| = |A| \implies |A| = 0
@@ -96,12 +96,12 @@ t|A| = t\begin{vmatrix}
 
 $$\begin{align}
 |U|= |D| = \begin{vmatrix}
-    d_1 & 0 & 0 \\\\
-    0 & d_2 & 0 \\\\
+    d_1 & 0 & 0 \\
+    0 & d_2 & 0 \\
     0 & 0 & d_3
 \end{vmatrix}=d_1d_2d_3\begin{vmatrix}
-    1 & 0 & 0 \\\\
-    0 & 1 & 0 \\\\
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
     0 & 0 & 1
 \end{vmatrix}\text{[From 3(a)]}=d_1d_2d_3|I|=d_1d_2d_3
 \end{align}$$

@@ -32,16 +32,16 @@ Vectors $v_1, v_2, ..., v_l$ <b>spans a space</b> if the vector space consists o
 * They span the space.
 
 Example: For the space be $R^3$, one basis is $\begin{bmatrix}
-    1 \\\\
-    0 \\\\
+    1 \\
+    0 \\
     0
 \end{bmatrix}, \begin{bmatrix}
-    0 \\\\
-    1 \\\\
+    0 \\
+    1 \\
     0
 \end{bmatrix}, \begin{bmatrix}
-    0 \\\\
-    0 \\\\
+    0 \\
+    0 \\
     1
 \end{bmatrix}$.
 
@@ -51,8 +51,8 @@ Let us take an example. For the below matrix $A$, we have to find the basis for 
 
 $$\begin{align}
 A = \begin{bmatrix}
-    1 & 2 & 3 & 1 \\\\
-    1 & 1 & 2 & 1 \\\\
+    1 & 2 & 3 & 1 \\
+    1 & 1 & 2 & 1 \\
     1 & 2 & 3 & 1
 \end{bmatrix}
 \end{align}$$

@@ -74,8 +74,7 @@ $$\begin{align}
 C = \int f(Z)dZ \simeq f(Z_0) \int exp\bigg[-\frac{1}{2}(Z-Z_0)^TA(Z-Z_0)\bigg] dZ
 \end{align}$$
 
-$$\begin{align}
-= f(Z_0) \frac{(2\pi)^{M/2}}{|A|^{1/2}}
+$$\begin{align} = f(Z_0) \frac{(2\pi)^{M/2}}{|A|^{1/2}}
 \end{align}$$
 
 For the purpose of <b>Bayesian model comparison</b>, consider a data set $D$ and a set of models $\{M_i\}$ having parameters $\{\theta_i\}$. For each model, we are interested in calculating the <b>model evidence</b> $p(D|M_i)$. The model evidence be further decomposed as the product of likelihood function $p(D|M_i,\theta_i)$ and the prior over parameters $p(\theta_i|M_i)$. Hence,

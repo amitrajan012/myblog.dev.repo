@@ -83,12 +83,10 @@ $$\begin{align}
 \mu_{f_s \to x} (x) = \sum_{X_s}  F_s(x,X_s) = \sum_{X_s}  f_s(x,x_1,...,x_M)G_1(x_1,X_{s1})...G_M(x_M,X_{sM})
 \end{align}$$
 
-$$\begin{align}
-= \sum_{X_s}  \bigg[f_s(x,x_1,...,x_M) \prod_{m \in ne(f_s)/\ x} G_m(x_m,X_{sm}) \bigg]
+$$\begin{align} = \sum_{X_s}  \bigg[f_s(x,x_1,...,x_M) \prod_{m \in ne(f_s)/\ x} G_m(x_m,X_{sm}) \bigg]
 \end{align}$$
 
-$$\begin{align}
-= \bigg[ \sum_{X_s}  f_s(x,x_1,...,x_M) \bigg] \bigg[ \prod_{m \in ne(f_s)/\ x} \sum_{X_s} G_m(x_m,X_{sm}) \bigg]
+$$\begin{align} = \bigg[ \sum_{X_s}  f_s(x,x_1,...,x_M) \bigg] \bigg[ \prod_{m \in ne(f_s)/\ x} \sum_{X_s} G_m(x_m,X_{sm}) \bigg]
 \end{align}$$
 
 As $X_s=\{x_1,x_2,...,x_M\}$, which are the variable nodes connected to $f_s$ apart from $x$, the above expression can be re-written as
@@ -97,8 +95,7 @@ $$\begin{align}
 \mu_{f_s \to x} (x) = \sum_{x_1}...\sum_{x_M} f_s(x,x_1,...,x_M) \prod_{m \in ne(f_s)/\ x} \bigg[ \sum_{X_{sm}} G_m(x_m,X_{sm}) \bigg]
 \end{align}$$
 
-$$\begin{align}
-= \sum_{x_1}...\sum_{x_M} f_s(x,x_1,...,x_M) \prod_{m \in ne(f_s)/\ x} \mu_{x_m \to f_s} (x_m)
+$$\begin{align} = \sum_{x_1}...\sum_{x_M} f_s(x,x_1,...,x_M) \prod_{m \in ne(f_s)/\ x} \mu_{x_m \to f_s} (x_m)
 \end{align}$$
 
 Hence, to evaluate the message sent by a factor node to a variable node along the link connecting them, take the product of the incoming messages $\mu_{x_m \to f_s} (x_m)$ along all other links (from the connected variable nodes) coming into the factor node, multiply by the factor $f_s(x,x_1,...,x_M)$ associated with that node, and then marginalize over all of the variables $X_s=\{x_1,x_2,...,x_M\}$ associated with the incoming messages.
@@ -227,16 +224,13 @@ $$\begin{align}
 p(x_2) = \mu_{f_a \to x_2} (x_2) \mu_{f_b \to x_2} (x_2) \mu_{f_c \to x_2} (x_2)
 \end{align}$$
 
-$$\begin{align}
-= \bigg[\sum_{x_1}f_a(x_1,x_2)\bigg] \bigg[\sum_{x_3}f_b(x_2,x_3)\bigg] \bigg[\sum_{x_4}f_c(x_2,x_4)\bigg]
+$$\begin{align} = \bigg[\sum_{x_1}f_a(x_1,x_2)\bigg] \bigg[\sum_{x_3}f_b(x_2,x_3)\bigg] \bigg[\sum_{x_4}f_c(x_2,x_4)\bigg]
 \end{align}$$
 
-$$\begin{align}
-= \sum_{x_1}\sum_{x_3}\sum_{x_4}f_a(x_1,x_2)f_b(x_2,x_3)f_c(x_2,x_4)
+$$\begin{align} = \sum_{x_1}\sum_{x_3}\sum_{x_4}f_a(x_1,x_2)f_b(x_2,x_3)f_c(x_2,x_4)
 \end{align}$$
 
-$$\begin{align}
-= \sum_{x_1}\sum_{x_3}\sum_{x_4} \tilde{p}(X)
+$$\begin{align} = \sum_{x_1}\sum_{x_3}\sum_{x_4} \tilde{p}(X)
 \end{align}$$
 
 which comes out to be as desired.

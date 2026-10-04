@@ -105,12 +105,10 @@ $$\begin{align}
 y(X) = E[t|X] = \int_{-\infty}^{\infty} tp(t|X)dt = \int_{-\infty}^{\infty} tp(t|X)dt
 \end{align}$$
 
-$$\begin{align}
-= \int_{-\infty}^{\infty} t\frac{p(X,t)}{p(X)}dt = \frac{\int_{-\infty}^{\infty} tp(X,t)dt}{p(X)} = \frac{\int tp(X,t)dt}{\int p(X,t)dt}
+$$\begin{align} = \int_{-\infty}^{\infty} t\frac{p(X,t)}{p(X)}dt = \frac{\int_{-\infty}^{\infty} tp(X,t)dt}{p(X)} = \frac{\int tp(X,t)dt}{\int p(X,t)dt}
 \end{align}$$
 
-$$\begin{align}
-= \frac{\sum_n \int t f(X-X_n, t-t_n) dt}{\sum_m \int f(X-X_m, t-t_m) dt}
+$$\begin{align} = \frac{\sum_n \int t f(X-X_n, t-t_n) dt}{\sum_m \int f(X-X_m, t-t_m) dt}
 \end{align}$$
 
 For simplicity, we can assume that the component density functions have $0$ mean, so that
@@ -125,12 +123,10 @@ $$\begin{align}
 y(X) = \frac{\sum_n \int (t + t_n) f(X-X_n, t) dt}{\sum_m \int f(X-X_m, t) dt}
 \end{align}$$
 
-$$\begin{align}
-=  \frac{\sum_n \bigg[ \int t f(X-X_n, t) dt + \int t_n f(X-X_n, t) dt\bigg]}{\sum_m \int f(X-X_m, t) dt}
+$$\begin{align} =  \frac{\sum_n \bigg[ \int t f(X-X_n, t) dt + \int t_n f(X-X_n, t) dt\bigg]}{\sum_m \int f(X-X_m, t) dt}
 \end{align}$$
 
-$$\begin{align}
-=  \frac{\sum_n \int t_n f(X-X_n, t) dt}{\sum_m \int f(X-X_m, t) dt} =  \frac{\sum_n t_n g(X-X_n)}{\sum_m g(X-X_m)}
+$$\begin{align} =  \frac{\sum_n \int t_n f(X-X_n, t) dt}{\sum_m \int f(X-X_m, t) dt} =  \frac{\sum_n t_n g(X-X_n)}{\sum_m g(X-X_m)}
 \end{align}$$
 
 where

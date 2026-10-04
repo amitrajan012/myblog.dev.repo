@@ -137,12 +137,10 @@ $$\begin{align}
 p(X,Z|\mu, \pi) = \prod_{n=1}^{N} p(X_n|Z,\mu) p(Z|\pi) = \prod_{n=1}^{N} p(Z|\pi) \prod_{k=1}^{K} p(X_n|\mu_k)^{z_{nk}}
 \end{align}$$
 
-$$\begin{align}
-= \prod_{n=1}^{N} p(Z|\pi) \prod_{k=1}^{K} \bigg[ \prod_{i=1}^{D} \mu_{ki}^{x_{ni}} (1 - \mu_{ki})^{(1 - x_{ni})} \bigg]^{z_{nk}}
+$$\begin{align} = \prod_{n=1}^{N} p(Z|\pi) \prod_{k=1}^{K} \bigg[ \prod_{i=1}^{D} \mu_{ki}^{x_{ni}} (1 - \mu_{ki})^{(1 - x_{ni})} \bigg]^{z_{nk}}
 \end{align}$$
 
-$$\begin{align}
-= \prod_{n=1}^{N} \prod_{k=1}^{K} \pi_k^{z_{nk}} \bigg[ \prod_{i=1}^{D} \mu_{ki}^{x_{ni}} (1 - \mu_{ki})^{(1 - x_{ni})} \bigg]^{z_{nk}}
+$$\begin{align} = \prod_{n=1}^{N} \prod_{k=1}^{K} \pi_k^{z_{nk}} \bigg[ \prod_{i=1}^{D} \mu_{ki}^{x_{ni}} (1 - \mu_{ki})^{(1 - x_{ni})} \bigg]^{z_{nk}}
 \end{align}$$
 
 Taking logarithm, we get the log likelihood function as

@@ -26,8 +26,8 @@ Let us take an example of a markov matrix $A$.
 
 $$\begin{align}
 A = \begin{bmatrix}
-0.1 & 0.01 & 0.3 \\\\
-0.2 & 0.99 & 0.3 \\\\
+0.1 & 0.01 & 0.3 \\
+0.2 & 0.99 & 0.3 \\
 0.7 & 0 & 0.4
 \end{bmatrix}
 \end{align}$$
@@ -36,8 +36,8 @@ If $\lambda = 1$ is an eigenvalue, then the matrix $A-\lambda I = A-I$ will be a
 
 $$\begin{align}
 A-I = \begin{bmatrix}
--0.9 & 0.01 & 0.3 \\\\
-0.2 & -0.01 & 0.3 \\\\
+-0.9 & 0.01 & 0.3 \\
+0.2 & -0.01 & 0.3 \\
 0.7 & 0 & -0.6
 \end{bmatrix}
 \end{align}$$
@@ -46,17 +46,17 @@ As all columns of $A-I$ add to $0$, the rows are <b>linearlly dependent</b> as $
 
 $$\begin{align}
 (A-I)x = \begin{bmatrix}
--0.9 & 0.01 & 0.3 \\\\
-0.2 & -0.01 & 0.3 \\\\
+-0.9 & 0.01 & 0.3 \\
+0.2 & -0.01 & 0.3 \\
 0.7 & 0 & -0.6
 \end{bmatrix}\begin{bmatrix}
-x_1 \\\\
-x_2 \\\\
+x_1 \\
+x_2 \\
 x_3 
 \end{bmatrix} = 0 \implies
 x = \begin{bmatrix}
-0.6 \\\\
-33 \\\\
+0.6 \\
+33 \\
 0.7 
 \end{bmatrix}
 \end{align}$$
@@ -64,22 +64,22 @@ x = \begin{bmatrix}
 ## 21.3 Applications of Markov Matrices
 
 Markov Matrices can be viewed as the distribution of probabilities when certain thing/quantity is spread across multiple bins along a closed systme. For example, consider a closed system considering of two states: California and Washington. We are trying to build a systme to track the population of these two states such that only people from california and washington moves to each other. Let $\begin{bmatrix}
-u_{c} \\\\
+u_{c} \\
 u_w
 \end{bmatrix}(k+1)$ be the population of these states at $t=k+1$. The population movement is represented as:
 
 $$\begin{align}
 \begin{bmatrix}
-u_{c} \\\\
+u_{c} \\
 u_w
 \end{bmatrix}(k+1) = M\begin{bmatrix}
-u_{c} \\\\
+u_{c} \\
 u_w
 \end{bmatrix}(k) = \begin{bmatrix}
-0.9 & 0.2 \\\\
+0.9 & 0.2 \\
 0.2 & 0.8
 \end{bmatrix}\begin{bmatrix}
-u_{c} \\\\
+u_{c} \\
 u_w
 \end{bmatrix}(k)
 \end{align}$$
@@ -88,36 +88,36 @@ where $M$ is a Markov Matrix. This system of equation can be interpreted as foll
 
 $$\begin{align}
 \begin{bmatrix}
-u_c \\\\
+u_c \\
 u_w
 \end{bmatrix}(k+1) = \begin{bmatrix}
-0.9u_c+0.2u_w \\\\
+0.9u_c+0.2u_w \\
 0.2u_c+0.8u_w
 \end{bmatrix}(k)
 \end{align}$$
 
-This means that at every time step, $90\\%$ of california's population stays while $20\\%$ of washington's population moves to california. Similarly, at every time step $80\\%$ of washington's population stays while $10\\%$ of california's population moves to washington. This system of equation can be solved by solving the difference equation $u_{k} = M^k u_0$.
+This means that at every time step, $90\%$ of california's population stays while $20\%$ of washington's population moves to california. Similarly, at every time step $80\%$ of washington's population stays while $10\%$ of california's population moves to washington. This system of equation can be solved by solving the difference equation $u_{k} = M^k u_0$.
 
 The eigenvalues of $M$ are $\lambda_1 = 1$ (as it's a markov matrix) and $\lambda_2 = 0.7$ (as trace = $1.7=\lambda_1 + \lambda_2$). The corresponding eigenvectors are $x_1 = \begin{bmatrix}
-2 \\\\
+2 \\
 1
 \end{bmatrix}$ and $x_2 = \begin{bmatrix}
--1 \\\\
+-1 \\
 1
 \end{bmatrix}$. This leads us to the generic solution:
 
 $$\begin{align}
 u_k = c_1 (1)^k \begin{bmatrix}
-2 \\\\
+2 \\
 1
 \end{bmatrix} + c_2 (0.7)^k \begin{bmatrix}
--1 \\\\
+-1 \\
 1
 \end{bmatrix}
 \end{align}$$
 
 Assuming the initial state of $u_0 = \begin{bmatrix}
-0 \\\\
+0 \\
 1000
 \end{bmatrix}$, we get the constants $c_1$ and $c_2$ as $c_1 = \frac{1000}{3};c_2 = \frac{2000}{3}$.
 
