@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{- $_ := .Paginate (where site.RegularPages "Section" "post") -}}
 {{ $posts := (where site.RegularPages "Section" "post").ByDate.Reverse }}
-{{ $all := (where site.RegularPages "Section" "in" (slice "post" "book")).ByDate.Reverse }}
+{{ $all := (where site.RegularPages "Section" "in" (slice "post" "book-blog")).ByDate.Reverse }}
 {{ $latest := index $posts 0 }}
 
 <section class="hero grid-paper">
@@ -42,7 +42,7 @@
       <p>{{ .tagline }} I’m publishing it here section by section, as short posts.</p>
       <div class="actions">
         <a class="btn btn-ivory" href="{{ "/book/" | relURL }}">See the contents</a>
-        {{ with first 1 (where site.RegularPages "Section" "book").ByDate.Reverse }}{{ range . }}<a class="btn btn-ghost" href="{{ .RelPermalink }}">Read the latest section</a>{{ end }}{{ end }}
+        <a class="btn btn-ghost" href="{{ "/book/blog/" | relURL }}">Read the book blog</a>
       </div>
     </div>
   </div>
@@ -85,7 +85,7 @@
     <h2 class="display-2">From the notebook</h2>
     <div class="filters" role="group" aria-label="Filter by series" data-count="{{ site.Params.notebook.recentCount | default 12 }}">
       <button type="button" class="pill is-on" data-filter="all" aria-pressed="true">All</button>
-      {{ if where site.RegularPages "Section" "book" }}<button type="button" class="pill" data-filter="book" aria-pressed="false">Book</button>{{ end }}
+      {{ if where site.RegularPages "Section" "book-blog" }}<button type="button" class="pill" data-filter="book" aria-pressed="false">Book</button>{{ end }}
       {{ range site.Data.series }}<button type="button" class="pill" data-filter="{{ urlize .short }}" aria-pressed="false">{{ .short }}</button>{{ end }}
       <button type="button" class="pill" data-filter="other" aria-pressed="false">Other notes</button>
     </div>

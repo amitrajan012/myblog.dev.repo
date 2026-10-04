@@ -8,6 +8,10 @@ languageCode = "en-us"
   category = "categories"
   topic = "topics"
 
+[permalinks]
+  [permalinks.page]
+    book-blog = "/book/blog/:slug/"
+
 [pagination]
   pagerSize = 5000 # frontpage pagination (replaces removed `paginate`)
 

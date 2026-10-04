@@ -1,0 +1,37 @@
+{{ define "bodyclass" }}page-book{{ end }}
+{{ define "main" }}
+{{/* Front matter: kind ("concept" | "excerpt"), subtitle, optional chapter (int) and section ("6.5"). */}}
+{{ $kind := .Params.kind | default "concept" }}
+{{ $chref := partial "book-chref.html" . }}
+{{ $all := (where site.RegularPages "Section" "book-blog").ByDate }}
+{{ $idx := -1 }}{{ range $i, $p := $all }}{{ if eq $p.RelPermalink $.RelPermalink }}{{ $idx = $i }}{{ end }}{{ end }}
+<div class="progress" aria-hidden="true"><div id="progress-bar" style="background:#0F766E"></div></div>
+<article class="wrap narrow book-post">
+  <nav class="crumbs mono" aria-label="Breadcrumb">
+    <a href="{{ "/book/" | relURL }}">{{ site.Data.book.title }}</a><span>/</span><a href="{{ "/book/blog/" | relURL }}">Book blog</a>
+  </nav>
+  <div class="sec-progress">
+    <span class="chip bb-kind-{{ $kind }}">{{ partial "book-kind.html" . }}</span>
+    <span class="mono muted">{{ .Date.Format "02 Jan 2006" }} · {{ .ReadingTime }} min read</span>
+  </div>
+  <h1 class="note-title">{{ .Title }}</h1>
+  {{ with .Params.subtitle }}<p class="promise">{{ . }}</p>{{ end }}
+  {{ with $chref }}
+  <a class="bb-where" href="{{ "/book/#contents" | relURL }}">
+    <span class="mono">Where this sits in the book</span>
+    <span>{{ . }}{{ with $.Params.section }} · Section {{ . }}{{ end }}</span>
+  </a>
+  {{ end }}
+  <div class="prose book-prose">{{ .Content }}</div>
+
+  <div class="feedback">
+    <p>{{ if eq $kind "excerpt" }}This is a draft section of the book.{{ else }}This idea is part of a book in progress.{{ end }} Lost somewhere? Tell me where — it goes straight into the next revision.</p>
+    {{ with site.Params.social.email }}<a class="btn btn-dark" href="mailto:{{ . }}?subject={{ $.Title | urlquery }}">Send feedback</a>{{ end }}
+  </div>
+
+  <nav class="prevnext" aria-label="Book blog navigation">
+    {{ if gt $idx 0 }}{{ with index $all (sub $idx 1) }}<a href="{{ .RelPermalink }}"><span class="mono muted">← Older</span><span class="pn-title">{{ .Title }}</span></a>{{ end }}{{ else }}<a href="{{ "/book/blog/" | relURL }}"><span class="mono muted">← All posts</span><span class="pn-title">Book blog</span></a>{{ end }}
+    {{ if lt $idx (sub (len $all) 1) }}{{ with index $all (add $idx 1) }}<a class="pn-next" href="{{ .RelPermalink }}"><span class="mono muted">Newer →</span><span class="pn-title">{{ .Title }}</span></a>{{ end }}{{ end }}
+  </nav>
+</article>
+{{ end }}

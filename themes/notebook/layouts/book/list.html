@@ -1,7 +1,7 @@
 {{ define "bodyclass" }}page-book{{ end }}
 {{ define "main" }}
 {{ $b := site.Data.book }}
-{{ $sections := where site.RegularPages "Section" "book" }}
+{{ $sections := where site.RegularPages "Section" "book-blog" }}
 <section class="book-hero">
   <div class="wrap book-hero-row">
     <div class="book-cover" aria-hidden="true">
@@ -15,17 +15,28 @@
       <p class="book-sub">{{ $b.subtitle }}</p>
       <p class="lede">{{ $b.tagline }}</p>
       <div class="actions">
-        {{ with first 1 $sections.ByWeight }}{{ range . }}<a class="btn btn-ivory" href="{{ .RelPermalink }}">Start reading</a>{{ end }}{{ end }}
-        <a class="btn btn-ghost" href="{{ "/book/index.xml" | relURL }}">Follow new sections (RSS)</a>
+        <a class="btn btn-ivory" href="{{ "/book/blog/" | relURL }}">Read the book blog</a>
+        <a class="btn btn-ghost" href="{{ "/book/blog/index.xml" | relURL }}">Follow new posts (RSS)</a>
       </div>
     </div>
   </div>
 </section>
 
+{{ partial "book-subnav.html" "contents" }}
 <section class="wrap narrow section-tight">
   <p class="kicker">About the book</p>
   <p class="book-about">{{ $b.about }}</p>
 </section>
+
+{{ with first 3 $sections.ByDate.Reverse }}
+<section class="wrap section-tight">
+  <div class="section-head">
+    <div><p class="kicker">From the book blog</p><h2 class="display-2">Latest posts</h2></div>
+    <a class="more" href="{{ "/book/blog/" | relURL }}">All book posts →</a>
+  </div>
+  <div class="bb-grid">{{ range . }}{{ partial "book-card.html" . }}{{ end }}</div>
+</section>
+{{ end }}
 
 <section class="wrap section-tight">
   <div class="principles">

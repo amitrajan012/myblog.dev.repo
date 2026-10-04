@@ -1,0 +1,44 @@
+{{ define "bodyclass" }}page-book{{ end }}
+{{ define "main" }}
+{{- $_ := .Paginate .Pages -}}
+{{ $b := site.Data.book }}
+<section class="bb-hero">
+  <div class="wrap">
+    <p class="kicker book-kicker">{{ $b.title }} · Book blog</p>
+    <h1 class="display-2">{{ .Title }}</h1>
+    <p class="lede">{{ .Params.description }}</p>
+  </div>
+</section>
+{{ partial "book-subnav.html" "blog" }}
+<section class="wrap section-tight">
+  {{ $pages := .Pages.ByDate.Reverse }}
+  {{ if $pages }}
+  <div class="filters" role="group" aria-label="Filter posts" data-count="1000">
+    <button type="button" class="pill is-on" data-filter="all" aria-pressed="true">All</button>
+    <button type="button" class="pill" data-filter="concept" aria-pressed="false">Concepts explained</button>
+    <button type="button" class="pill" data-filter="excerpt" aria-pressed="false">From the manuscript</button>
+  </div>
+  <ol class="rows" id="note-list">
+    {{ range $pages }}{{ $kind := .Params.kind | default "concept" }}
+    <li class="row" data-series="{{ $kind }}">
+      <a href="{{ .RelPermalink }}">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 06" }}</time>
+        <span class="row-main">
+          <span class="row-title">{{ .Title }}</span>
+          {{ $bits := slice }}{{ with .Params.subtitle }}{{ $bits = $bits | append . }}{{ end }}{{ with partial "book-chref.html" . }}{{ $bits = $bits | append . }}{{ end }}
+          {{ with $bits }}<span class="row-sub">{{ delimit . " · " }}</span>{{ end }}
+        </span>
+        <span class="chip bb-kind-{{ $kind }}">{{ partial "book-kind.html" . }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ol>
+  {{ else }}
+  <div class="bb-empty card pad">
+    <h2 class="h3">No posts yet</h2>
+    <p class="muted">Two kinds of posts will appear here: <strong>concepts explained</strong> — one idea from the book, told on its own — and <strong>sections from the manuscript</strong>, published as standalone posts.</p>
+    <p class="muted">Follow along with <a href="{{ "/book/blog/index.xml" | relURL }}">RSS</a>, or browse the <a href="{{ "/book/#contents" | relURL }}">contents</a>.</p>
+  </div>
+  {{ end }}
+</section>
+{{ end }}

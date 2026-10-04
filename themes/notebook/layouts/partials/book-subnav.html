@@ -1,0 +1,6 @@
+<nav class="book-subnav" aria-label="The Book">
+  <div class="wrap">
+    <a href="{{ "/book/" | relURL }}"{{ if eq . "contents" }} aria-current="page"{{ end }}>About &amp; contents</a>
+    <a href="{{ "/book/blog/" | relURL }}"{{ if eq . "blog" }} aria-current="page"{{ end }}>Book blog</a>
+  </div>
+</nav>

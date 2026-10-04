@@ -25,7 +25,7 @@
         {{ end }}
       </ol>
       {{ end }}
-      {{ if $posts }}<a class="ch-read" href="{{ (index $posts 0).RelPermalink }}">Read this chapter on the blog →</a>{{ else if eq $status "planned" }}<p class="ch-note">Planned sections — from the working outline.</p>{{ end }}
+      {{ if $posts }}<a class="ch-read" href="{{ (index $posts 0).RelPermalink }}">Read posts from this chapter →</a>{{ else if eq $status "planned" }}<p class="ch-note">Planned sections — from the working outline.</p>{{ end }}
     </div>
   </details>
 </li>

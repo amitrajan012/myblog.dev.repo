@@ -1,0 +1,7 @@
+{{- $kind := .Params.kind | default "concept" -}}
+<a class="card bb-card" href="{{ .RelPermalink }}">
+  <span class="bb-kind bb-kind-{{ $kind }}">{{ partial "book-kind.html" . }}</span>
+  <h3>{{ .Title }}</h3>
+  {{ with .Params.subtitle }}<p class="muted">{{ . }}</p>{{ end }}
+  <span class="bb-meta mono">{{ with partial "book-chref.html" . }}{{ . }} · {{ end }}{{ .Date.Format "02 Jan 2006" }}</span>
+</a>

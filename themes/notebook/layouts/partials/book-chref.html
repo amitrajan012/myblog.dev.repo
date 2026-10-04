@@ -1,0 +1,8 @@
+{{- /* "Chapter 6 · Calculus: The Math of Change" for a post with `chapter` set, else "". */ -}}
+{{- $out := "" -}}
+{{- with .Params.chapter -}}
+  {{- $n := . -}}{{- $t := "" -}}
+  {{- range site.Data.book.parts }}{{ range .chapters }}{{ if eq .number $n }}{{ $t = .title }}{{ end }}{{ end }}{{ end -}}
+  {{- $out = printf "Chapter %v" $n -}}{{- with $t }}{{ $out = printf "%s · %s" $out . }}{{ end -}}
+{{- end -}}
+{{- return $out -}}

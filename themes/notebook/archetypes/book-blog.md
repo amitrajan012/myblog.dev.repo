@@ -2,11 +2,13 @@
 title = "{{ replace .File.ContentBaseName "-" " " | title }}"
 date = {{ .Date }}
 draft = true
-part = 1
-chapter = 1
-section = "1.1"
-weight = 11
-subtitle = "One sentence: the question this section answers."
+# kind: "concept" (one idea explained on its own) or "excerpt" (a section from the manuscript)
+kind = "concept"
+subtitle = "One sentence: the question this post answers."
+# Optional — link the post to its place in the book:
+# chapter = 6
+# section = "6.5"
+tags = []
 +++
 
 {{< problem >}}
