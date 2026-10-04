@@ -11,8 +11,9 @@
     </div>
     <div class="book-hero-copy">
       <p class="kicker book-kicker">The Book · written in public</p>
-      <h1 class="display">{{ $b.pitch }}</h1>
-      <p class="lede">{{ $b.intro }}</p>
+      <h1 class="display">{{ $b.title }}</h1>
+      <p class="book-sub">{{ $b.subtitle }}</p>
+      <p class="lede">{{ $b.tagline }}</p>
       <div class="actions">
         {{ with first 1 $sections.ByWeight }}{{ range . }}<a class="btn btn-ivory" href="{{ .RelPermalink }}">Start reading</a>{{ end }}{{ end }}
         <a class="btn btn-ghost" href="{{ "/book/index.xml" | relURL }}">Follow new sections (RSS)</a>
@@ -21,10 +22,15 @@
   </div>
 </section>
 
+<section class="wrap narrow section-tight">
+  <p class="kicker">About the book</p>
+  <p class="book-about">{{ $b.about }}</p>
+</section>
+
 <section class="wrap section-tight">
   <div class="principles">
     <div class="card pad"><span class="mono book-ink">01</span><h2 class="h3">Why before what</h2><p class="muted">Every idea starts with the problem it solves, before any method gets a name.</p></div>
-    <div class="card pad"><span class="mono book-ink">02</span><h2 class="h3">Maths you can skip</h2><p class="muted">Formulas live in “Under the Hood” boxes. Open them when you want the machinery; the story reads without them.</p></div>
+    <div class="card pad"><span class="mono book-ink">02</span><h2 class="h3">Maths where it belongs</h2><p class="muted">Equations arrive as the precise tools for failures you’ve already watched unfold — never as the opening move.</p></div>
     <div class="card pad"><span class="mono book-ink">03</span><h2 class="h3">Foundations to MLOps</h2><p class="muted">From the maths you need, through deep learning, to running models in production.</p></div>
   </div>
 </section>

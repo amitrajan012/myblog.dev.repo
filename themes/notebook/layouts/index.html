@@ -33,12 +33,13 @@
     <div class="book-cover small" aria-hidden="true">
       <span class="mono">Amit Rajan</span>
       <span class="cover-title">{{ .title }}</span>
-      <span class="mono">{{ len .parts }} parts</span>
+      <span class="mono">Draft edition</span>
     </div>
     <div class="book-band-copy">
       <p class="kicker book-kicker">The Book · writing in public</p>
-      <h2 class="display-2">{{ .pitch }}</h2>
-      <p>A book for curious readers who don’t speak fluent maths. I’m publishing it section by section as short posts — the maths lives in skippable “Under the Hood” boxes.</p>
+      <h2 class="display-2">{{ .title }}</h2>
+      <p class="band-sub">{{ .subtitle }}</p>
+      <p>{{ .tagline }} I’m publishing it here section by section, as short posts.</p>
       <div class="actions">
         <a class="btn btn-ivory" href="{{ "/book/" | relURL }}">See the contents</a>
         {{ with first 1 (where site.RegularPages "Section" "book").ByDate.Reverse }}{{ range . }}<a class="btn btn-ghost" href="{{ .RelPermalink }}">Read the latest section</a>{{ end }}{{ end }}

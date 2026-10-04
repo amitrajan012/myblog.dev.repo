@@ -1,9 +1,10 @@
-# The Book — replace the [placeholders] with your real title and contents.
+# The Book — replace the remaining [placeholders] with your real contents.
 # status: published | drafting | planned
-title: "[Book title]"
-subtitle: "[Subtitle]"
-pitch: "Machine learning, explained from the why up."
-intro: "I found ISLR and ESL hard going the first time. This is the book I wanted then — for readers who are curious and sharp, but don’t think in equations. Each section appears here first as a short post."
+title: "Counting to Intelligence"
+subtitle: "How Simple Mathematics Becomes Machine Learning"
+tagline: "The machinery is smaller than the mystery. It is simple counting, multiplied until it looks like thought."
+audience: "Written for curious readers, technical leaders, and hands-on builders who prefer deep mental models over dense notation."
+about: "Long before machine learning became a web of dense matrices and hundred-billion-parameter neural networks, it began with an operation every human understands: counting. Counting to Intelligence does not strip the mathematics out of modern AI—it puts it where it belongs. By leading with intuition and plain language, equations arrive only as the precise tools needed to solve failures you’ve already seen unfold. Written for curious readers, technical leaders, and hands-on builders who prefer deep mental models over dense notation, this book charts the path from simple ratios of counts to systems that seem to think—showing how the most basic mathematical principles scale into the technology reshaping our world. The machinery is smaller than the mystery. It is simple counting, multiplied until it looks like thought."
 parts:
   - title: "[Part I title]"
     chapters:
