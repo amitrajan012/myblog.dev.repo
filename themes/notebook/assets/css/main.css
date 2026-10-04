@@ -317,3 +317,19 @@ a.chapter:hover .ch-title{color:var(--book)}
 .page-book .pill.is-on{background:var(--book-dark);border-color:var(--book-dark)}
 .page-book .more{color:var(--book)}
 .tag.tag-book{background:var(--book-tint);border-color:transparent;color:var(--book)}
+.lede-book{margin-top:14px}
+.lede-book a{display:inline-block;background:var(--book-tint);color:var(--book-dark);font-weight:600;padding:1px 10px;border-radius:8px;text-decoration:none;box-shadow:inset 0 -2px 0 rgba(15,118,110,.25);transition:background .15s}
+.lede-book a:hover{background:#C9E7E1;color:var(--book-dark)}
+.book-about p{margin:0 0 20px}
+.book-about p:last-child{margin:0;font-style:italic;color:var(--book-dark)}
+.series-book{border-color:#B9DDD6;grid-column:1/-1;flex-direction:row;flex-wrap:wrap;gap:28px;min-height:0;align-items:stretch}
+.series-book .series-art{flex:0 0 260px;height:auto;min-height:150px}
+.series-book-body{flex:1 1 320px;display:flex;flex-direction:column}
+.series-book .series-label{margin-top:4px}
+.series-book h3{font-size:30px}
+.series-book .series-foot{max-width:520px}
+@media (max-width:720px){.series-book .series-art{flex-basis:100%}}
+.series-book:hover{border-color:var(--book)}
+.book-mark{display:block;height:auto;max-width:100%}
+.book-cover .book-mark{margin-bottom:14px}
+.cover-mid{display:block}

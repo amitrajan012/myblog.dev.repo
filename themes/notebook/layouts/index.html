@@ -10,6 +10,7 @@
       <p class="kicker accent">Machine Learning · Statistics · Linear Algebra</p>
       <h1 class="display">Working notes on machine learning, <em>one chapter at a time.</em></h1>
       <p class="lede">{{ site.Params.notebook.intro }}</p>
+      {{ with site.Params.notebook.introBook }}<p class="lede lede-book">{{ . | markdownify }}</p>{{ end }}
       <div class="actions">
         <a class="btn btn-dark" href="#series">Browse the series
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -34,7 +35,7 @@
   <div class="book-band">
     <div class="book-cover small" aria-hidden="true">
       <span class="mono">Amit Rajan</span>
-      <span class="cover-title">{{ .title }}</span>
+      <span class="cover-mid">{{ partial "book-mark.html" (dict "w" 120) }}<span class="cover-title">{{ .title }}</span></span>
       <span class="mono">Draft edition</span>
     </div>
     <div class="book-band-copy">
@@ -60,6 +61,23 @@
     <p class="muted">Each series follows one textbook in order. Start at chapter one, or jump to the topic you need.</p>
   </div>
   <div class="series-grid">
+    {{ if site.Params.book.enabled }}{{ with site.Data.book }}
+      {{ $total := 0 }}{{ $drafted := 0 }}
+      {{ range .parts }}{{ range .chapters }}{{ if .number }}{{ $total = add $total 1 }}{{ if ne .status "planned" }}{{ $drafted = add $drafted 1 }}{{ end }}{{ end }}{{ end }}{{ end }}
+      {{ $bp := where site.RegularPages "Section" "book-blog" }}
+      <a class="card series-card series-book" href="{{ "/book/" | relURL }}">
+        <div class="series-art" style="background:#E1F1EE">{{ partial "book-mark.html" (dict "w" 210) }}</div>
+        <div class="series-book-body">
+        <span class="series-label" style="color:#0F766E">My book · in progress</span>
+        <h3>{{ .title }}</h3>
+        <p class="muted">{{ .subtitle }}</p>
+        <div class="series-foot">
+          <div class="series-meta mono"><span>{{ len $bp }} post{{ if ne (len $bp) 1 }}s{{ end }} · {{ len .parts }} parts</span><span>{{ $drafted }} / {{ $total }} drafted</span></div>
+          {{ if $total }}<div class="bar"><div style="width:{{ div (mul $drafted 100.0) $total }}%;background:#0F766E"></div></div>{{ end }}
+        </div>
+        </div>
+      </a>
+    {{ end }}{{ end }}
     {{ range site.Data.series }}
       {{ $s := . }}
       {{ $sp := where site.RegularPages "Params.topics" "intersect" (slice .topic) }}

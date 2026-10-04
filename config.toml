@@ -52,8 +52,9 @@ languageCode = "en-us"
 
 # ---- notebook theme ----
 [params.notebook]
-  intro = "I’m Amit — Head of Engineering, ML engineer and data scientist by background, and a reader. These are my chapter-by-chapter notes on the textbooks behind modern ML: Bishop, Strang, ISLR and Think Stats, with the derivations written out in full."
-  bio = "Head of Engineering. Formerly a machine learning engineer and data scientist — and once the UI lead on a product."
+  intro = "I’m Amit—Head of Engineering, currently leading the build of an agentic AI platform that reads, understands and validates documents at enterprise scale. My background is in ML and data science, and these pages contain my chapter-by-chapter notes and complete derivations for the foundational textbooks behind modern AI: Bishop, Strang, ISLR, and Think Stats."
+  introBook = "Currently, I’m turning these working notes into my own book, [Counting to Intelligence](/book/)."
+  bio = "Head of Engineering, leading the build of an agentic AI platform that reads, understands and validates documents at enterprise scale — teams of AI agents doing work that once took whole back offices. Before that, I spent years in the weeds as a machine learning engineer and data scientist."
   recentCount = 12
 
 [params.book]

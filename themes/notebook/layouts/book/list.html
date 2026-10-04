@@ -6,7 +6,7 @@
   <div class="wrap book-hero-row">
     <div class="book-cover" aria-hidden="true">
       <span class="mono">Amit Rajan</span>
-      <div><span class="cover-title">{{ $b.title }}</span><span class="cover-sub">{{ $b.subtitle }}</span></div>
+      <div>{{ partial "book-mark.html" (dict "w" 150) }}<span class="cover-title">{{ $b.title }}</span><span class="cover-sub">{{ $b.subtitle }}</span></div>
       <span class="mono">Draft edition</span>
     </div>
     <div class="book-hero-copy">
@@ -25,7 +25,7 @@
 {{ partial "book-subnav.html" "contents" }}
 <section class="wrap narrow section-tight">
   <p class="kicker">About the book</p>
-  <p class="book-about">{{ $b.about }}</p>
+  <div class="book-about">{{ $b.about | markdownify }}</div>
 </section>
 
 {{ with first 3 $sections.ByDate.Reverse }}
