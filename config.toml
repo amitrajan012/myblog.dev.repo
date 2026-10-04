@@ -48,8 +48,8 @@ languageCode = "en-us"
 
 # ---- notebook theme ----
 [params.notebook]
-  intro = "I’m Amit — a data scientist and a reader. These are my chapter-by-chapter notes on the textbooks behind modern ML: Bishop, Strang, ISLR and Think Stats, with the derivations written out in full."
-  bio = "Data scientist, reader, and occasional blockchain tinkerer."
+  intro = "I’m Amit — Head of Engineering, ML engineer and data scientist by background, and a reader. These are my chapter-by-chapter notes on the textbooks behind modern ML: Bishop, Strang, ISLR and Think Stats, with the derivations written out in full."
+  bio = "Head of Engineering. Formerly a machine learning engineer and data scientist — and once the UI lead on a product."
   recentCount = 12
 
 [params.book]
