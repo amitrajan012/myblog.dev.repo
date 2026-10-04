@@ -57,13 +57,21 @@ commit_push() {
   dir="$1"
   git -C "$dir" add -A
   if git -C "$dir" diff --cached --quiet; then
-    say "No changes to commit in $(basename "$dir")"
+    say "$(basename "$dir"): no uncommitted changes (already committed)"
   else
     git -C "$dir" commit --quiet -m "$MSG"
-    say "Committed $(basename "$dir")"
+    say "$(basename "$dir"): committed \"$MSG\""
   fi
   branch="$(git -C "$dir" rev-parse --abbrev-ref HEAD)"
-  git -C "$dir" push origin "$branch"
+  git -C "$dir" fetch --quiet origin "$branch" 2>/dev/null || true
+  ahead="$(git -C "$dir" rev-list --count "origin/$branch..HEAD" 2>/dev/null || echo "?")"
+  if [ "$ahead" = "0" ]; then
+    say "$(basename "$dir"): nothing to push — already up to date"
+  else
+    say "$(basename "$dir"): pushing $ahead commit(s):"
+    git -C "$dir" log --oneline "origin/$branch..HEAD" 2>/dev/null | sed 's/^/    /'
+    git -C "$dir" push --quiet origin "$branch"
+  fi
 }
 commit_push "$SRC"
 commit_push "$PAGES"
