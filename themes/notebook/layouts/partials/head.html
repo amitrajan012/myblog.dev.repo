@@ -47,3 +47,7 @@ window.MathJax = {
 </script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
 {{ end }}
+{{/* Visit counter: production builds only, so local "hugo server" previews are not counted. */}}
+{{ with site.Params.analytics.goatcounter }}{{ if hugo.IsProduction }}
+<script data-goatcounter="https://{{ . }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+{{ end }}{{ end }}
